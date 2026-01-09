@@ -69,29 +69,34 @@ include CMakeFiles/FEM-program.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/FEM-program.dir/flags.make
 
-CMakeFiles/FEM-program.dir/main.cpp.o: CMakeFiles/FEM-program.dir/flags.make
-CMakeFiles/FEM-program.dir/main.cpp.o: /home/vladislav/Документы/FEM/FEM\ program/main.cpp
-CMakeFiles/FEM-program.dir/main.cpp.o: CMakeFiles/FEM-program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/vladislav/Документы/FEM/FEM program/out/build/Clang 18.1.3 x86_64-pc-linux-gnu/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FEM-program.dir/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FEM-program.dir/main.cpp.o -MF CMakeFiles/FEM-program.dir/main.cpp.o.d -o CMakeFiles/FEM-program.dir/main.cpp.o -c "/home/vladislav/Документы/FEM/FEM program/main.cpp"
+CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.o: CMakeFiles/FEM-program.dir/flags.make
+CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.o: FEM-program_autogen/mocs_compilation.cpp
+CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.o: CMakeFiles/FEM-program.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/vladislav/Документы/FEM/FEM program/out/build/Clang 18.1.3 x86_64-pc-linux-gnu/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.o -MF CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.o -c "/home/vladislav/Документы/FEM/FEM program/out/build/Clang 18.1.3 x86_64-pc-linux-gnu/FEM-program_autogen/mocs_compilation.cpp"
 
-CMakeFiles/FEM-program.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FEM-program.dir/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/vladislav/Документы/FEM/FEM program/main.cpp" > CMakeFiles/FEM-program.dir/main.cpp.i
+CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/vladislav/Документы/FEM/FEM program/out/build/Clang 18.1.3 x86_64-pc-linux-gnu/FEM-program_autogen/mocs_compilation.cpp" > CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.i
 
-CMakeFiles/FEM-program.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FEM-program.dir/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/vladislav/Документы/FEM/FEM program/main.cpp" -o CMakeFiles/FEM-program.dir/main.cpp.s
+CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/vladislav/Документы/FEM/FEM program/out/build/Clang 18.1.3 x86_64-pc-linux-gnu/FEM-program_autogen/mocs_compilation.cpp" -o CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.s
 
 # Object files for target FEM-program
 FEM__program_OBJECTS = \
-"CMakeFiles/FEM-program.dir/main.cpp.o"
+"CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.o"
 
 # External object files for target FEM-program
 FEM__program_EXTERNAL_OBJECTS =
 
-FEM-program: CMakeFiles/FEM-program.dir/main.cpp.o
+FEM-program: CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.o
 FEM-program: CMakeFiles/FEM-program.dir/build.make
+FEM-program: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
+FEM-program: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2
+FEM-program: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
+FEM-program: /usr/lib/x86_64-linux-gnu/libGLX.so
+FEM-program: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 FEM-program: CMakeFiles/FEM-program.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/vladislav/Документы/FEM/FEM program/out/build/Clang 18.1.3 x86_64-pc-linux-gnu/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable FEM-program"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FEM-program.dir/link.txt --verbose=$(VERBOSE)

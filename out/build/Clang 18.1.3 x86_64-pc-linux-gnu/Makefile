@@ -126,32 +126,34 @@ FEM-program: cmake_check_build_system
 
 # fast build rule for target.
 FEM-program/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FEM-program.dir/build.make CMakeFiles/FEM-program.dir/build
+	$(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/FEM-program.dir/build.make src/app/CMakeFiles/FEM-program.dir/build
 .PHONY : FEM-program/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+#=============================================================================
+# Target rules for targets named FEM-program_autogen_timestamp_deps
 
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FEM-program.dir/build.make CMakeFiles/FEM-program.dir/main.cpp.o
-.PHONY : main.cpp.o
+# Build rule for target.
+FEM-program_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FEM-program_autogen_timestamp_deps
+.PHONY : FEM-program_autogen_timestamp_deps
 
-main.i: main.cpp.i
-.PHONY : main.i
+# fast build rule for target.
+FEM-program_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/FEM-program_autogen_timestamp_deps.dir/build.make src/app/CMakeFiles/FEM-program_autogen_timestamp_deps.dir/build
+.PHONY : FEM-program_autogen_timestamp_deps/fast
 
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FEM-program.dir/build.make CMakeFiles/FEM-program.dir/main.cpp.i
-.PHONY : main.cpp.i
+#=============================================================================
+# Target rules for targets named FEM-program_autogen
 
-main.s: main.cpp.s
-.PHONY : main.s
+# Build rule for target.
+FEM-program_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FEM-program_autogen
+.PHONY : FEM-program_autogen
 
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FEM-program.dir/build.make CMakeFiles/FEM-program.dir/main.cpp.s
-.PHONY : main.cpp.s
+# fast build rule for target.
+FEM-program_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/FEM-program_autogen.dir/build.make src/app/CMakeFiles/FEM-program_autogen.dir/build
+.PHONY : FEM-program_autogen/fast
 
 # Help Target
 help:
@@ -161,10 +163,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... FEM-program_autogen"
+	@echo "... FEM-program_autogen_timestamp_deps"
 	@echo "... FEM-program"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

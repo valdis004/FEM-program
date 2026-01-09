@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/vladislav/Документы/FEM/FEM program/out/build/Clang 18.1.3 x86_64-pc-linux-gnu",
+  "command": "/usr/bin/clang++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I\"/home/vladislav/Документы/FEM/FEM program/out/build/Clang 18.1.3 x86_64-pc-linux-gnu/FEM-program_autogen/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -std=gnu++23 -fPIC -o CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/out/build/Clang 18.1.3 x86_64-pc-linux-gnu/FEM-program_autogen/mocs_compilation.cpp\"",
+  "file": "/home/vladislav/Документы/FEM/FEM program/out/build/Clang 18.1.3 x86_64-pc-linux-gnu/FEM-program_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/home/vladislav/Документы/FEM/FEM program/out/build/Clang 18.1.3 x86_64-pc-linux-gnu",
+  "command": "/usr/bin/clang++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I\"/home/vladislav/Документы/FEM/FEM program/out/build/Clang 18.1.3 x86_64-pc-linux-gnu/FEM-program_autogen/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -std=gnu++23 -fPIC -o CMakeFiles/FEM-program.dir/src/main/main.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/main/main.cpp\"",
+  "file": "/home/vladislav/Документы/FEM/FEM program/src/main/main.cpp",
+  "output": "CMakeFiles/FEM-program.dir/src/main/main.cpp.o"
+}
+]

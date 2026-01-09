@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/vladislav/Документы/FEM/FEM program/main.cpp" "CMakeFiles/FEM-program.dir/main.cpp.o" "gcc" "CMakeFiles/FEM-program.dir/main.cpp.o.d"
+  "/home/vladislav/Документы/FEM/FEM program/out/build/Clang 18.1.3 x86_64-pc-linux-gnu/FEM-program_autogen/mocs_compilation.cpp" "CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
