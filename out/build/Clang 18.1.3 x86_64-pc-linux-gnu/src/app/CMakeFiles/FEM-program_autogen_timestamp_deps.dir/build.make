@@ -66,10 +66,10 @@ include src/app/CMakeFiles/FEM-program_autogen_timestamp_deps.dir/compiler_depen
 # Include the progress variables for this target.
 include src/app/CMakeFiles/FEM-program_autogen_timestamp_deps.dir/progress.make
 
-src/app/CMakeFiles/FEM-program_autogen_timestamp_deps: /usr/lib/qt6/libexec/uic
 src/app/CMakeFiles/FEM-program_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
-src/app/CMakeFiles/FEM-program_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
+src/app/CMakeFiles/FEM-program_autogen_timestamp_deps: /usr/lib/qt6/libexec/uic
 src/app/CMakeFiles/FEM-program_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
+src/app/CMakeFiles/FEM-program_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 
 FEM-program_autogen_timestamp_deps: src/app/CMakeFiles/FEM-program_autogen_timestamp_deps
 FEM-program_autogen_timestamp_deps: src/app/CMakeFiles/FEM-program_autogen_timestamp_deps.dir/build.make
