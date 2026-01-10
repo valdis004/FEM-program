@@ -713,6 +713,66 @@ src/app/FEM-program_autogen/timestamp: /home/vladislav/Документы/FEM/FE
   /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
   /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
   /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
   /usr/bin/cmake
 
 

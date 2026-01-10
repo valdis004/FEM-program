@@ -608,6 +608,66 @@ src/app/FEM-program_autogen/timestamp: /home/vladislav/Документы/FEM/FE
   /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
   /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
   /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /usr/bin/cmake \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/CMakeLists.txt \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
   /usr/bin/cmake
 
 src/app/CMakeFiles/FEM-program.dir/FEM-program_autogen/mocs_compilation.cpp.o: src/app/FEM-program_autogen/mocs_compilation.cpp
@@ -1501,14 +1561,12 @@ src/app/CMakeFiles/FEM-program.dir/mainwindow.cpp.o: /home/vladislav/Докум�
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtGui/QAction \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qaction.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qbitmap.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qbrush.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qcursor.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qfont.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtGui/qfontdatabase.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qfontinfo.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qfontmetrics.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qicon.h \
@@ -1537,9 +1595,10 @@ src/app/CMakeFiles/FEM-program.dir/mainwindow.cpp.o: /home/vladislav/Докум�
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QButtonGroup \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QComboBox \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QDockWidget \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFontComboBox \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMdiArea \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenuBar \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QProgressBar \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QStatusBar \
@@ -1557,18 +1616,17 @@ src/app/CMakeFiles/FEM-program.dir/mainwindow.cpp.o: /home/vladislav/Докум�
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractspinbox.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qaction.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qbuttongroup.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcombobox.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdockwidget.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfontcombobox.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmdiarea.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenubar.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qprogressbar.h \
@@ -1623,6 +1681,8 @@ src/app/CMakeFiles/FEM-program.dir/mainwindow.cpp.o: /home/vladislav/Докум�
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtreewidget.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtextedit.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstatusbar.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
@@ -1793,8 +1853,6 @@ src/app/CMakeFiles/FEM-program.dir/mainwindow.cpp.o: /home/vladislav/Докум�
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
 /usr/include/c++/13/climits:
-
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qaction.h:
 
 /usr/include/c++/13/iterator:
 
@@ -2039,6 +2097,8 @@ src/app/FEM-program_autogen/moc_predefs.h:
 /usr/include/c++/13/bits/alloc_traits.h:
 
 /usr/include/c++/13/backward/binders.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenuBar:
 
 /usr/include/c++/13/bits/locale_facets.h:
 
@@ -2446,8 +2506,6 @@ src/app/FEM-program_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qaction.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h:
-
 /usr/include/c++/13/bits/hash_bytes.h:
 
 /usr/lib/llvm-18/lib/clang/18/include/__stddef_null.h:
@@ -2648,8 +2706,6 @@ src/app/FEM-program_autogen/mocs_compilation.cpp:
 
 /usr/lib/llvm-18/lib/clang/18/include/__stdarg___va_copy.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstatusbar.h:
-
 /usr/lib/llvm-18/lib/clang/18/include/__stdarg_va_list.h:
 
 /usr/lib/llvm-18/lib/clang/18/include/__stddef_max_align_t.h:
@@ -2668,8 +2724,6 @@ src/app/FEM-program_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/13/bits/ranges_algo.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtGui/QAction:
-
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextcursor.h:
 
 /usr/include/c++/13/bits/unordered_map.h:
@@ -2686,6 +2740,8 @@ src/app/FEM-program_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QDockWidget:
 
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMdiArea:
+
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QStatusBar:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qregion.h:
@@ -2697,6 +2753,10 @@ src/app/FEM-program_autogen/mocs_compilation.cpp:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmdiarea.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h:
 

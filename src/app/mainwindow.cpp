@@ -3,6 +3,7 @@
 #include <QComboBox>
 #include <QDockWidget>
 #include <QLabel>
+#include <QMdiArea>
 #include <QMenuBar>
 #include <QProgressBar>
 #include <QPushButton>
@@ -15,6 +16,8 @@
 #include <QTreeWidget>
 #include <QVBoxLayout>
 #include <QWidget>
+#include <qdockwidget.h>
+#include <qnamespace.h>
 
 MainWindow::MainWindow() {
   setWindowTitle("Пример Docking областей");
@@ -23,22 +26,23 @@ MainWindow::MainWindow() {
   createToolBar();
   createLeftDock();
   createToolStrip();
-  // QHBoxLayout *layout = new QHBoxLayout;
-  // layout->addWidget(toolBox);
 }
 
 void MainWindow::createLeftDock() {
   // Центральный виджет - текстовый редактор
-  QTextEdit *centralTextEdit = new QTextEdit();
-  centralTextEdit->setPlainText(
-      "Это центральная рабочая область.\n"
-      "Вы можете вводить текст здесь.\n\n"
-      "Вокруг расположены док-виджеты, которые можно:\n"
-      "- Перемещать\n"
-      "- Закрывать\n"
-      "- Пристыковывать к разным сторонам\n"
-      "- Делать плавающими");
-  setCentralWidget(centralTextEdit);
+  QMdiArea *m_pma = new QMdiArea(this);
+  m_pma->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+  m_pma->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+  QTextEdit *centralTextEdit = new QTextEdit("Text");
+  m_pma->addSubWindow(centralTextEdit);
+  centralTextEdit->setWindowTitle("Graphic window");
+  m_pma->setViewMode(QMdiArea::TabbedView);
+  m_pma->setViewMode(QMdiArea::TabbedView);
+  m_pma->setTabPosition(QTabWidget::North);
+  m_pma->setTabsClosable(true); // Добавить кнопки закрытия
+  m_pma->setTabsMovable(true);  // Возможность перемещать вкладки
+
+  setCentralWidget(m_pma);
 
   // ========== 4. DOCK WIDGETS (Док-система) ==========
 
@@ -57,67 +61,52 @@ void MainWindow::createLeftDock() {
   treeWidget->expandAll();
 
   leftDock->setWidget(treeWidget);
+  leftDock->setFeatures(QDockWidget::NoDockWidgetFeatures);
   addDockWidget(Qt::LeftDockWidgetArea, leftDock);
 
-  // Док-виджет справа (Свойства/Информация)
-  QDockWidget *rightDock = new QDockWidget("Свойства", this);
-  rightDock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
+  // // Док-виджет справа (Свойства/Информация)
+  // QDockWidget *rightDock = new QDockWidget("Свойства", this);
+  // rightDock->setAllowedAreas(Qt::LeftDockWidgetArea |
+  // Qt::RightDockWidgetArea);
 
-  QTabWidget *rightTabWidget = new QTabWidget();
+  // QTabWidget *rightTabWidget = new QTabWidget();
 
-  QWidget *propertiesTab = new QWidget();
-  QVBoxLayout *propsLayout = new QVBoxLayout(propertiesTab);
+  // QWidget *propertiesTab = new QWidget();
+  // QVBoxLayout *propsLayout = new QVBoxLayout(propertiesTab);
 
-  QLabel *label1 = new QLabel("Размер файла: 1.2 MB");
-  QLabel *label2 = new QLabel("Количество слов: 156");
-  QLabel *label3 = new QLabel("Дата изменения: сегодня");
+  // QLabel *label1 = new QLabel("Размер файла: 1.2 MB");
+  // QLabel *label2 = new QLabel("Количество слов: 156");
+  // QLabel *label3 = new QLabel("Дата изменения: сегодня");
 
-  propsLayout->addWidget(label1);
-  propsLayout->addWidget(label2);
-  propsLayout->addWidget(label3);
-  propsLayout->addStretch();
+  // propsLayout->addWidget(label1);
+  // propsLayout->addWidget(label2);
+  // propsLayout->addWidget(label3);
+  // propsLayout->addStretch();
 
-  QWidget *notesTab = new QWidget();
-  QVBoxLayout *notesLayout = new QVBoxLayout(notesTab);
-  QTextEdit *notesEdit = new QTextEdit();
-  notesEdit->setPlaceholderText("Ваши заметки...");
-  notesLayout->addWidget(notesEdit);
+  // QWidget *notesTab = new QWidget();
+  // QVBoxLayout *notesLayout = new QVBoxLayout(notesTab);
+  // QTextEdit *notesEdit = new QTextEdit();
+  // notesEdit->setPlaceholderText("Ваши заметки...");
+  // notesLayout->addWidget(notesEdit);
 
-  rightTabWidget->addTab(propertiesTab, "Свойства");
-  rightTabWidget->addTab(notesTab, "Заметки");
+  // rightTabWidget->addTab(propertiesTab, "Свойства");
+  // rightTabWidget->addTab(notesTab, "Заметки");
 
-  rightDock->setWidget(rightTabWidget);
-  addDockWidget(Qt::RightDockWidgetArea, rightDock);
+  // rightDock->setWidget(rightTabWidget);
+  // addDockWidget(Qt::RightDockWidgetArea, rightDock);
 
-  // Док-виджет снизу (Консоль/Логи)
-  QDockWidget *bottomDock = new QDockWidget("Консоль", this);
-  bottomDock->setAllowedAreas(Qt::BottomDockWidgetArea | Qt::TopDockWidgetArea);
+  // // Док-виджет снизу (Консоль/Логи)
+  // QDockWidget *bottomDock = new QDockWidget("Консоль", this);
+  // bottomDock->setAllowedAreas(Qt::BottomDockWidgetArea |
+  // Qt::TopDockWidgetArea);
 
-  QTextBrowser *consoleWidget = new QTextBrowser();
-  consoleWidget->setPlainText("[INFO] Приложение запущено\n"
-                              "[INFO] Загружен документ\n"
-                              "[INFO] Готов к работе");
+  // QTextBrowser *consoleWidget = new QTextBrowser();
+  // consoleWidget->setPlainText("[INFO] Приложение запущено\n"
+  //                             "[INFO] Загружен документ\n"
+  //                             "[INFO] Готов к работе");
 
-  bottomDock->setWidget(consoleWidget);
-  addDockWidget(Qt::BottomDockWidgetArea, bottomDock);
-
-  // // Создаем центральный виджет
-  // QTextEdit *centralTextEdit = new QTextEdit(this);
-  // centralTextEdit->setPlaceholderText("Центральная область");
-  // setCentralWidget(centralTextEdit);
-
-  // QDockWidget *leftDockTreeWiev = new QDockWidget("TreeWiev", this);
-
-  // QTreeWidget *tree = new QTreeWidget(leftDockTreeWiev);
-  // QTreeWidgetItem *item1 = new QTreeWidgetItem(tree, {"Plate"});
-  // leftDockTreeWiev->setWidget(tree);
-  // leftDockTreeWiev->setFeatures(QDockWidget::NoDockWidgetFeatures);
-
-  // QDockWidget *leftDockProperties = new QDockWidget("Properties", this);
-  // leftDockProperties->setFeatures(QDockWidget::NoDockWidgetFeatures);
-
-  // addDockWidget(Qt::LeftDockWidgetArea, leftDockTreeWiev);
-  // addDockWidget(Qt::LeftDockWidgetArea, leftDockProperties);
+  // bottomDock->setWidget(consoleWidget);
+  // addDockWidget(Qt::BottomDockWidgetArea, bottomDock);
 }
 
 void MainWindow::createMenus() {

@@ -11,6 +11,7 @@
 // #include <QWidget>
 // #include <qdockwidget.h>
 // #include <qwidget.h>
+class QMdiArea;
 
 class MainWindow : public QMainWindow {
 

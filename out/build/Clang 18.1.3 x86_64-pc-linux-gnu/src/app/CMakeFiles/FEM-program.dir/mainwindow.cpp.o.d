@@ -469,6 +469,9 @@ src/app/CMakeFiles/FEM-program.dir/mainwindow.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMdiArea \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmdiarea.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenuBar \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenubar.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
@@ -482,7 +485,6 @@ src/app/CMakeFiles/FEM-program.dir/mainwindow.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTextBrowser \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtextbrowser.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtextedit.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextoption.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextcursor.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextformat.h \
