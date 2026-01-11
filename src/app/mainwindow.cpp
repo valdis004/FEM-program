@@ -1,7 +1,11 @@
 #include "mainwindow.h"
+#include "../graphics/qtgl/qtgl.h"
+
 #include <QButtonGroup>
 #include <QComboBox>
+#include <QDialog>
 #include <QDockWidget>
+#include <QFormLayout>
 #include <QLabel>
 #include <QMdiArea>
 #include <QMenuBar>
@@ -16,8 +20,11 @@
 #include <QTreeWidget>
 #include <QVBoxLayout>
 #include <QWidget>
+#include <qdialog.h>
 #include <qdockwidget.h>
+#include <qgridlayout.h>
 #include <qnamespace.h>
+#include <qobject.h>
 
 MainWindow::MainWindow() {
   setWindowTitle("Пример Docking областей");
@@ -26,6 +33,7 @@ MainWindow::MainWindow() {
   createToolBar();
   createLeftDock();
   createToolStrip();
+  setupTreeContextMenu(); // Настройка контекстного меню для работы
 }
 
 void MainWindow::createLeftDock() {
@@ -33,80 +41,32 @@ void MainWindow::createLeftDock() {
   QMdiArea *m_pma = new QMdiArea(this);
   m_pma->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
   m_pma->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
-  QTextEdit *centralTextEdit = new QTextEdit("Text");
-  m_pma->addSubWindow(centralTextEdit);
-  centralTextEdit->setWindowTitle("Graphic window");
+  Qtgl *scene = new Qtgl(this);
+  scene->setWindowTitle("Graphic window");
+  m_pma->addSubWindow(scene);
   m_pma->setViewMode(QMdiArea::TabbedView);
-  m_pma->setViewMode(QMdiArea::TabbedView);
-  m_pma->setTabPosition(QTabWidget::North);
-  m_pma->setTabsClosable(true); // Добавить кнопки закрытия
-  m_pma->setTabsMovable(true);  // Возможность перемещать вкладки
+  m_pma->setTabsClosable(false); // Добавить кнопки закрытия
+  m_pma->setTabsMovable(true);   // Возможность перемещать вкладки
 
   setCentralWidget(m_pma);
 
-  // ========== 4. DOCK WIDGETS (Док-система) ==========
-
-  // Док-виджет слева (Структура документа)
-  QDockWidget *leftDock = new QDockWidget("Структура", this);
+  // Док-виджет слева (Дерево)
+  QDockWidget *leftDock = new QDockWidget("Tree wiev", this);
   leftDock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
 
-  QTreeWidget *treeWidget = new QTreeWidget();
-  treeWidget->setHeaderLabel("Заголовки");
+  treeWidget = new QTreeWidget();
+  treeWidget->setHeaderLabel("");
+  treeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
+
   QTreeWidgetItem *root =
-      new QTreeWidgetItem(treeWidget, QStringList("Документ"));
-  new QTreeWidgetItem(root, QStringList("Введение"));
-  new QTreeWidgetItem(root, QStringList("Глава 1"));
-  new QTreeWidgetItem(root, QStringList("Глава 2"));
-  new QTreeWidgetItem(root, QStringList("Заключение"));
-  treeWidget->expandAll();
+      new QTreeWidgetItem(treeWidget, QStringList("Plates"));
+
+  connect(treeWidget, &QTreeWidget::customContextMenuRequested, this,
+          &MainWindow::onTreeContextMenuRequested);
 
   leftDock->setWidget(treeWidget);
   leftDock->setFeatures(QDockWidget::NoDockWidgetFeatures);
   addDockWidget(Qt::LeftDockWidgetArea, leftDock);
-
-  // // Док-виджет справа (Свойства/Информация)
-  // QDockWidget *rightDock = new QDockWidget("Свойства", this);
-  // rightDock->setAllowedAreas(Qt::LeftDockWidgetArea |
-  // Qt::RightDockWidgetArea);
-
-  // QTabWidget *rightTabWidget = new QTabWidget();
-
-  // QWidget *propertiesTab = new QWidget();
-  // QVBoxLayout *propsLayout = new QVBoxLayout(propertiesTab);
-
-  // QLabel *label1 = new QLabel("Размер файла: 1.2 MB");
-  // QLabel *label2 = new QLabel("Количество слов: 156");
-  // QLabel *label3 = new QLabel("Дата изменения: сегодня");
-
-  // propsLayout->addWidget(label1);
-  // propsLayout->addWidget(label2);
-  // propsLayout->addWidget(label3);
-  // propsLayout->addStretch();
-
-  // QWidget *notesTab = new QWidget();
-  // QVBoxLayout *notesLayout = new QVBoxLayout(notesTab);
-  // QTextEdit *notesEdit = new QTextEdit();
-  // notesEdit->setPlaceholderText("Ваши заметки...");
-  // notesLayout->addWidget(notesEdit);
-
-  // rightTabWidget->addTab(propertiesTab, "Свойства");
-  // rightTabWidget->addTab(notesTab, "Заметки");
-
-  // rightDock->setWidget(rightTabWidget);
-  // addDockWidget(Qt::RightDockWidgetArea, rightDock);
-
-  // // Док-виджет снизу (Консоль/Логи)
-  // QDockWidget *bottomDock = new QDockWidget("Консоль", this);
-  // bottomDock->setAllowedAreas(Qt::BottomDockWidgetArea |
-  // Qt::TopDockWidgetArea);
-
-  // QTextBrowser *consoleWidget = new QTextBrowser();
-  // consoleWidget->setPlainText("[INFO] Приложение запущено\n"
-  //                             "[INFO] Загружен документ\n"
-  //                             "[INFO] Готов к работе");
-
-  // bottomDock->setWidget(consoleWidget);
-  // addDockWidget(Qt::BottomDockWidgetArea, bottomDock);
 }
 
 void MainWindow::createMenus() {
@@ -117,52 +77,146 @@ void MainWindow::createMenus() {
 }
 
 void MainWindow::createToolBar() {
-  QToolBar *mainToolBar = new QToolBar("Основная панель");
-  addToolBar(Qt::TopToolBarArea, mainToolBar);
+  // Заменяем тулбар на виджет с вкладками
+  QTabWidget *toolTabs = new QTabWidget();
+  toolTabs->setTabPosition(QTabWidget::North);
+  toolTabs->setDocumentMode(true);
 
-  mainToolBar->addAction(QIcon::fromTheme("document-new"), "Новый");
-  mainToolBar->addAction(QIcon::fromTheme("document-open"), "Открыть");
-  mainToolBar->addAction(QIcon::fromTheme("document-save"), "Сохранить");
-  mainToolBar->addSeparator();
-  mainToolBar->addAction(QIcon::fromTheme("edit-cut"), "Вырезать");
-  mainToolBar->addAction(QIcon::fromTheme("edit-copy"), "Копировать");
-  mainToolBar->addAction(QIcon::fromTheme("edit-paste"), "Вставить");
-  mainToolBar->addSeparator();
-  mainToolBar->addAction(QIcon::fromTheme("edit-undo"), "Отменить");
-  mainToolBar->addAction(QIcon::fromTheme("edit-redo"), "Повторить");
+  // ========== Первая вкладка: Основные операции ==========
+  QWidget *mainTab = new QWidget();
+  QVBoxLayout *mainLayout = new QVBoxLayout(mainTab);
+  mainLayout->setSpacing(2);
+  mainLayout->setContentsMargins(2, 2, 2, 2);
 
-  // Панель форматирования
-  QToolBar *formatToolBar = new QToolBar("Форматирование");
-  addToolBar(Qt::TopToolBarArea, formatToolBar);
+  // Первый ряд кнопок
+  QHBoxLayout *row1Layout = new QHBoxLayout();
+  row1Layout->setSpacing(2);
 
-  QPushButton *boldBtn = new QPushButton("B");
-  boldBtn->setCheckable(true);
-  boldBtn->setFixedSize(30, 30);
+  QToolButton *newBtn = new QToolButton(mainTab);
+  newBtn->setFixedHeight(30);
+  newBtn->setAutoRaise(true);
+  newBtn->setText("Кнопка");
+  row1Layout->addWidget(newBtn);
 
-  QPushButton *italicBtn = new QPushButton("I");
-  italicBtn->setCheckable(true);
-  italicBtn->setFixedSize(30, 30);
+  QPushButton *openBtn =
+      new QPushButton(QIcon::fromTheme("document-open"), "Открыть");
+  openBtn->setFixedHeight(30);
+  row1Layout->addWidget(openBtn);
 
-  QPushButton *underlineBtn = new QPushButton("U");
-  underlineBtn->setCheckable(true);
-  underlineBtn->setFixedSize(30, 30);
+  QPushButton *saveBtn =
+      new QPushButton(QIcon::fromTheme("document-save"), "Сохранить");
+  saveBtn->setFixedHeight(30);
+  row1Layout->addWidget(saveBtn);
 
-  formatToolBar->addWidget(boldBtn);
-  formatToolBar->addWidget(italicBtn);
-  formatToolBar->addWidget(underlineBtn);
-  formatToolBar->addSeparator();
+  row1Layout->addSpacing(10); // Небольшой разделитель
 
-  // Выпадающий список шрифтов
-  QComboBox *fontCombo = new QComboBox();
-  fontCombo->addItems({"Arial", "Times New Roman", "Courier New", "Verdana"});
-  fontCombo->setFixedWidth(120);
-  formatToolBar->addWidget(fontCombo);
+  QPushButton *cutBtn =
+      new QPushButton(QIcon::fromTheme("edit-cut"), "Вырезать");
+  cutBtn->setFixedHeight(30);
+  row1Layout->addWidget(cutBtn);
 
-  // Выпадающий список размера
-  QComboBox *sizeCombo = new QComboBox();
-  sizeCombo->addItems({"8", "10", "12", "14", "16", "18", "24", "36"});
-  sizeCombo->setFixedWidth(60);
-  formatToolBar->addWidget(sizeCombo);
+  QPushButton *copyBtn =
+      new QPushButton(QIcon::fromTheme("edit-copy"), "Копировать");
+  copyBtn->setFixedHeight(30);
+  row1Layout->addWidget(copyBtn);
+
+  QPushButton *pasteBtn =
+      new QPushButton(QIcon::fromTheme("edit-paste"), "Вставить");
+  pasteBtn->setFixedHeight(30);
+  row1Layout->addWidget(pasteBtn);
+
+  row1Layout->addStretch();
+
+  // Второй ряд кнопок
+  QHBoxLayout *row2Layout = new QHBoxLayout();
+  row2Layout->setSpacing(2);
+
+  QPushButton *undoBtn =
+      new QPushButton(QIcon::fromTheme("edit-undo"), "Отменить");
+  undoBtn->setFixedHeight(30);
+  row2Layout->addWidget(undoBtn);
+
+  QPushButton *redoBtn =
+      new QPushButton(QIcon::fromTheme("edit-redo"), "Повторить");
+  redoBtn->setFixedHeight(30);
+  row2Layout->addWidget(redoBtn);
+
+  row2Layout->addStretch();
+
+  mainLayout->addLayout(row1Layout);
+  mainLayout->addLayout(row2Layout);
+
+  // ========== Вторая вкладка: Форматирование ==========
+  QWidget *resultWindget = new QWidget();
+  QGridLayout *structuralForsesLayout = new QGridLayout(resultWindget);
+  structuralForsesLayout->setContentsMargins(5, 5, 5, 5);
+  structuralForsesLayout->setSpacing(5);
+  structuralForsesLayout->setAlignment(Qt::AlignLeft);
+
+  QToolButton *Nx = new QToolButton(resultWindget);
+  Nx->setFixedHeight(30);
+  Nx->setAutoRaise(true);
+  Nx->setText("N_x");
+
+  QToolButton *Ny = new QToolButton(resultWindget);
+  Ny->setFixedHeight(30);
+  Ny->setAutoRaise(true);
+  Ny->setText("N_y");
+
+  QToolButton *Qx = new QToolButton(resultWindget);
+  Qx->setFixedHeight(30);
+  Qx->setAutoRaise(true);
+  Qx->setText("Q_x");
+
+  QToolButton *Qy = new QToolButton(resultWindget);
+  Qy->setFixedHeight(30);
+  Qy->setAutoRaise(true);
+  Qy->setText("Q_y");
+
+  QToolButton *Qxy = new QToolButton(resultWindget);
+  Qxy->setFixedHeight(30);
+  Qxy->setAutoRaise(true);
+  Qxy->setText("Q_xy");
+
+  QToolButton *Mx = new QToolButton(resultWindget);
+  Mx->setFixedHeight(30);
+  Mx->setAutoRaise(true);
+  Mx->setText("M_x");
+
+  QToolButton *My = new QToolButton(resultWindget);
+  My->setFixedHeight(30);
+  My->setAutoRaise(true);
+  My->setText("M_y");
+
+  QToolButton *Mxy = new QToolButton(resultWindget);
+  Mxy->setFixedHeight(30);
+  Mxy->setAutoRaise(true);
+  Mxy->setText("M_xy");
+
+  structuralForsesLayout->addWidget(Nx, 0, 0);
+  structuralForsesLayout->addWidget(Ny, 1, 0);
+  structuralForsesLayout->addWidget(Qx, 0, 1);
+  structuralForsesLayout->addWidget(Qy, 1, 1);
+  structuralForsesLayout->addWidget(Qxy, 0, 2);
+  structuralForsesLayout->addWidget(Mx, 0, 3);
+  structuralForsesLayout->addWidget(My, 1, 3);
+  structuralForsesLayout->addWidget(Mxy, 0, 4);
+
+  // Добавляем вкладки
+  toolTabs->addTab(mainTab, "Основные");
+  toolTabs->addTab(resultWindget, "Результаты");
+
+  // Устанавливаем панель с вкладками в качестве тулбара
+  addToolBar(Qt::TopToolBarArea, createToolBarFromWidget(toolTabs));
+}
+
+// Вспомогательная функция для создания тулбара из виджета
+QToolBar *MainWindow::createToolBarFromWidget(QWidget *widget) {
+  QToolBar *toolBar = new QToolBar("Панель вкладок");
+  toolBar->setMovable(false); // Можно сделать фиксированной
+  toolBar->setAllowedAreas(Qt::TopToolBarArea);
+  toolBar->addWidget(widget);
+  return toolBar;
 }
 
 void MainWindow::createToolStrip() {
@@ -185,4 +239,47 @@ void MainWindow::createToolStrip() {
   progressBar->setFixedWidth(150);
   progressBar->setVisible(false); // По умолчанию скрыт
   statusBar->addPermanentWidget(progressBar);
+}
+
+void MainWindow::setupTreeContextMenu() {
+  // Создаем структурированное меню
+  treeContextMenu = new TreeContextMenu(treeWidget, this);
+
+  // Подключаем сигналы к слотам
+  connect(treeContextMenu, &TreeContextMenu::createDefaultPlateScheme, this,
+          &MainWindow::createDefaultPlateScheme);
+}
+
+void MainWindow::onTreeContextMenuRequested(const QPoint &pos) {
+  if (treeContextMenu) {
+    treeContextMenu->showMenu(pos);
+  }
+}
+
+// Функция, отрабатываемая при нажатии кнопки "Create default scheme" У treewiev
+// для plate
+void MainWindow::createDefaultPlateScheme(QTreeWidgetItem *item) {
+  QDialog *d = new QDialog(this);
+  d->setFixedSize({250, 100});
+  d->setWindowTitle("Settings of scheme");
+  d->setModal(true);
+  d->setWindowFlag(Qt::ToolTip);
+  d->setWindowFlags(Qt::Window | Qt::CustomizeWindowHint | Qt::WindowTitleHint |
+                    Qt::WindowCloseButtonHint);
+
+  QFormLayout *formLayout = new QFormLayout(d);
+  QComboBox *comboBox = new QComboBox(d);
+  comboBox->addItem("MITC9");
+  comboBox->addItem("MITC16");
+  formLayout->addRow("Тип элемента:", comboBox);
+
+  // Выравнивание
+  formLayout->setLabelAlignment(Qt::AlignRight | Qt::AlignVCenter);
+  formLayout->setFieldGrowthPolicy(QFormLayout::FieldsStayAtSizeHint);
+  formLayout->setRowWrapPolicy(QFormLayout::DontWrapRows);
+
+  d->setLayout(formLayout);
+
+  d->setSizeGripEnabled(true); // Добавляет маркер изменения размера в углу
+  d->show();
 }

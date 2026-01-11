@@ -1,0 +1,58 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"external/glad/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"id" : "glad_autogen_timestamp_deps::@be6379ffe3ff8751a4fd",
+	"isGeneratorProvided" : true,
+	"name" : "glad_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "src/graphics/glad",
+		"source" : "external/glad"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Custom configure preset/src/graphics/glad/CMakeFiles/glad_autogen_timestamp_deps-RelWithDebInfo",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Custom configure preset/src/graphics/glad/CMakeFiles/glad_autogen_timestamp_deps-(CONFIG).rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,457 @@
+{
+	"BUILD_DIR" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen",
+	"CMAKE_BINARY_DIR" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/CMakeLists.txt",
+		"/usr/share/cmake-3.28/Modules/CheckIncludeFiles.cmake",
+		"/usr/share/cmake-3.28/Modules/CheckFunctionExists.cmake",
+		"/usr/share/cmake-3.28/Modules/FindPkgConfig.cmake",
+		"/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake",
+		"/usr/share/cmake-3.28/Modules/FindX11.cmake",
+		"/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake",
+		"/usr/share/cmake-3.28/Modules/CheckFunctionExists.cmake",
+		"/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake",
+		"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/CMake/glfw3.pc.in"
+	],
+	"CMAKE_SOURCE_DIR" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program",
+	"DEP_FILE" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "glfw_autogen/timestamp",
+	"HEADERS" : 
+	[
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/fractional-scale-v1-client-protocol-code.h",
+			"MU",
+			"EJRQKI7XPS/moc_fractional-scale-v1-client-protocol-code.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/fractional-scale-v1-client-protocol.h",
+			"MU",
+			"EJRQKI7XPS/moc_fractional-scale-v1-client-protocol.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol-code.h",
+			"MU",
+			"EJRQKI7XPS/moc_idle-inhibit-unstable-v1-client-protocol-code.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol.h",
+			"MU",
+			"EJRQKI7XPS/moc_idle-inhibit-unstable-v1-client-protocol.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol-code.h",
+			"MU",
+			"EJRQKI7XPS/moc_pointer-constraints-unstable-v1-client-protocol-code.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol.h",
+			"MU",
+			"EJRQKI7XPS/moc_pointer-constraints-unstable-v1-client-protocol.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol-code.h",
+			"MU",
+			"EJRQKI7XPS/moc_relative-pointer-unstable-v1-client-protocol-code.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol.h",
+			"MU",
+			"EJRQKI7XPS/moc_relative-pointer-unstable-v1-client-protocol.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/viewporter-client-protocol-code.h",
+			"MU",
+			"EJRQKI7XPS/moc_viewporter-client-protocol-code.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/viewporter-client-protocol.h",
+			"MU",
+			"EJRQKI7XPS/moc_viewporter-client-protocol.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/wayland-client-protocol-code.h",
+			"MU",
+			"EJRQKI7XPS/moc_wayland-client-protocol-code.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/wayland-client-protocol.h",
+			"MU",
+			"EJRQKI7XPS/moc_wayland-client-protocol.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/xdg-activation-v1-client-protocol-code.h",
+			"MU",
+			"EJRQKI7XPS/moc_xdg-activation-v1-client-protocol-code.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/xdg-activation-v1-client-protocol.h",
+			"MU",
+			"EJRQKI7XPS/moc_xdg-activation-v1-client-protocol.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol-code.h",
+			"MU",
+			"EJRQKI7XPS/moc_xdg-decoration-unstable-v1-client-protocol-code.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol.h",
+			"MU",
+			"EJRQKI7XPS/moc_xdg-decoration-unstable-v1-client-protocol.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/xdg-shell-client-protocol-code.h",
+			"MU",
+			"EJRQKI7XPS/moc_xdg-shell-client-protocol-code.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/xdg-shell-client-protocol.h",
+			"MU",
+			"EJRQKI7XPS/moc_xdg-shell-client-protocol.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/include/GLFW/glfw3.h",
+			"MU",
+			"WILY6KHFIM/moc_glfw3.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/include/GLFW/glfw3native.h",
+			"MU",
+			"WILY6KHFIM/moc_glfw3native.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/internal.h",
+			"MU",
+			"EWIEGA46WW/moc_internal.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/linux_joystick.h",
+			"MU",
+			"EWIEGA46WW/moc_linux_joystick.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/mappings.h",
+			"MU",
+			"EWIEGA46WW/moc_mappings.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/null_joystick.h",
+			"MU",
+			"EWIEGA46WW/moc_null_joystick.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/null_platform.h",
+			"MU",
+			"EWIEGA46WW/moc_null_platform.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/platform.h",
+			"MU",
+			"EWIEGA46WW/moc_platform.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/posix_poll.h",
+			"MU",
+			"EWIEGA46WW/moc_posix_poll.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/posix_thread.h",
+			"MU",
+			"EWIEGA46WW/moc_posix_thread.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/posix_time.h",
+			"MU",
+			"EWIEGA46WW/moc_posix_time.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/wl_platform.h",
+			"MU",
+			"EWIEGA46WW/moc_wl_platform.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/x11_platform.h",
+			"MU",
+			"EWIEGA46WW/moc_x11_platform.cpp",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/xkb_unicode.h",
+			"MU",
+			"EWIEGA46WW/moc_xkb_unicode.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include",
+	"INCLUDE_DIR_Debug" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug",
+	"INCLUDE_DIR_RelWithDebInfo" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo",
+	"INCLUDE_DIR_Release" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release",
+	"MOC_COMPILATION_FILE" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/mocs_compilation.cpp",
+	"MOC_COMPILATION_FILE_Debug" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/mocs_compilation_Debug.cpp",
+	"MOC_COMPILATION_FILE_RelWithDebInfo" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/mocs_compilation_RelWithDebInfo.cpp",
+	"MOC_COMPILATION_FILE_Release" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/mocs_compilation_Release.cpp",
+	"MOC_DEFINITIONS" : [],
+	"MOC_DEFINITIONS_Debug" : [ "HAVE_MEMFD_CREATE", "_DEFAULT_SOURCE", "_GLFW_WAYLAND", "_GLFW_X11" ],
+	"MOC_DEFINITIONS_RelWithDebInfo" : [ "HAVE_MEMFD_CREATE", "_DEFAULT_SOURCE", "_GLFW_WAYLAND", "_GLFW_X11" ],
+	"MOC_DEFINITIONS_Release" : [ "HAVE_MEMFD_CREATE", "_DEFAULT_SOURCE", "_GLFW_WAYLAND", "_GLFW_X11" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : [],
+	"MOC_INCLUDES_Debug" : 
+	[
+		"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/include",
+		"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src",
+		"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src",
+		"/usr/include",
+		"/usr/include/c++/13",
+		"/usr/include/x86_64-linux-gnu/c++/13",
+		"/usr/include/c++/13/backward",
+		"/usr/lib/llvm-18/lib/clang/18/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_INCLUDES_RelWithDebInfo" : 
+	[
+		"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/include",
+		"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src",
+		"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src",
+		"/usr/include",
+		"/usr/include/c++/13",
+		"/usr/include/x86_64-linux-gnu/c++/13",
+		"/usr/include/c++/13/backward",
+		"/usr/lib/llvm-18/lib/clang/18/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_INCLUDES_Release" : 
+	[
+		"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/include",
+		"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src",
+		"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src",
+		"/usr/include",
+		"/usr/include/c++/13",
+		"/usr/include/x86_64-linux-gnu/c++/13",
+		"/usr/include/c++/13/backward",
+		"/usr/lib/llvm-18/lib/clang/18/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_GADGET_EXPORT",
+		"Q_NAMESPACE",
+		"Q_NAMESPACE_EXPORT"
+	],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-std=gnu++23",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE_Debug" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/moc_predefs_Debug.h",
+	"MOC_PREDEFS_FILE_RelWithDebInfo" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/moc_predefs_RelWithDebInfo.h",
+	"MOC_PREDEFS_FILE_Release" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/moc_predefs_Release.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : true,
+	"PARALLEL" : 8,
+	"PARSE_CACHE_FILE" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/CMakeFiles/glfw_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE_Debug" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/CMakeFiles/glfw_autogen.dir/ParseCache_Debug.txt",
+	"PARSE_CACHE_FILE_RelWithDebInfo" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/CMakeFiles/glfw_autogen.dir/ParseCache_RelWithDebInfo.txt",
+	"PARSE_CACHE_FILE_Release" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/CMakeFiles/glfw_autogen.dir/ParseCache_Release.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/libexec/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/lib/qt6/libexec/uic",
+	"QT_VERSION_MAJOR" : 6,
+	"QT_VERSION_MINOR" : 4,
+	"SETTINGS_FILE" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/CMakeFiles/glfw_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE_Debug" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/CMakeFiles/glfw_autogen.dir/AutogenUsed_Debug.txt",
+	"SETTINGS_FILE_RelWithDebInfo" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/CMakeFiles/glfw_autogen.dir/AutogenUsed_RelWithDebInfo.txt",
+	"SETTINGS_FILE_Release" : "/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/CMakeFiles/glfw_autogen.dir/AutogenUsed_Release.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/context.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/egl_context.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/glx_context.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/init.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/input.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/linux_joystick.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/monitor.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/null_init.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/null_joystick.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/null_monitor.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/null_window.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/osmesa_context.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/platform.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/posix_module.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/posix_poll.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/posix_thread.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/posix_time.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/vulkan.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/window.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/wl_init.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/wl_monitor.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/wl_window.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/x11_init.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/x11_monitor.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/x11_window.c",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/external/glfw/src/xkb_unicode.c",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

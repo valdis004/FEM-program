@@ -1,19 +1,10 @@
-#ifndef WINDOW_H
-#define WINDOW_H
+#pragma once
 
-// #include <QAbstractButton>
-// #include <QComboBox>
-// #include <QFontComboBox>
+#include "context-menu/treeContextMenu.h"
 #include <QMainWindow>
-// #include <QToolBar>
-// #include <QToolBox>
-// #include <QToolButton>
-// #include <QWidget>
-// #include <qdockwidget.h>
-// #include <qwidget.h>
-class QMdiArea;
 
 class MainWindow : public QMainWindow {
+  Q_OBJECT
 
 public:
   MainWindow();
@@ -23,6 +14,12 @@ private:
   void createMenus();
   void createToolBar();
   void createToolStrip();
-};
+  QToolBar *createToolBarFromWidget(QWidget *widget);
+  QTreeWidget *treeWidget;
+  TreeContextMenu *treeContextMenu;
+  void setupTreeContextMenu();
 
-#endif // WINDOW_H
+private slots:
+  void onTreeContextMenuRequested(const QPoint &pos);
+  void createDefaultPlateScheme(QTreeWidgetItem *item);
+};
