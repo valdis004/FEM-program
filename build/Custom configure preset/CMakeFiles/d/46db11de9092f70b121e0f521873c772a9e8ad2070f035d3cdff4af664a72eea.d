@@ -6,8 +6,18 @@ src/app/FEM-program_autogen/timestamp: \
   /home/vladislav/Документы/FEM/FEM\ program/src/app/main.cpp \
   /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.cpp \
   /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
+  /home/vladislav/Документы/FEM/FEM\ program/src/elements/displacement/displacement.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/elements/displacement/displacement.h \
+  /home/vladislav/Документы/FEM/FEM\ program/src/elements/element.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/elements/element.h \
+  /home/vladislav/Документы/FEM/FEM\ program/src/elements/load/load.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/elements/load/load.h \
+  /home/vladislav/Документы/FEM/FEM\ program/src/elements/plates/plates.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/elements/plates/plates.h \
   /home/vladislav/Документы/FEM/FEM\ program/src/graphics/qtgl/qtgl.cpp \
   /home/vladislav/Документы/FEM/FEM\ program/src/graphics/qtgl/qtgl.h \
+  /home/vladislav/Документы/FEM/FEM\ program/src/mesh/mesh.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/mesh/mesh.h \
   /usr/bin/cmake \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \

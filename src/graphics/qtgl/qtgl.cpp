@@ -1,34 +1,103 @@
 #include "qtgl.h"
 #include <QOpenGLFunctions>
+#include <QtGui>
+#include <qmatrix4x4.h>
+#include <qnamespace.h>
+#include <qpoint.h>
 
-Qtgl::Qtgl(QWidget *pwdj) : QOpenGLWidget(pwdj) {}
+Qtgl::Qtgl(QWidget *pwgt /*= 0*/)
+    : QOpenGLWidget(pwgt), m_xRotate(0), m_yRotate(0) {}
 
-void Qtgl::initializeGL() {
+// ----------------------------------------------------------------------
+/*virtual*/ void Qtgl::initializeGL() {
   QOpenGLFunctions *pFunc = QOpenGLContext::currentContext()->functions();
-  pFunc->glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-};
+  pFunc->glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
 
-void Qtgl::resizeGL(int w, int h) {
+  pFunc->glEnable(GL_DEPTH_TEST);
+  glShadeModel(GL_FLAT);
+  m_nPyramid = createPyramid(0.9f);
+}
+
+// ----------------------------------------------------------------------
+/*virtual*/ void Qtgl::resizeGL(int nWidth, int nHeight) {
+  glViewport(0, 0, (GLint)nWidth, (GLint)nHeight);
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
-  glViewport(0, 0, (GLint)w, (GLint)h);
-  glOrtho(0, 100, 100, 0, -1, 1);
-};
+  glFrustum(-1.0, 1.0, -1.0, 1.0, 1.0, 10.0);
+}
 
-void Qtgl::paintGL() {
+// ----------------------------------------------------------------------
+/*virtual*/ void Qtgl::paintGL() {
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-  glBegin(GL_QUADS);
-  glColor3f(1, 0, 0);
-  glVertex2f(10, 90);
+  glMatrixMode(GL_MODELVIEW);
+  glLoadIdentity();
+  glTranslatef(0.0, 0.0, -4.0 * m_scale);
 
-  glColor3f(0, 1, 0);
-  glVertex2f(90, 90);
+  glRotatef(m_xRotate, 1.0, 0.0, 0.0);
+  glRotatef(m_yRotate, 0.0, 1.0, 0.0);
 
-  glColor3f(0, 0, 1);
-  glVertex2f(90, 10);
+  glCallList(m_nPyramid);
+}
 
-  glColor3f(1, 1, 1);
-  glVertex2f(10, 10);
+// ----------------------------------------------------------------------
+/*virtual*/ void Qtgl::mousePressEvent(QMouseEvent *pe) {
+  if (pe->button() != Qt::LeftButton) {
+    isLeftBut = false;
+    return;
+  }
+
+  isLeftBut = true;
+  m_ptPosition = pe->pos();
+}
+
+void Qtgl::wheelEvent(QWheelEvent *pe) {
+  GLfloat delta = pe->angleDelta().y();
+  if (delta > 0)
+    m_scale /= 1.1f;
+  else
+    m_scale *= 1.1f;
+  update();
+}
+
+// ----------------------------------------------------------------------
+/*virtual*/ void Qtgl::mouseMoveEvent(QMouseEvent *pe) {
+  if (!isLeftBut)
+    return;
+
+  m_xRotate += 180 * (GLfloat)(pe->y() - m_ptPosition.y()) / height();
+  m_yRotate += 180 * (GLfloat)(pe->x() - m_ptPosition.x()) / width();
+  update();
+
+  m_ptPosition = pe->pos();
+}
+
+// ----------------------------------------------------------------------
+GLuint Qtgl::createPyramid(GLfloat fSize /*=1.0f*/) {
+  GLuint n = glGenLists(1);
+
+  glNewList(n, GL_COMPILE);
+  glBegin(GL_TRIANGLE_FAN);
+  glColor4f(0.0f, 1.0f, 0.0f, 1.0f);
+  glVertex3f(0.0, fSize, 0.0);
+  glVertex3f(-fSize, -fSize, fSize);
+  glVertex3f(fSize, -fSize, fSize);
+  glColor4f(1.0f, 1.0f, 0.0f, 1.0f);
+  glVertex3f(fSize, -fSize, -fSize);
+  glColor4f(0.0f, 0.0f, 1.0f, 1.0f);
+  glVertex3f(-fSize, -fSize, -fSize);
+  glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+  glVertex3f(-fSize, -fSize, fSize);
   glEnd();
-};
+
+  glBegin(GL_QUADS);
+  glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
+  glVertex3f(-fSize, -fSize, fSize);
+  glVertex3f(fSize, -fSize, fSize);
+  glVertex3f(fSize, -fSize, -fSize);
+  glVertex3f(-fSize, -fSize, -fSize);
+  glEnd();
+  glEndList();
+
+  return n;
+}

@@ -283,6 +283,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Doxygen documentation generation tool (https://www.doxygen.nl)
 DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
 
+//The directory containing a CMake configuration file for Eigen3.
+Eigen3_DIR:PATH=/usr/share/eigen3/cmake
+
 //Value Computed by CMake
 FEM-program_BINARY_DIR:STATIC=/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset
 

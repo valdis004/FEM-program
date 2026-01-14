@@ -52,7 +52,7 @@ build src/app/CMakeFiles/FEM-program.dir/Debug/FEM-program_autogen/mocs_compilat
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/Debug/FEM-program_autogen/mocs_compilation_Debug.cpp.o.d
   FLAGS = -g -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/Debug
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/Debug/FEM-program_autogen
 
@@ -60,7 +60,7 @@ build src/app/CMakeFiles/FEM-program.dir/Debug/mainwindow.cpp.o: CXX_COMPILER__F
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/Debug/mainwindow.cpp.o.d
   FLAGS = -g -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/Debug
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/Debug
 
@@ -68,7 +68,7 @@ build src/app/CMakeFiles/FEM-program.dir/Debug/main.cpp.o: CXX_COMPILER__FEM-pro
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/Debug/main.cpp.o.d
   FLAGS = -g -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/Debug
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/Debug
 
@@ -76,7 +76,7 @@ build src/app/CMakeFiles/FEM-program.dir/Debug/context-menu/treeContextMenu.cpp.
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/Debug/context-menu/treeContextMenu.cpp.o.d
   FLAGS = -g -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/Debug
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/Debug/context-menu
 
@@ -84,9 +84,57 @@ build src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o: CXX_
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o.d
   FLAGS = -g -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/Debug
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl
+
+build src/app/CMakeFiles/FEM-program.dir/Debug/__/mesh/mesh.cpp.o: CXX_COMPILER__FEM-program_unscanned_Debug /home/vladislav/Документы/FEM/FEM$ program/src/mesh/mesh.cpp || cmake_object_order_depends_target_FEM-program_DEBUG
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"Debug\"
+  DEP_FILE = src/app/CMakeFiles/FEM-program.dir/Debug/__/mesh/mesh.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fPIC
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/Debug
+  OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/Debug/__/mesh
+
+build src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/displacement.cpp.o: CXX_COMPILER__FEM-program_unscanned_Debug /home/vladislav/Документы/FEM/FEM$ program/src/elements/displacement/displacement.cpp || cmake_object_order_depends_target_FEM-program_DEBUG
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"Debug\"
+  DEP_FILE = src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/displacement.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fPIC
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/Debug
+  OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement
+
+build src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/load.cpp.o: CXX_COMPILER__FEM-program_unscanned_Debug /home/vladislav/Документы/FEM/FEM$ program/src/elements/load/load.cpp || cmake_object_order_depends_target_FEM-program_DEBUG
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"Debug\"
+  DEP_FILE = src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/load.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fPIC
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/Debug
+  OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load
+
+build src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/plates/plates.cpp.o: CXX_COMPILER__FEM-program_unscanned_Debug /home/vladislav/Документы/FEM/FEM$ program/src/elements/plates/plates.cpp || cmake_object_order_depends_target_FEM-program_DEBUG
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"Debug\"
+  DEP_FILE = src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/plates/plates.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fPIC
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/Debug
+  OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/plates
+
+build src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/element.cpp.o: CXX_COMPILER__FEM-program_unscanned_Debug /home/vladislav/Документы/FEM/FEM$ program/src/elements/element.cpp || cmake_object_order_depends_target_FEM-program_DEBUG
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"Debug\"
+  DEP_FILE = src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/element.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fPIC
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/Debug
+  OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/Debug/__/elements
+
+build src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/femload.cpp.o: CXX_COMPILER__FEM-program_unscanned_Debug /home/vladislav/Документы/FEM/FEM$ program/src/elements/load/femload.cpp || cmake_object_order_depends_target_FEM-program_DEBUG
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"Debug\"
+  DEP_FILE = src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/femload.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fPIC
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/Debug
+  OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load
 
 
 # =============================================================================
@@ -96,9 +144,9 @@ build src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o: CXX_
 #############################################
 # Link the executable src/app/Debug/FEM-program
 
-build src/app/Debug/FEM-program: CXX_EXECUTABLE_LINKER__FEM-program_Debug src/app/CMakeFiles/FEM-program.dir/Debug/FEM-program_autogen/mocs_compilation_Debug.cpp.o src/app/CMakeFiles/FEM-program.dir/Debug/mainwindow.cpp.o src/app/CMakeFiles/FEM-program.dir/Debug/main.cpp.o src/app/CMakeFiles/FEM-program.dir/Debug/context-menu/treeContextMenu.cpp.o src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.4.2 src/graphics/Debug/libopengl.a /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so src/graphics/glfw/src/Debug/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so src/graphics/glad/Debug/libglad.a || src/app/FEM-program_autogen$:Debug src/app/FEM-program_autogen_timestamp_deps$:Debug src/graphics/Debug/libopengl.a src/graphics/glad/Debug/libglad.a src/graphics/glfw/src/Debug/libglfw3.a
+build src/app/Debug/FEM-program: CXX_EXECUTABLE_LINKER__FEM-program_Debug src/app/CMakeFiles/FEM-program.dir/Debug/FEM-program_autogen/mocs_compilation_Debug.cpp.o src/app/CMakeFiles/FEM-program.dir/Debug/mainwindow.cpp.o src/app/CMakeFiles/FEM-program.dir/Debug/main.cpp.o src/app/CMakeFiles/FEM-program.dir/Debug/context-menu/treeContextMenu.cpp.o src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o src/app/CMakeFiles/FEM-program.dir/Debug/__/mesh/mesh.cpp.o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/displacement.cpp.o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/load.cpp.o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/plates/plates.cpp.o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/element.cpp.o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/femload.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.4.2 src/graphics/Debug/libopengl.a /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 src/graphics/glfw/src/Debug/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so src/graphics/glad/Debug/libglad.a || src/app/FEM-program_autogen$:Debug src/app/FEM-program_autogen_timestamp_deps$:Debug src/graphics/Debug/libopengl.a src/graphics/glad/Debug/libglad.a src/graphics/glfw/src/Debug/libglfw3.a
   FLAGS = -g
-  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.4.2  src/graphics/Debug/libopengl.a  /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  src/graphics/glfw/src/Debug/libglfw3.a  /usr/lib/x86_64-linux-gnu/librt.a  -lm  -ldl  src/graphics/glad/Debug/libglad.a
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.4.2  src/graphics/Debug/libopengl.a  /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2  src/graphics/glfw/src/Debug/libglfw3.a  /usr/lib/x86_64-linux-gnu/librt.a  -lm  -ldl  src/graphics/glad/Debug/libglad.a
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/Debug
   POST_BUILD = :
   PRE_LINK = :
@@ -131,7 +179,7 @@ build src/app/FEM-program_autogen/timestamp src/app/FEM-program_autogen/mocs_com
 #############################################
 # Phony custom command for src/app/CMakeFiles/FEM-program_autogen_timestamp_deps-Debug
 
-build src/app/CMakeFiles/FEM-program_autogen_timestamp_deps-Debug | ${cmake_ninja_workdir}src/app/CMakeFiles/FEM-program_autogen_timestamp_deps-Debug: phony /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/qt6/libexec/uic /usr/lib/qt6/libexec/moc /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.4.2 src/graphics/Debug/libopengl.a || src/graphics/Debug/libopengl.a src/graphics/glad/Debug/libglad.a src/graphics/glad/glad_autogen$:Debug src/graphics/glad/glad_autogen_timestamp_deps$:Debug src/graphics/glfw/src/Debug/libglfw3.a src/graphics/glfw/src/glfw_autogen$:Debug src/graphics/glfw/src/glfw_autogen_timestamp_deps$:Debug src/graphics/opengl_autogen$:Debug src/graphics/opengl_autogen_timestamp_deps$:Debug
+build src/app/CMakeFiles/FEM-program_autogen_timestamp_deps-Debug | ${cmake_ninja_workdir}src/app/CMakeFiles/FEM-program_autogen_timestamp_deps-Debug: phony /usr/lib/qt6/libexec/uic /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/qt6/libexec/moc /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.4.2 src/graphics/Debug/libopengl.a || src/graphics/Debug/libopengl.a src/graphics/glad/Debug/libglad.a src/graphics/glad/glad_autogen$:Debug src/graphics/glad/glad_autogen_timestamp_deps$:Debug src/graphics/glfw/src/Debug/libglfw3.a src/graphics/glfw/src/glfw_autogen$:Debug src/graphics/glfw/src/glfw_autogen_timestamp_deps$:Debug src/graphics/opengl_autogen$:Debug src/graphics/opengl_autogen_timestamp_deps$:Debug
 
 
 #############################################
@@ -211,7 +259,7 @@ build src/graphics/opengl_autogen/timestamp src/graphics/opengl_autogen/mocs_com
 #############################################
 # Phony custom command for src/graphics/CMakeFiles/opengl_autogen_timestamp_deps-Debug
 
-build src/graphics/CMakeFiles/opengl_autogen_timestamp_deps-Debug | ${cmake_ninja_workdir}src/graphics/CMakeFiles/opengl_autogen_timestamp_deps-Debug: phony /usr/lib/qt6/libexec/uic /usr/lib/qt6/libexec/moc src/graphics/glfw/src/Debug/libglfw3.a src/graphics/glad/Debug/libglad.a || src/graphics/glad/Debug/libglad.a src/graphics/glad/glad_autogen$:Debug src/graphics/glad/glad_autogen_timestamp_deps$:Debug src/graphics/glfw/src/Debug/libglfw3.a src/graphics/glfw/src/glfw_autogen$:Debug src/graphics/glfw/src/glfw_autogen_timestamp_deps$:Debug
+build src/graphics/CMakeFiles/opengl_autogen_timestamp_deps-Debug | ${cmake_ninja_workdir}src/graphics/CMakeFiles/opengl_autogen_timestamp_deps-Debug: phony /usr/lib/qt6/libexec/uic /usr/lib/qt6/libexec/moc src/graphics/glad/Debug/libglad.a src/graphics/glfw/src/Debug/libglfw3.a || src/graphics/glad/Debug/libglad.a src/graphics/glad/glad_autogen$:Debug src/graphics/glad/glad_autogen_timestamp_deps$:Debug src/graphics/glfw/src/Debug/libglfw3.a src/graphics/glfw/src/glfw_autogen$:Debug src/graphics/glfw/src/glfw_autogen_timestamp_deps$:Debug
 
 
 #############################################

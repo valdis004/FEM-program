@@ -9,7 +9,8 @@ project(FEM-program VERSION 0.1.0 LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets OpenGLWidgets)
+find_package(Qt6 REQUIRED COMPONENTS Widgets OpenGLWidgets Gui)
+find_package(Eigen3 3.4 REQUIRED)
 
 qt_standard_project_setup()
 

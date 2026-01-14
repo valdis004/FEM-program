@@ -27,7 +27,7 @@
 #include <qobject.h>
 
 MainWindow::MainWindow() {
-  setWindowTitle("Пример Docking областей");
+  setWindowTitle("Fem test");
   resize(1000, 600);
   createMenus();
   createToolBar();
