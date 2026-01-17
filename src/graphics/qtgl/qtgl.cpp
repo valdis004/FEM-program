@@ -65,8 +65,8 @@ void Qtgl::wheelEvent(QWheelEvent *pe) {
   if (!isLeftBut)
     return;
 
-  m_xRotate += 180 * (GLfloat)(pe->y() - m_ptPosition.y()) / height();
-  m_yRotate += 180 * (GLfloat)(pe->x() - m_ptPosition.x()) / width();
+  m_xRotate += 180 * (GLfloat)(pe->pos().y() - m_ptPosition.y()) / height();
+  m_yRotate += 180 * (GLfloat)(pe->pos().x() - m_ptPosition.x()) / width();
   update();
 
   m_ptPosition = pe->pos();

@@ -46,13 +46,13 @@ include CMakeFiles/common.ninja
 #############################################
 # Order-only phony target for FEM-program
 
-build cmake_object_order_depends_target_FEM-program_RELWITHDEBINFO: phony || cmake_object_order_depends_target_glad_RELWITHDEBINFO cmake_object_order_depends_target_glfw_RELWITHDEBINFO cmake_object_order_depends_target_opengl_RELWITHDEBINFO src/app/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp src/app/FEM-program_autogen/timestamp src/app/FEM-program_autogen$:RelWithDebInfo src/app/FEM-program_autogen_timestamp_deps$:RelWithDebInfo
+build cmake_object_order_depends_target_FEM-program_RELWITHDEBINFO: phony || src/app/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp src/app/FEM-program_autogen/timestamp src/app/FEM-program_autogen$:RelWithDebInfo src/app/FEM-program_autogen_timestamp_deps$:RelWithDebInfo
 
 build src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp.o: CXX_COMPILER__FEM-program_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/build/Custom$ configure$ preset/src/app/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp || cmake_object_order_depends_target_FEM-program_RELWITHDEBINFO
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/FEM-program_autogen
 
@@ -60,7 +60,7 @@ build src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/mainwindow.cpp.o: CXX_CO
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/mainwindow.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo
 
@@ -68,7 +68,7 @@ build src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/main.cpp.o: CXX_COMPILER
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/main.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo
 
@@ -76,7 +76,7 @@ build src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/context-menu/treeContext
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/context-menu/treeContextMenu.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/context-menu
 
@@ -84,7 +84,7 @@ build src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/graphics/qtgl/qtgl.cp
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/graphics/qtgl/qtgl.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/graphics/qtgl
 
@@ -92,7 +92,7 @@ build src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/mesh/mesh.cpp.o: CXX_
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/mesh/mesh.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/mesh
 
@@ -100,7 +100,7 @@ build src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement/displacement.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement
 
@@ -108,7 +108,7 @@ build src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/load/load.cp
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/load/load.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/load
 
@@ -116,7 +116,7 @@ build src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/plates/plate
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/plates/plates.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/plates
 
@@ -124,7 +124,7 @@ build src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/element.cpp.
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/element.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements
 
@@ -132,7 +132,7 @@ build src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/load/femload
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/load/femload.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/load
 
@@ -140,7 +140,7 @@ build src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement/femdisplacement.cpp.o.d
   FLAGS = -O2 -g -DNDEBUG -std=gnu++23 -fPIC
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
+  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo
   OBJECT_FILE_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement
 
@@ -152,9 +152,9 @@ build src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement
 #############################################
 # Link the executable src/app/RelWithDebInfo/FEM-program
 
-build src/app/RelWithDebInfo/FEM-program: CXX_EXECUTABLE_LINKER__FEM-program_RelWithDebInfo src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/mainwindow.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/main.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/context-menu/treeContextMenu.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/graphics/qtgl/qtgl.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/mesh/mesh.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement/displacement.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/load/load.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/plates/plates.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/element.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/load/femload.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement/femdisplacement.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.4.2 src/graphics/RelWithDebInfo/libopengl.a /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 src/graphics/glfw/src/RelWithDebInfo/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so src/graphics/glad/RelWithDebInfo/libglad.a || src/app/FEM-program_autogen$:RelWithDebInfo src/app/FEM-program_autogen_timestamp_deps$:RelWithDebInfo src/graphics/RelWithDebInfo/libopengl.a src/graphics/glad/RelWithDebInfo/libglad.a src/graphics/glfw/src/RelWithDebInfo/libglfw3.a
+build src/app/RelWithDebInfo/FEM-program: CXX_EXECUTABLE_LINKER__FEM-program_RelWithDebInfo src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/mainwindow.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/main.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/context-menu/treeContextMenu.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/graphics/qtgl/qtgl.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/mesh/mesh.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement/displacement.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/load/load.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/plates/plates.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/element.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/load/femload.cpp.o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement/femdisplacement.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 || src/app/FEM-program_autogen$:RelWithDebInfo src/app/FEM-program_autogen_timestamp_deps$:RelWithDebInfo
   FLAGS = -O2 -g -DNDEBUG
-  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.4.2  src/graphics/RelWithDebInfo/libopengl.a  /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2  src/graphics/glfw/src/RelWithDebInfo/libglfw3.a  /usr/lib/x86_64-linux-gnu/librt.a  -lm  -ldl  src/graphics/glad/RelWithDebInfo/libglad.a
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
   OBJECT_DIR = src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo
   POST_BUILD = :
   PRE_LINK = :
@@ -165,7 +165,7 @@ build src/app/RelWithDebInfo/FEM-program: CXX_EXECUTABLE_LINKER__FEM-program_Rel
 #############################################
 # Utility command for FEM-program_autogen_timestamp_deps
 
-build src/app/FEM-program_autogen_timestamp_deps$:RelWithDebInfo: phony src/app/CMakeFiles/FEM-program_autogen_timestamp_deps-RelWithDebInfo src/graphics/RelWithDebInfo/libopengl.a
+build src/app/FEM-program_autogen_timestamp_deps$:RelWithDebInfo: phony src/app/CMakeFiles/FEM-program_autogen_timestamp_deps-RelWithDebInfo
 
 
 #############################################
@@ -177,7 +177,7 @@ build src/app/FEM-program_autogen$:RelWithDebInfo: phony src/app/CMakeFiles/FEM-
 #############################################
 # Custom command for src/app/FEM-program_autogen/timestamp
 
-build src/app/FEM-program_autogen/timestamp src/app/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp | ${cmake_ninja_workdir}src/app/FEM-program_autogen/timestamp ${cmake_ninja_workdir}src/app/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp: CUSTOM_COMMAND /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic || src/app/FEM-program_autogen_timestamp_deps$:RelWithDebInfo src/graphics/RelWithDebInfo/libopengl.a src/graphics/glad/RelWithDebInfo/libglad.a src/graphics/glad/glad_autogen$:RelWithDebInfo src/graphics/glad/glad_autogen_timestamp_deps$:RelWithDebInfo src/graphics/glfw/src/RelWithDebInfo/libglfw3.a src/graphics/glfw/src/glfw_autogen$:RelWithDebInfo src/graphics/glfw/src/glfw_autogen_timestamp_deps$:RelWithDebInfo src/graphics/opengl_autogen$:RelWithDebInfo src/graphics/opengl_autogen_timestamp_deps$:RelWithDebInfo
+build src/app/FEM-program_autogen/timestamp src/app/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp | ${cmake_ninja_workdir}src/app/FEM-program_autogen/timestamp ${cmake_ninja_workdir}src/app/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp: CUSTOM_COMMAND /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic || src/app/FEM-program_autogen_timestamp_deps$:RelWithDebInfo
   COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app" && /usr/bin/cmake -E cmake_autogen "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/CMakeFiles/FEM-program_autogen.dir/AutogenInfo.json" RelWithDebInfo && /usr/bin/cmake -E touch "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp" && /usr/bin/cmake -E cmake_transform_depfile "Ninja Multi-Config" gccdepfile "/home/vladislav/Документы/FEM/FEM program" "/home/vladislav/Документы/FEM/FEM program/src/app" "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset" "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app" "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/deps" "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/CMakeFiles/d/46db11de9092f70b121e0f521873c772a9e8ad2070f035d3cdff4af664a72eea.d"
   DESC = Automatic MOC and UIC for target FEM-program
   depfile = /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/CMakeFiles/d/46db11de9092f70b121e0f521873c772a9e8ad2070f035d3cdff4af664a72eea.d
@@ -187,652 +187,13 @@ build src/app/FEM-program_autogen/timestamp src/app/FEM-program_autogen/mocs_com
 #############################################
 # Phony custom command for src/app/CMakeFiles/FEM-program_autogen_timestamp_deps-RelWithDebInfo
 
-build src/app/CMakeFiles/FEM-program_autogen_timestamp_deps-RelWithDebInfo | ${cmake_ninja_workdir}src/app/CMakeFiles/FEM-program_autogen_timestamp_deps-RelWithDebInfo: phony /usr/lib/qt6/libexec/uic /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/qt6/libexec/moc /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.4.2 src/graphics/RelWithDebInfo/libopengl.a || src/graphics/RelWithDebInfo/libopengl.a src/graphics/glad/RelWithDebInfo/libglad.a src/graphics/glad/glad_autogen$:RelWithDebInfo src/graphics/glad/glad_autogen_timestamp_deps$:RelWithDebInfo src/graphics/glfw/src/RelWithDebInfo/libglfw3.a src/graphics/glfw/src/glfw_autogen$:RelWithDebInfo src/graphics/glfw/src/glfw_autogen_timestamp_deps$:RelWithDebInfo src/graphics/opengl_autogen$:RelWithDebInfo src/graphics/opengl_autogen_timestamp_deps$:RelWithDebInfo
+build src/app/CMakeFiles/FEM-program_autogen_timestamp_deps-RelWithDebInfo | ${cmake_ninja_workdir}src/app/CMakeFiles/FEM-program_autogen_timestamp_deps-RelWithDebInfo: phony /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.4.2
 
 
 #############################################
 # Phony custom command for src/app/CMakeFiles/FEM-program_autogen-RelWithDebInfo
 
-build src/app/CMakeFiles/FEM-program_autogen-RelWithDebInfo | ${cmake_ninja_workdir}src/app/CMakeFiles/FEM-program_autogen-RelWithDebInfo: phony src/app/FEM-program_autogen/timestamp || src/app/FEM-program_autogen_timestamp_deps$:RelWithDebInfo src/graphics/RelWithDebInfo/libopengl.a src/graphics/glad/RelWithDebInfo/libglad.a src/graphics/glad/glad_autogen$:RelWithDebInfo src/graphics/glad/glad_autogen_timestamp_deps$:RelWithDebInfo src/graphics/glfw/src/RelWithDebInfo/libglfw3.a src/graphics/glfw/src/glfw_autogen$:RelWithDebInfo src/graphics/glfw/src/glfw_autogen_timestamp_deps$:RelWithDebInfo src/graphics/opengl_autogen$:RelWithDebInfo src/graphics/opengl_autogen_timestamp_deps$:RelWithDebInfo
-
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# /home/vladislav/Документы/FEM/FEM program/CMakeLists.txt
-# =============================================================================
-
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target opengl
-
-
-#############################################
-# Order-only phony target for opengl
-
-build cmake_object_order_depends_target_opengl_RELWITHDEBINFO: phony || cmake_object_order_depends_target_glad_RELWITHDEBINFO cmake_object_order_depends_target_glfw_RELWITHDEBINFO src/graphics/opengl_autogen/mocs_compilation_RelWithDebInfo.cpp src/graphics/opengl_autogen/timestamp src/graphics/opengl_autogen$:RelWithDebInfo src/graphics/opengl_autogen_timestamp_deps$:RelWithDebInfo
-
-build src/graphics/CMakeFiles/opengl.dir/RelWithDebInfo/opengl_autogen/mocs_compilation_RelWithDebInfo.cpp.o: CXX_COMPILER__opengl_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/build/Custom$ configure$ preset/src/graphics/opengl_autogen/mocs_compilation_RelWithDebInfo.cpp || cmake_object_order_depends_target_opengl_RELWITHDEBINFO
-  DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/CMakeFiles/opengl.dir/RelWithDebInfo/opengl_autogen/mocs_compilation_RelWithDebInfo.cpp.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=gnu++23
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/include_RelWithDebInfo" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glad/include"
-  OBJECT_DIR = src/graphics/CMakeFiles/opengl.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/CMakeFiles/opengl.dir/RelWithDebInfo/opengl_autogen
-
-build src/graphics/CMakeFiles/opengl.dir/RelWithDebInfo/src/glfw.cpp.o: CXX_COMPILER__opengl_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/src/graphics/src/glfw.cpp || cmake_object_order_depends_target_opengl_RELWITHDEBINFO
-  DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/CMakeFiles/opengl.dir/RelWithDebInfo/src/glfw.cpp.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=gnu++23
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/include_RelWithDebInfo" -I"/home/vladislav/Документы/FEM/FEM program/src/graphics/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glad/include"
-  OBJECT_DIR = src/graphics/CMakeFiles/opengl.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/CMakeFiles/opengl.dir/RelWithDebInfo/src
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target opengl
-
-
-#############################################
-# Link the static library src/graphics/RelWithDebInfo/libopengl.a
-
-build src/graphics/RelWithDebInfo/libopengl.a: CXX_STATIC_LIBRARY_LINKER__opengl_RelWithDebInfo src/graphics/CMakeFiles/opengl.dir/RelWithDebInfo/opengl_autogen/mocs_compilation_RelWithDebInfo.cpp.o src/graphics/CMakeFiles/opengl.dir/RelWithDebInfo/src/glfw.cpp.o || src/graphics/glad/RelWithDebInfo/libglad.a src/graphics/glfw/src/RelWithDebInfo/libglfw3.a src/graphics/opengl_autogen$:RelWithDebInfo src/graphics/opengl_autogen_timestamp_deps$:RelWithDebInfo
-  LANGUAGE_COMPILE_FLAGS = -O2 -g -DNDEBUG
-  OBJECT_DIR = src/graphics/CMakeFiles/opengl.dir/RelWithDebInfo
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = src/graphics/RelWithDebInfo/libopengl.a
-  TARGET_PDB = opengl.a.dbg
-
-
-#############################################
-# Utility command for opengl_autogen_timestamp_deps
-
-build src/graphics/opengl_autogen_timestamp_deps$:RelWithDebInfo: phony src/graphics/CMakeFiles/opengl_autogen_timestamp_deps-RelWithDebInfo src/graphics/glad/RelWithDebInfo/libglad.a src/graphics/glfw/src/RelWithDebInfo/libglfw3.a
-
-
-#############################################
-# Utility command for opengl_autogen
-
-build src/graphics/opengl_autogen$:RelWithDebInfo: phony src/graphics/CMakeFiles/opengl_autogen-RelWithDebInfo src/graphics/opengl_autogen/timestamp src/graphics/opengl_autogen/mocs_compilation_RelWithDebInfo.cpp src/graphics/opengl_autogen_timestamp_deps$:RelWithDebInfo
-
-
-#############################################
-# Custom command for src/graphics/opengl_autogen/timestamp
-
-build src/graphics/opengl_autogen/timestamp src/graphics/opengl_autogen/mocs_compilation_RelWithDebInfo.cpp | ${cmake_ninja_workdir}src/graphics/opengl_autogen/timestamp ${cmake_ninja_workdir}src/graphics/opengl_autogen/mocs_compilation_RelWithDebInfo.cpp: CUSTOM_COMMAND /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic || src/graphics/glad/RelWithDebInfo/libglad.a src/graphics/glad/glad_autogen$:RelWithDebInfo src/graphics/glad/glad_autogen_timestamp_deps$:RelWithDebInfo src/graphics/glfw/src/RelWithDebInfo/libglfw3.a src/graphics/glfw/src/glfw_autogen$:RelWithDebInfo src/graphics/glfw/src/glfw_autogen_timestamp_deps$:RelWithDebInfo src/graphics/opengl_autogen_timestamp_deps$:RelWithDebInfo
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics" && /usr/bin/cmake -E cmake_autogen "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/CMakeFiles/opengl_autogen.dir/AutogenInfo.json" RelWithDebInfo && /usr/bin/cmake -E touch "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/timestamp" && /usr/bin/cmake -E cmake_transform_depfile "Ninja Multi-Config" gccdepfile "/home/vladislav/Документы/FEM/FEM program" "/home/vladislav/Документы/FEM/FEM program/src/graphics" "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset" "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics" "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/deps" "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/CMakeFiles/d/0fe20c23a2eee7abf40892870f893c03d88577abd1cbec8f4238ed0b1be14e60.d"
-  DESC = Automatic MOC and UIC for target opengl
-  depfile = /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/CMakeFiles/d/0fe20c23a2eee7abf40892870f893c03d88577abd1cbec8f4238ed0b1be14e60.d
-  restat = 1
-
-
-#############################################
-# Phony custom command for src/graphics/CMakeFiles/opengl_autogen_timestamp_deps-RelWithDebInfo
-
-build src/graphics/CMakeFiles/opengl_autogen_timestamp_deps-RelWithDebInfo | ${cmake_ninja_workdir}src/graphics/CMakeFiles/opengl_autogen_timestamp_deps-RelWithDebInfo: phony /usr/lib/qt6/libexec/uic /usr/lib/qt6/libexec/moc src/graphics/glfw/src/RelWithDebInfo/libglfw3.a src/graphics/glad/RelWithDebInfo/libglad.a || src/graphics/glad/RelWithDebInfo/libglad.a src/graphics/glad/glad_autogen$:RelWithDebInfo src/graphics/glad/glad_autogen_timestamp_deps$:RelWithDebInfo src/graphics/glfw/src/RelWithDebInfo/libglfw3.a src/graphics/glfw/src/glfw_autogen$:RelWithDebInfo src/graphics/glfw/src/glfw_autogen_timestamp_deps$:RelWithDebInfo
-
-
-#############################################
-# Phony custom command for src/graphics/CMakeFiles/opengl_autogen-RelWithDebInfo
-
-build src/graphics/CMakeFiles/opengl_autogen-RelWithDebInfo | ${cmake_ninja_workdir}src/graphics/CMakeFiles/opengl_autogen-RelWithDebInfo: phony src/graphics/opengl_autogen/timestamp || src/graphics/glad/RelWithDebInfo/libglad.a src/graphics/glad/glad_autogen$:RelWithDebInfo src/graphics/glad/glad_autogen_timestamp_deps$:RelWithDebInfo src/graphics/glfw/src/RelWithDebInfo/libglfw3.a src/graphics/glfw/src/glfw_autogen$:RelWithDebInfo src/graphics/glfw/src/glfw_autogen_timestamp_deps$:RelWithDebInfo src/graphics/opengl_autogen_timestamp_deps$:RelWithDebInfo
-
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# /home/vladislav/Документы/FEM/FEM program/src/graphics/CMakeLists.txt
-# =============================================================================
-
-
-#############################################
-# Utility command for uninstall
-
-build src/graphics/glfw/uninstall$:RelWithDebInfo: phony src/graphics/glfw/CMakeFiles/uninstall-RelWithDebInfo
-
-
-#############################################
-# Custom command for src/graphics/glfw/CMakeFiles/uninstall-RelWithDebInfo
-
-build src/graphics/glfw/CMakeFiles/uninstall-RelWithDebInfo | ${cmake_ninja_workdir}src/graphics/glfw/CMakeFiles/uninstall-RelWithDebInfo: CUSTOM_COMMAND
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw" && /usr/bin/cmake -P /home/vladislav/Документы/FEM/FEM\ program/build/Custom\ configure\ preset/src/graphics/glfw/cmake_uninstall.cmake
-
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# /home/vladislav/Документы/FEM/FEM program/external/glfw/CMakeLists.txt
-# =============================================================================
-
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target glfw
-
-
-#############################################
-# Order-only phony target for glfw
-
-build cmake_object_order_depends_target_glfw_RELWITHDEBINFO: phony || src/graphics/glfw/src/fractional-scale-v1-client-protocol-code.h src/graphics/glfw/src/fractional-scale-v1-client-protocol.h src/graphics/glfw/src/glfw_autogen/mocs_compilation_RelWithDebInfo.cpp src/graphics/glfw/src/glfw_autogen/timestamp src/graphics/glfw/src/glfw_autogen$:RelWithDebInfo src/graphics/glfw/src/glfw_autogen_timestamp_deps$:RelWithDebInfo src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol-code.h src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol.h src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol-code.h src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol.h src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol-code.h src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol.h src/graphics/glfw/src/viewporter-client-protocol-code.h src/graphics/glfw/src/viewporter-client-protocol.h src/graphics/glfw/src/wayland-client-protocol-code.h src/graphics/glfw/src/wayland-client-protocol.h src/graphics/glfw/src/xdg-activation-v1-client-protocol-code.h src/graphics/glfw/src/xdg-activation-v1-client-protocol.h src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol-code.h src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol.h src/graphics/glfw/src/xdg-shell-client-protocol-code.h src/graphics/glfw/src/xdg-shell-client-protocol.h
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/glfw_autogen/mocs_compilation_RelWithDebInfo.cpp.o: CXX_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/build/Custom$ configure$ preset/src/graphics/glfw/src/glfw_autogen/mocs_compilation_RelWithDebInfo.cpp || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/glfw_autogen/mocs_compilation_RelWithDebInfo.cpp.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=gnu++23 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/glfw_autogen
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/context.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/context.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/context.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/init.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/init.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/init.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/input.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/input.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/input.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/monitor.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/monitor.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/monitor.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/platform.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/platform.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/platform.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/vulkan.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/vulkan.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/window.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/window.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/window.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/egl_context.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/egl_context.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/osmesa_context.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/osmesa_context.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_init.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/null_init.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_init.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_monitor.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/null_monitor.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_monitor.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_window.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/null_window.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_window.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_joystick.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/null_joystick.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_joystick.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_module.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/posix_module.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_module.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_time.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/posix_time.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_time.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_thread.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/posix_thread.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_thread.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/x11_init.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/x11_init.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/x11_init.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/x11_monitor.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/x11_monitor.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/x11_monitor.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/x11_window.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/x11_window.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/x11_window.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/xkb_unicode.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/xkb_unicode.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/xkb_unicode.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/glx_context.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/glx_context.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/glx_context.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/wl_init.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/wl_init.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/wl_init.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/wl_monitor.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/wl_monitor.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/wl_monitor.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/wl_window.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/wl_window.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/wl_window.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/linux_joystick.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/linux_joystick.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/linux_joystick.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_poll.c.o: C_COMPILER__glfw_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glfw/src/posix_poll.c || cmake_object_order_depends_target_glfw_RELWITHDEBINFO
-  DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_poll.c.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=c99 -fPIC -Wall
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/include" -I"/home/vladislav/Документы/FEM/FEM program/external/glfw/src" -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" -isystem "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo"
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target glfw
-
-
-#############################################
-# Link the static library src/graphics/glfw/src/RelWithDebInfo/libglfw3.a
-
-build src/graphics/glfw/src/RelWithDebInfo/libglfw3.a: CXX_STATIC_LIBRARY_LINKER__glfw_RelWithDebInfo src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/glfw_autogen/mocs_compilation_RelWithDebInfo.cpp.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/context.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/init.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/input.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/monitor.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/platform.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/vulkan.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/window.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/egl_context.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/osmesa_context.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_init.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_monitor.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_window.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_joystick.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_module.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_time.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_thread.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/x11_init.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/x11_monitor.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/x11_window.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/xkb_unicode.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/glx_context.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/wl_init.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/wl_monitor.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/wl_window.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/linux_joystick.c.o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_poll.c.o || src/graphics/glfw/src/glfw_autogen$:RelWithDebInfo src/graphics/glfw/src/glfw_autogen_timestamp_deps$:RelWithDebInfo
-  LANGUAGE_COMPILE_FLAGS = -O2 -g -DNDEBUG
-  OBJECT_DIR = src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = src/graphics/glfw/src/RelWithDebInfo/libglfw3.a
-  TARGET_PDB = glfw3.a.dbg
-
-
-#############################################
-# Utility command for update_mappings
-
-build src/graphics/glfw/src/update_mappings$:RelWithDebInfo: phony src/graphics/glfw/src/CMakeFiles/update_mappings-RelWithDebInfo
-
-
-#############################################
-# Utility command for glfw_autogen_timestamp_deps
-
-build src/graphics/glfw/src/glfw_autogen_timestamp_deps$:RelWithDebInfo: phony src/graphics/glfw/src/CMakeFiles/glfw_autogen_timestamp_deps-RelWithDebInfo src/graphics/glfw/src/fractional-scale-v1-client-protocol-code.h src/graphics/glfw/src/fractional-scale-v1-client-protocol.h src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol-code.h src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol.h src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol-code.h src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol.h src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol-code.h src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol.h src/graphics/glfw/src/viewporter-client-protocol-code.h src/graphics/glfw/src/viewporter-client-protocol.h src/graphics/glfw/src/wayland-client-protocol-code.h src/graphics/glfw/src/wayland-client-protocol.h src/graphics/glfw/src/xdg-activation-v1-client-protocol-code.h src/graphics/glfw/src/xdg-activation-v1-client-protocol.h src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol-code.h src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol.h src/graphics/glfw/src/xdg-shell-client-protocol-code.h src/graphics/glfw/src/xdg-shell-client-protocol.h
-
-
-#############################################
-# Utility command for glfw_autogen
-
-build src/graphics/glfw/src/glfw_autogen$:RelWithDebInfo: phony src/graphics/glfw/src/CMakeFiles/glfw_autogen-RelWithDebInfo src/graphics/glfw/src/glfw_autogen/timestamp src/graphics/glfw/src/glfw_autogen/mocs_compilation_RelWithDebInfo.cpp src/graphics/glfw/src/glfw_autogen_timestamp_deps$:RelWithDebInfo
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/wayland-client-protocol.h
-
-build src/graphics/glfw/src/wayland-client-protocol.h | ${cmake_ninja_workdir}src/graphics/glfw/src/wayland-client-protocol.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/wayland.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner client-header "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/wayland.xml" wayland-client-protocol.h
-  DESC = Generating wayland-client-protocol.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/wayland-client-protocol-code.h
-
-build src/graphics/glfw/src/wayland-client-protocol-code.h | ${cmake_ninja_workdir}src/graphics/glfw/src/wayland-client-protocol-code.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/wayland.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner private-code "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/wayland.xml" wayland-client-protocol-code.h
-  DESC = Generating wayland-client-protocol-code.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/viewporter-client-protocol.h
-
-build src/graphics/glfw/src/viewporter-client-protocol.h | ${cmake_ninja_workdir}src/graphics/glfw/src/viewporter-client-protocol.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/viewporter.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner client-header "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/viewporter.xml" viewporter-client-protocol.h
-  DESC = Generating viewporter-client-protocol.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/viewporter-client-protocol-code.h
-
-build src/graphics/glfw/src/viewporter-client-protocol-code.h | ${cmake_ninja_workdir}src/graphics/glfw/src/viewporter-client-protocol-code.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/viewporter.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner private-code "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/viewporter.xml" viewporter-client-protocol-code.h
-  DESC = Generating viewporter-client-protocol-code.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/xdg-shell-client-protocol.h
-
-build src/graphics/glfw/src/xdg-shell-client-protocol.h | ${cmake_ninja_workdir}src/graphics/glfw/src/xdg-shell-client-protocol.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/xdg-shell.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner client-header "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/xdg-shell.xml" xdg-shell-client-protocol.h
-  DESC = Generating xdg-shell-client-protocol.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/xdg-shell-client-protocol-code.h
-
-build src/graphics/glfw/src/xdg-shell-client-protocol-code.h | ${cmake_ninja_workdir}src/graphics/glfw/src/xdg-shell-client-protocol-code.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/xdg-shell.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner private-code "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/xdg-shell.xml" xdg-shell-client-protocol-code.h
-  DESC = Generating xdg-shell-client-protocol-code.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol.h
-
-build src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol.h | ${cmake_ninja_workdir}src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/idle-inhibit-unstable-v1.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner client-header "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/idle-inhibit-unstable-v1.xml" idle-inhibit-unstable-v1-client-protocol.h
-  DESC = Generating idle-inhibit-unstable-v1-client-protocol.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol-code.h
-
-build src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol-code.h | ${cmake_ninja_workdir}src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol-code.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/idle-inhibit-unstable-v1.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner private-code "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/idle-inhibit-unstable-v1.xml" idle-inhibit-unstable-v1-client-protocol-code.h
-  DESC = Generating idle-inhibit-unstable-v1-client-protocol-code.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol.h
-
-build src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol.h | ${cmake_ninja_workdir}src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/pointer-constraints-unstable-v1.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner client-header "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/pointer-constraints-unstable-v1.xml" pointer-constraints-unstable-v1-client-protocol.h
-  DESC = Generating pointer-constraints-unstable-v1-client-protocol.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol-code.h
-
-build src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol-code.h | ${cmake_ninja_workdir}src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol-code.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/pointer-constraints-unstable-v1.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner private-code "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/pointer-constraints-unstable-v1.xml" pointer-constraints-unstable-v1-client-protocol-code.h
-  DESC = Generating pointer-constraints-unstable-v1-client-protocol-code.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol.h
-
-build src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol.h | ${cmake_ninja_workdir}src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/relative-pointer-unstable-v1.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner client-header "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/relative-pointer-unstable-v1.xml" relative-pointer-unstable-v1-client-protocol.h
-  DESC = Generating relative-pointer-unstable-v1-client-protocol.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol-code.h
-
-build src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol-code.h | ${cmake_ninja_workdir}src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol-code.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/relative-pointer-unstable-v1.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner private-code "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/relative-pointer-unstable-v1.xml" relative-pointer-unstable-v1-client-protocol-code.h
-  DESC = Generating relative-pointer-unstable-v1-client-protocol-code.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/fractional-scale-v1-client-protocol.h
-
-build src/graphics/glfw/src/fractional-scale-v1-client-protocol.h | ${cmake_ninja_workdir}src/graphics/glfw/src/fractional-scale-v1-client-protocol.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/fractional-scale-v1.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner client-header "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/fractional-scale-v1.xml" fractional-scale-v1-client-protocol.h
-  DESC = Generating fractional-scale-v1-client-protocol.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/fractional-scale-v1-client-protocol-code.h
-
-build src/graphics/glfw/src/fractional-scale-v1-client-protocol-code.h | ${cmake_ninja_workdir}src/graphics/glfw/src/fractional-scale-v1-client-protocol-code.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/fractional-scale-v1.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner private-code "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/fractional-scale-v1.xml" fractional-scale-v1-client-protocol-code.h
-  DESC = Generating fractional-scale-v1-client-protocol-code.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/xdg-activation-v1-client-protocol.h
-
-build src/graphics/glfw/src/xdg-activation-v1-client-protocol.h | ${cmake_ninja_workdir}src/graphics/glfw/src/xdg-activation-v1-client-protocol.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/xdg-activation-v1.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner client-header "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/xdg-activation-v1.xml" xdg-activation-v1-client-protocol.h
-  DESC = Generating xdg-activation-v1-client-protocol.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/xdg-activation-v1-client-protocol-code.h
-
-build src/graphics/glfw/src/xdg-activation-v1-client-protocol-code.h | ${cmake_ninja_workdir}src/graphics/glfw/src/xdg-activation-v1-client-protocol-code.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/xdg-activation-v1.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner private-code "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/xdg-activation-v1.xml" xdg-activation-v1-client-protocol-code.h
-  DESC = Generating xdg-activation-v1-client-protocol-code.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol.h
-
-build src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol.h | ${cmake_ninja_workdir}src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/xdg-decoration-unstable-v1.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner client-header "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/xdg-decoration-unstable-v1.xml" xdg-decoration-unstable-v1-client-protocol.h
-  DESC = Generating xdg-decoration-unstable-v1-client-protocol.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol-code.h
-
-build src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol-code.h | ${cmake_ninja_workdir}src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol-code.h: CUSTOM_COMMAND /home/vladislav/Документы/FEM/FEM$ program/external/glfw/deps/wayland/xdg-decoration-unstable-v1.xml
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/wayland-scanner private-code "/home/vladislav/Документы/FEM/FEM program/external/glfw/deps/wayland/xdg-decoration-unstable-v1.xml" xdg-decoration-unstable-v1-client-protocol-code.h
-  DESC = Generating xdg-decoration-unstable-v1-client-protocol-code.h
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/glfw_autogen/timestamp
-
-build src/graphics/glfw/src/glfw_autogen/timestamp src/graphics/glfw/src/glfw_autogen/mocs_compilation_RelWithDebInfo.cpp | ${cmake_ninja_workdir}src/graphics/glfw/src/glfw_autogen/timestamp ${cmake_ninja_workdir}src/graphics/glfw/src/glfw_autogen/mocs_compilation_RelWithDebInfo.cpp: CUSTOM_COMMAND /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic || src/graphics/glfw/src/glfw_autogen_timestamp_deps$:RelWithDebInfo
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" && /usr/bin/cmake -E cmake_autogen "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/CMakeFiles/glfw_autogen.dir/AutogenInfo.json" RelWithDebInfo && /usr/bin/cmake -E touch "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/timestamp" && /usr/bin/cmake -E cmake_transform_depfile "Ninja Multi-Config" gccdepfile "/home/vladislav/Документы/FEM/FEM program" "/home/vladislav/Документы/FEM/FEM program/external/glfw/src" "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset" "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src" "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/deps" "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/CMakeFiles/d/dd08d74f423295a05f2e7a1bd692c1c6fef02299bda5448cc615a2c6d77c6aaa.d"
-  DESC = Automatic MOC and UIC for target glfw
-  depfile = /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/CMakeFiles/d/dd08d74f423295a05f2e7a1bd692c1c6fef02299bda5448cc615a2c6d77c6aaa.d
-  restat = 1
-
-
-#############################################
-# Custom command for src/graphics/glfw/src/CMakeFiles/update_mappings-RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/update_mappings-RelWithDebInfo | ${cmake_ninja_workdir}src/graphics/glfw/src/CMakeFiles/update_mappings-RelWithDebInfo: CUSTOM_COMMAND
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/external/glfw/src" && /usr/bin/cmake -P "/home/vladislav/Документы/FEM/FEM program/external/glfw/CMake/GenerateMappings.cmake" mappings.h.in mappings.h
-  DESC = Updating gamepad mappings from upstream repository
-
-
-#############################################
-# Phony custom command for src/graphics/glfw/src/CMakeFiles/glfw_autogen_timestamp_deps-RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw_autogen_timestamp_deps-RelWithDebInfo | ${cmake_ninja_workdir}src/graphics/glfw/src/CMakeFiles/glfw_autogen_timestamp_deps-RelWithDebInfo: phony src/graphics/glfw/src/fractional-scale-v1-client-protocol-code.h src/graphics/glfw/src/fractional-scale-v1-client-protocol.h src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol-code.h src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol.h src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol-code.h src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol.h src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol-code.h src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol.h src/graphics/glfw/src/viewporter-client-protocol-code.h src/graphics/glfw/src/viewporter-client-protocol.h src/graphics/glfw/src/wayland-client-protocol-code.h src/graphics/glfw/src/wayland-client-protocol.h src/graphics/glfw/src/xdg-activation-v1-client-protocol-code.h src/graphics/glfw/src/xdg-activation-v1-client-protocol.h src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol-code.h src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol.h src/graphics/glfw/src/xdg-shell-client-protocol-code.h src/graphics/glfw/src/xdg-shell-client-protocol.h /usr/lib/qt6/libexec/uic /usr/lib/qt6/libexec/moc
-
-
-#############################################
-# Phony custom command for src/graphics/glfw/src/CMakeFiles/glfw_autogen-RelWithDebInfo
-
-build src/graphics/glfw/src/CMakeFiles/glfw_autogen-RelWithDebInfo | ${cmake_ninja_workdir}src/graphics/glfw/src/CMakeFiles/glfw_autogen-RelWithDebInfo: phony src/graphics/glfw/src/glfw_autogen/timestamp || src/graphics/glfw/src/glfw_autogen_timestamp_deps$:RelWithDebInfo
-
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# /home/vladislav/Документы/FEM/FEM program/external/glfw/CMakeLists.txt
-# =============================================================================
-
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# /home/vladislav/Документы/FEM/FEM program/src/graphics/CMakeLists.txt
-# =============================================================================
-
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target glad
-
-
-#############################################
-# Order-only phony target for glad
-
-build cmake_object_order_depends_target_glad_RELWITHDEBINFO: phony || src/graphics/glad/glad_autogen/mocs_compilation_RelWithDebInfo.cpp src/graphics/glad/glad_autogen/timestamp src/graphics/glad/glad_autogen$:RelWithDebInfo src/graphics/glad/glad_autogen_timestamp_deps$:RelWithDebInfo
-
-build src/graphics/glad/CMakeFiles/glad.dir/RelWithDebInfo/glad_autogen/mocs_compilation_RelWithDebInfo.cpp.o: CXX_COMPILER__glad_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/build/Custom$ configure$ preset/src/graphics/glad/glad_autogen/mocs_compilation_RelWithDebInfo.cpp || cmake_object_order_depends_target_glad_RELWITHDEBINFO
-  DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glad/CMakeFiles/glad.dir/RelWithDebInfo/glad_autogen/mocs_compilation_RelWithDebInfo.cpp.o.d
-  FLAGS = -O2 -g -DNDEBUG -std=gnu++23
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/include_RelWithDebInfo" -I"/home/vladislav/Документы/FEM/FEM program/external/glad/include"
-  OBJECT_DIR = src/graphics/glad/CMakeFiles/glad.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glad/CMakeFiles/glad.dir/RelWithDebInfo/glad_autogen
-
-build src/graphics/glad/CMakeFiles/glad.dir/RelWithDebInfo/src/glad.c.o: C_COMPILER__glad_unscanned_RelWithDebInfo /home/vladislav/Документы/FEM/FEM$ program/external/glad/src/glad.c || cmake_object_order_depends_target_glad_RELWITHDEBINFO
-  DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
-  DEP_FILE = src/graphics/glad/CMakeFiles/glad.dir/RelWithDebInfo/src/glad.c.o.d
-  FLAGS = -O2 -g -DNDEBUG
-  INCLUDES = -I"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/include_RelWithDebInfo" -I"/home/vladislav/Документы/FEM/FEM program/external/glad/include"
-  OBJECT_DIR = src/graphics/glad/CMakeFiles/glad.dir/RelWithDebInfo
-  OBJECT_FILE_DIR = src/graphics/glad/CMakeFiles/glad.dir/RelWithDebInfo/src
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target glad
-
-
-#############################################
-# Link the static library src/graphics/glad/RelWithDebInfo/libglad.a
-
-build src/graphics/glad/RelWithDebInfo/libglad.a: CXX_STATIC_LIBRARY_LINKER__glad_RelWithDebInfo src/graphics/glad/CMakeFiles/glad.dir/RelWithDebInfo/glad_autogen/mocs_compilation_RelWithDebInfo.cpp.o src/graphics/glad/CMakeFiles/glad.dir/RelWithDebInfo/src/glad.c.o || src/graphics/glad/glad_autogen$:RelWithDebInfo src/graphics/glad/glad_autogen_timestamp_deps$:RelWithDebInfo
-  LANGUAGE_COMPILE_FLAGS = -O2 -g -DNDEBUG
-  OBJECT_DIR = src/graphics/glad/CMakeFiles/glad.dir/RelWithDebInfo
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = src/graphics/glad/RelWithDebInfo/libglad.a
-  TARGET_PDB = glad.a.dbg
-
-
-#############################################
-# Utility command for glad_autogen_timestamp_deps
-
-build src/graphics/glad/glad_autogen_timestamp_deps$:RelWithDebInfo: phony src/graphics/glad/CMakeFiles/glad_autogen_timestamp_deps-RelWithDebInfo
-
-
-#############################################
-# Utility command for glad_autogen
-
-build src/graphics/glad/glad_autogen$:RelWithDebInfo: phony src/graphics/glad/CMakeFiles/glad_autogen-RelWithDebInfo src/graphics/glad/glad_autogen/timestamp src/graphics/glad/glad_autogen/mocs_compilation_RelWithDebInfo.cpp src/graphics/glad/glad_autogen_timestamp_deps$:RelWithDebInfo
-
-
-#############################################
-# Custom command for src/graphics/glad/glad_autogen/timestamp
-
-build src/graphics/glad/glad_autogen/timestamp src/graphics/glad/glad_autogen/mocs_compilation_RelWithDebInfo.cpp | ${cmake_ninja_workdir}src/graphics/glad/glad_autogen/timestamp ${cmake_ninja_workdir}src/graphics/glad/glad_autogen/mocs_compilation_RelWithDebInfo.cpp: CUSTOM_COMMAND /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic || src/graphics/glad/glad_autogen_timestamp_deps$:RelWithDebInfo
-  COMMAND = cd "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad" && /usr/bin/cmake -E cmake_autogen "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/CMakeFiles/glad_autogen.dir/AutogenInfo.json" RelWithDebInfo && /usr/bin/cmake -E touch "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/timestamp" && /usr/bin/cmake -E cmake_transform_depfile "Ninja Multi-Config" gccdepfile "/home/vladislav/Документы/FEM/FEM program" "/home/vladislav/Документы/FEM/FEM program/external/glad" "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset" "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad" "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/deps" "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/CMakeFiles/d/17bdc5e7558603a40d3291819c0b63f471cd57c032870d5924d09650a1353ed4.d"
-  DESC = Automatic MOC and UIC for target glad
-  depfile = /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/CMakeFiles/d/17bdc5e7558603a40d3291819c0b63f471cd57c032870d5924d09650a1353ed4.d
-  restat = 1
-
-
-#############################################
-# Phony custom command for src/graphics/glad/CMakeFiles/glad_autogen_timestamp_deps-RelWithDebInfo
-
-build src/graphics/glad/CMakeFiles/glad_autogen_timestamp_deps-RelWithDebInfo | ${cmake_ninja_workdir}src/graphics/glad/CMakeFiles/glad_autogen_timestamp_deps-RelWithDebInfo: phony /usr/lib/qt6/libexec/uic /usr/lib/qt6/libexec/moc
-
-
-#############################################
-# Phony custom command for src/graphics/glad/CMakeFiles/glad_autogen-RelWithDebInfo
-
-build src/graphics/glad/CMakeFiles/glad_autogen-RelWithDebInfo | ${cmake_ninja_workdir}src/graphics/glad/CMakeFiles/glad_autogen-RelWithDebInfo: phony src/graphics/glad/glad_autogen/timestamp || src/graphics/glad/glad_autogen_timestamp_deps$:RelWithDebInfo
+build src/app/CMakeFiles/FEM-program_autogen-RelWithDebInfo | ${cmake_ninja_workdir}src/app/CMakeFiles/FEM-program_autogen-RelWithDebInfo: phony src/app/FEM-program_autogen/timestamp || src/app/FEM-program_autogen_timestamp_deps$:RelWithDebInfo
 
 build FEM-program$:RelWithDebInfo: phony src/app/RelWithDebInfo/FEM-program
 
@@ -840,75 +201,17 @@ build FEM-program_autogen$:RelWithDebInfo: phony src/app/FEM-program_autogen$:Re
 
 build FEM-program_autogen_timestamp_deps$:RelWithDebInfo: phony src/app/FEM-program_autogen_timestamp_deps$:RelWithDebInfo
 
-build glad$:RelWithDebInfo: phony src/graphics/glad/RelWithDebInfo/libglad.a
-
-build glad_autogen$:RelWithDebInfo: phony src/graphics/glad/glad_autogen$:RelWithDebInfo
-
-build glad_autogen_timestamp_deps$:RelWithDebInfo: phony src/graphics/glad/glad_autogen_timestamp_deps$:RelWithDebInfo
-
-build glfw$:RelWithDebInfo: phony src/graphics/glfw/src/RelWithDebInfo/libglfw3.a
-
-build glfw_autogen$:RelWithDebInfo: phony src/graphics/glfw/src/glfw_autogen$:RelWithDebInfo
-
-build glfw_autogen_timestamp_deps$:RelWithDebInfo: phony src/graphics/glfw/src/glfw_autogen_timestamp_deps$:RelWithDebInfo
-
-build libglad.a$:RelWithDebInfo: phony src/graphics/glad/RelWithDebInfo/libglad.a
-
-build libglfw3.a$:RelWithDebInfo: phony src/graphics/glfw/src/RelWithDebInfo/libglfw3.a
-
-build libopengl.a$:RelWithDebInfo: phony src/graphics/RelWithDebInfo/libopengl.a
-
-build opengl$:RelWithDebInfo: phony src/graphics/RelWithDebInfo/libopengl.a
-
-build opengl_autogen$:RelWithDebInfo: phony src/graphics/opengl_autogen$:RelWithDebInfo
-
-build opengl_autogen_timestamp_deps$:RelWithDebInfo: phony src/graphics/opengl_autogen_timestamp_deps$:RelWithDebInfo
-
-build uninstall$:RelWithDebInfo: phony src/graphics/glfw/uninstall$:RelWithDebInfo
-
-build update_mappings$:RelWithDebInfo: phony src/graphics/glfw/src/update_mappings$:RelWithDebInfo
-
 
 #############################################
 # Folder: /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset
 
-build all$:RelWithDebInfo: phony src/app/all$:RelWithDebInfo src/graphics/all$:RelWithDebInfo
+build all$:RelWithDebInfo: phony src/app/all$:RelWithDebInfo
 
 
 #############################################
 # Folder: /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app
 
 build src/app/all$:RelWithDebInfo: phony src/app/RelWithDebInfo/FEM-program
-
-
-#############################################
-# Folder: /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics
-
-build src/graphics/all$:RelWithDebInfo: phony src/graphics/RelWithDebInfo/libopengl.a src/graphics/glfw/all$:RelWithDebInfo src/graphics/glad/all$:RelWithDebInfo
-
-
-#############################################
-# Folder: /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad
-
-build src/graphics/glad/all$:RelWithDebInfo: phony src/graphics/glad/RelWithDebInfo/libglad.a
-
-
-#############################################
-# Folder: /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw
-
-build src/graphics/glfw/all$:RelWithDebInfo: phony src/graphics/glfw/src/all$:RelWithDebInfo src/graphics/glfw/docs/all$:RelWithDebInfo
-
-
-#############################################
-# Folder: /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/docs
-
-build src/graphics/glfw/docs/all$:RelWithDebInfo: phony
-
-
-#############################################
-# Folder: /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src
-
-build src/graphics/glfw/src/all$:RelWithDebInfo: phony src/graphics/glfw/src/RelWithDebInfo/libglfw3.a
 
 
 #############################################

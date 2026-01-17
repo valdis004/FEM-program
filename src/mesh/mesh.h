@@ -93,8 +93,9 @@ public:
             // Add displ
             if (node.point.y == starty ||
                 node.point.y == starty + lenghtPlate) {
-              node.nodeDisplacement =
-                  new NodeDisplacementUzPsixPsiy(true, true, true);
+              NodeDisplacementUzPsixPsiy disp =
+                  NodeDisplacementUzPsixPsiy(true, true, true);
+              node.nodeDisplacement = &disp;
             }
           }
 
@@ -111,4 +112,6 @@ public:
       }
     }
   }
+
+  void meshManager(ElementType type);
 };

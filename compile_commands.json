@@ -1,776 +1,218 @@
 [
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/FEM-program_autogen/mocs_compilation_Debug.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/FEM-program_autogen/mocs_compilation_Debug.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Debug/FEM-program_autogen/mocs_compilation_Debug.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/mainwindow.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/mainwindow.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/mainwindow.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/mainwindow.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/app/mainwindow.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Debug/mainwindow.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/main.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/main.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/main.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/main.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/app/main.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Debug/main.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/context-menu/treeContextMenu.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/context-menu/treeContextMenu.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/context-menu/treeContextMenu.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/context-menu/treeContextMenu.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/app/context-menu/treeContextMenu.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Debug/context-menu/treeContextMenu.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/graphics/qtgl/qtgl.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/graphics/qtgl/qtgl.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/graphics/qtgl/qtgl.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/__/mesh/mesh.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/__/mesh/mesh.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Debug/__/mesh/mesh.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/displacement.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/displacement.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/displacement.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/displacement.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/displacement.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/displacement.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/load.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/load.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/load.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/plates/plates.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/plates/plates.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/plates/plates.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/plates/plates.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/plates/plates.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/plates/plates.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/element.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/element.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/element.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/element.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/element.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/element.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/femload.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/load/femload.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/femload.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/load/femload.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/load/femload.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/femload.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/femdisplacement.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/femdisplacement.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Debug\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -g -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/femdisplacement.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/femdisplacement.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/femdisplacement.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/femdisplacement.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/FEM-program_autogen/mocs_compilation_Release.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Release.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/FEM-program_autogen/mocs_compilation_Release.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Release.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Release.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Release/FEM-program_autogen/mocs_compilation_Release.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/mainwindow.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/mainwindow.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/mainwindow.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/mainwindow.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/app/mainwindow.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Release/mainwindow.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/main.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/main.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/main.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/main.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/app/main.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Release/main.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/context-menu/treeContextMenu.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/context-menu/treeContextMenu.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/context-menu/treeContextMenu.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/context-menu/treeContextMenu.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/app/context-menu/treeContextMenu.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Release/context-menu/treeContextMenu.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/__/graphics/qtgl/qtgl.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/graphics/qtgl/qtgl.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/__/graphics/qtgl/qtgl.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/graphics/qtgl/qtgl.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/graphics/qtgl/qtgl.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Release/__/graphics/qtgl/qtgl.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/__/mesh/mesh.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/__/mesh/mesh.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Release/__/mesh/mesh.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/__/elements/displacement/displacement.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/displacement.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/__/elements/displacement/displacement.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/displacement.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/displacement.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Release/__/elements/displacement/displacement.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/__/elements/load/load.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/__/elements/load/load.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Release/__/elements/load/load.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/__/elements/plates/plates.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/plates/plates.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/__/elements/plates/plates.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/plates/plates.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/plates/plates.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Release/__/elements/plates/plates.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/__/elements/element.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/element.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/__/elements/element.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/element.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/element.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Release/__/elements/element.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/__/elements/load/femload.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/load/femload.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/__/elements/load/femload.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/load/femload.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/load/femload.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Release/__/elements/load/femload.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/__/elements/displacement/femdisplacement.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/femdisplacement.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_Release\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/Release/__/elements/displacement/femdisplacement.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/femdisplacement.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/femdisplacement.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/Release/__/elements/displacement/femdisplacement.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/FEM-program_autogen/mocs_compilation_RelWithDebInfo.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/mainwindow.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/mainwindow.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/mainwindow.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/mainwindow.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/app/mainwindow.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/mainwindow.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/main.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/main.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/main.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/main.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/app/main.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/main.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/context-menu/treeContextMenu.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/context-menu/treeContextMenu.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/context-menu/treeContextMenu.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/app/context-menu/treeContextMenu.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/app/context-menu/treeContextMenu.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/context-menu/treeContextMenu.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/graphics/qtgl/qtgl.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/graphics/qtgl/qtgl.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/graphics/qtgl/qtgl.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/graphics/qtgl/qtgl.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/graphics/qtgl/qtgl.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/graphics/qtgl/qtgl.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/mesh/mesh.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/mesh/mesh.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/mesh/mesh.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement/displacement.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/displacement.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement/displacement.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/displacement.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/displacement.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement/displacement.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/load/load.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/load/load.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/load/load.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/plates/plates.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/plates/plates.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/plates/plates.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/plates/plates.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/plates/plates.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/plates/plates.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/element.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/element.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/element.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/element.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/element.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/element.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/load/femload.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/load/femload.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/load/femload.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/load/femload.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/load/femload.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/load/femload.cpp.o"
 },
 {
   "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement/femdisplacement.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/femdisplacement.cpp\"",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/include_RelWithDebInfo\" -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtOpenGL -isystem /usr/include/eigen3 -O2 -g -DNDEBUG -std=gnu++23 -fPIC -o src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement/femdisplacement.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/femdisplacement.cpp\"",
   "file": "/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/femdisplacement.cpp",
   "output": "src/app/CMakeFiles/FEM-program.dir/RelWithDebInfo/__/elements/displacement/femdisplacement.cpp.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/include_Debug\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glad/include\" -g -std=gnu++23 -o src/graphics/CMakeFiles/opengl.dir/Debug/opengl_autogen/mocs_compilation_Debug.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/mocs_compilation_Debug.cpp\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/mocs_compilation_Debug.cpp",
-  "output": "src/graphics/CMakeFiles/opengl.dir/Debug/opengl_autogen/mocs_compilation_Debug.cpp.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/include_Debug\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glad/include\" -g -std=gnu++23 -o src/graphics/CMakeFiles/opengl.dir/Debug/src/glfw.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/graphics/src/glfw.cpp\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/src/graphics/src/glfw.cpp",
-  "output": "src/graphics/CMakeFiles/opengl.dir/Debug/src/glfw.cpp.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/include_Release\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glad/include\" -O3 -DNDEBUG -std=gnu++23 -o src/graphics/CMakeFiles/opengl.dir/Release/opengl_autogen/mocs_compilation_Release.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/mocs_compilation_Release.cpp\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/mocs_compilation_Release.cpp",
-  "output": "src/graphics/CMakeFiles/opengl.dir/Release/opengl_autogen/mocs_compilation_Release.cpp.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/include_Release\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glad/include\" -O3 -DNDEBUG -std=gnu++23 -o src/graphics/CMakeFiles/opengl.dir/Release/src/glfw.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/graphics/src/glfw.cpp\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/src/graphics/src/glfw.cpp",
-  "output": "src/graphics/CMakeFiles/opengl.dir/Release/src/glfw.cpp.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/include_RelWithDebInfo\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glad/include\" -O2 -g -DNDEBUG -std=gnu++23 -o src/graphics/CMakeFiles/opengl.dir/RelWithDebInfo/opengl_autogen/mocs_compilation_RelWithDebInfo.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/mocs_compilation_RelWithDebInfo.cpp\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/mocs_compilation_RelWithDebInfo.cpp",
-  "output": "src/graphics/CMakeFiles/opengl.dir/RelWithDebInfo/opengl_autogen/mocs_compilation_RelWithDebInfo.cpp.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/include_RelWithDebInfo\" -I\"/home/vladislav/Документы/FEM/FEM program/src/graphics/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glad/include\" -O2 -g -DNDEBUG -std=gnu++23 -o src/graphics/CMakeFiles/opengl.dir/RelWithDebInfo/src/glfw.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/src/graphics/src/glfw.cpp\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/src/graphics/src/glfw.cpp",
-  "output": "src/graphics/CMakeFiles/opengl.dir/RelWithDebInfo/src/glfw.cpp.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=gnu++23 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/glfw_autogen/mocs_compilation_Debug.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/mocs_compilation_Debug.cpp\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/mocs_compilation_Debug.cpp",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/glfw_autogen/mocs_compilation_Debug.cpp.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/context.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/context.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/context.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/context.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/init.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/init.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/init.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/init.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/input.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/input.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/input.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/input.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/monitor.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/monitor.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/monitor.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/monitor.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/platform.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/platform.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/platform.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/platform.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/vulkan.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/vulkan.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/vulkan.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/vulkan.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/window.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/window.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/window.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/window.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/egl_context.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/egl_context.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/egl_context.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/egl_context.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/osmesa_context.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/osmesa_context.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/osmesa_context.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/osmesa_context.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/null_init.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_init.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_init.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/null_init.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/null_monitor.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_monitor.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_monitor.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/null_monitor.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/null_window.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_window.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_window.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/null_window.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/null_joystick.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_joystick.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_joystick.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/null_joystick.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/posix_module.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_module.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_module.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/posix_module.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/posix_time.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_time.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_time.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/posix_time.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/posix_thread.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_thread.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_thread.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/posix_thread.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/x11_init.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_init.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_init.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/x11_init.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/x11_monitor.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_monitor.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_monitor.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/x11_monitor.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/x11_window.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_window.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_window.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/x11_window.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/xkb_unicode.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/xkb_unicode.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/xkb_unicode.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/xkb_unicode.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/glx_context.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/glx_context.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/glx_context.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/glx_context.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/wl_init.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_init.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_init.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/wl_init.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/wl_monitor.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_monitor.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_monitor.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/wl_monitor.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/wl_window.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_window.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_window.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/wl_window.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/linux_joystick.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/linux_joystick.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/linux_joystick.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/linux_joystick.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Debug\" -g -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/posix_poll.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_poll.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_poll.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/posix_poll.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=gnu++23 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/glfw_autogen/mocs_compilation_Release.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/mocs_compilation_Release.cpp\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/mocs_compilation_Release.cpp",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/glfw_autogen/mocs_compilation_Release.cpp.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/context.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/context.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/context.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/context.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/init.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/init.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/init.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/init.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/input.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/input.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/input.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/input.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/monitor.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/monitor.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/monitor.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/monitor.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/platform.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/platform.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/platform.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/platform.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/vulkan.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/vulkan.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/vulkan.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/vulkan.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/window.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/window.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/window.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/window.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/egl_context.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/egl_context.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/egl_context.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/egl_context.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/osmesa_context.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/osmesa_context.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/osmesa_context.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/osmesa_context.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/null_init.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_init.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_init.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/null_init.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/null_monitor.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_monitor.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_monitor.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/null_monitor.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/null_window.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_window.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_window.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/null_window.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/null_joystick.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_joystick.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_joystick.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/null_joystick.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/posix_module.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_module.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_module.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/posix_module.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/posix_time.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_time.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_time.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/posix_time.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/posix_thread.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_thread.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_thread.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/posix_thread.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/x11_init.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_init.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_init.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/x11_init.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/x11_monitor.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_monitor.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_monitor.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/x11_monitor.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/x11_window.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_window.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_window.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/x11_window.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/xkb_unicode.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/xkb_unicode.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/xkb_unicode.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/xkb_unicode.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/glx_context.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/glx_context.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/glx_context.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/glx_context.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/wl_init.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_init.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_init.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/wl_init.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/wl_monitor.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_monitor.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_monitor.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/wl_monitor.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/wl_window.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_window.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_window.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/wl_window.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/linux_joystick.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/linux_joystick.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/linux_joystick.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/linux_joystick.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_Release\" -O3 -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/posix_poll.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_poll.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_poll.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/Release/posix_poll.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=gnu++23 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/glfw_autogen/mocs_compilation_RelWithDebInfo.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/mocs_compilation_RelWithDebInfo.cpp\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/mocs_compilation_RelWithDebInfo.cpp",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/glfw_autogen/mocs_compilation_RelWithDebInfo.cpp.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/context.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/context.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/context.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/context.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/init.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/init.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/init.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/init.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/input.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/input.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/input.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/input.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/monitor.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/monitor.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/monitor.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/monitor.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/platform.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/platform.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/platform.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/platform.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/vulkan.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/vulkan.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/vulkan.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/vulkan.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/window.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/window.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/window.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/window.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/egl_context.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/egl_context.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/egl_context.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/egl_context.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/osmesa_context.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/osmesa_context.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/osmesa_context.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/osmesa_context.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_init.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_init.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_init.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_init.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_monitor.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_monitor.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_monitor.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_monitor.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_window.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_window.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_window.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_window.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_joystick.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_joystick.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/null_joystick.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/null_joystick.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_module.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_module.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_module.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_module.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_time.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_time.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_time.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_time.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_thread.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_thread.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_thread.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_thread.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/x11_init.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_init.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_init.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/x11_init.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/x11_monitor.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_monitor.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_monitor.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/x11_monitor.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/x11_window.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_window.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/x11_window.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/x11_window.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/xkb_unicode.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/xkb_unicode.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/xkb_unicode.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/xkb_unicode.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/glx_context.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/glx_context.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/glx_context.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/glx_context.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/wl_init.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_init.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_init.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/wl_init.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/wl_monitor.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_monitor.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_monitor.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/wl_monitor.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/wl_window.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_window.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/wl_window.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/wl_window.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/linux_joystick.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/linux_joystick.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/linux_joystick.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/linux_joystick.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/include\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glfw/src\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src\" -isystem \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/include_RelWithDebInfo\" -O2 -g -DNDEBUG -std=c99 -fPIC -Wall -o src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_poll.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_poll.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glfw/src/posix_poll.c",
-  "output": "src/graphics/glfw/src/CMakeFiles/glfw.dir/RelWithDebInfo/posix_poll.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/include_Debug\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glad/include\" -g -std=gnu++23 -o src/graphics/glad/CMakeFiles/glad.dir/Debug/glad_autogen/mocs_compilation_Debug.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/mocs_compilation_Debug.cpp\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/mocs_compilation_Debug.cpp",
-  "output": "src/graphics/glad/CMakeFiles/glad.dir/Debug/glad_autogen/mocs_compilation_Debug.cpp.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DCMAKE_INTDIR=\\\"Debug\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/include_Debug\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glad/include\" -g -o src/graphics/glad/CMakeFiles/glad.dir/Debug/src/glad.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glad/src/glad.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glad/src/glad.c",
-  "output": "src/graphics/glad/CMakeFiles/glad.dir/Debug/src/glad.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/include_Release\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glad/include\" -O3 -DNDEBUG -std=gnu++23 -o src/graphics/glad/CMakeFiles/glad.dir/Release/glad_autogen/mocs_compilation_Release.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/mocs_compilation_Release.cpp\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/mocs_compilation_Release.cpp",
-  "output": "src/graphics/glad/CMakeFiles/glad.dir/Release/glad_autogen/mocs_compilation_Release.cpp.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DCMAKE_INTDIR=\\\"Release\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/include_Release\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glad/include\" -O3 -DNDEBUG -o src/graphics/glad/CMakeFiles/glad.dir/Release/src/glad.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glad/src/glad.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glad/src/glad.c",
-  "output": "src/graphics/glad/CMakeFiles/glad.dir/Release/src/glad.c.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/include_RelWithDebInfo\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glad/include\" -O2 -g -DNDEBUG -std=gnu++23 -o src/graphics/glad/CMakeFiles/glad.dir/RelWithDebInfo/glad_autogen/mocs_compilation_RelWithDebInfo.cpp.o -c \"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/mocs_compilation_RelWithDebInfo.cpp\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/mocs_compilation_RelWithDebInfo.cpp",
-  "output": "src/graphics/glad/CMakeFiles/glad.dir/RelWithDebInfo/glad_autogen/mocs_compilation_RelWithDebInfo.cpp.o"
-},
-{
-  "directory": "/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset",
-  "command": "/usr/bin/cc -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\" -I\"/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/include_RelWithDebInfo\" -I\"/home/vladislav/Документы/FEM/FEM program/external/glad/include\" -O2 -g -DNDEBUG -o src/graphics/glad/CMakeFiles/glad.dir/RelWithDebInfo/src/glad.c.o -c \"/home/vladislav/Документы/FEM/FEM program/external/glad/src/glad.c\"",
-  "file": "/home/vladislav/Документы/FEM/FEM program/external/glad/src/glad.c",
-  "output": "src/graphics/glad/CMakeFiles/glad.dir/RelWithDebInfo/src/glad.c.o"
 }
 ]

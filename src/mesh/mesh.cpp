@@ -1,5 +1,6 @@
 #include <QList>
 #include <QtAlgorithms>
+#include <stdexcept>
 
 // #include <new>
 
@@ -29,7 +30,7 @@ unsigned Mesh::maxNodeIndexInList(const QList<Node> &list) {
 //   // ElementProvider::initialize();
 
 //   auto data = ElementProvider<type>::data;
-//   AreaLoadPlate load = AreaLoadPlate(-100);
+//   AreaLoadQzMxMy load = AreaLoadQzMxMy(-100);
 
 //   float startx = 0;
 //   float starty = 0;
@@ -51,13 +52,13 @@ unsigned Mesh::maxNodeIndexInList(const QList<Node> &list) {
 //   float sinA = 0;
 //   float cosA = 1;
 
-//   for (int l = 1; l <= steps; l++) {
-//     for (int k = 1; k <= steps; k++) {
+//   for (int l = 0; l < steps; l++) {
+//     for (int k = 0; k < steps; k++) {
 
 //       Point3 point0{point00.x + l * step * cosA, point00.y + k * step,
 //                     point00.x + l * step * sinA};
 //       Node node;
-//       const int count = data;
+//       const int count = data.NODES_COUNT;
 //       Node nodesToElem[count];
 //       float checkValue = 0.01f;
 
@@ -101,9 +102,9 @@ unsigned Mesh::maxNodeIndexInList(const QList<Node> &list) {
 //           // Add displ
 //           if (node.point.y == starty || node.point.y == starty + lenghtPlate)
 //           {
-//             bool values[3] = {true, true, true};
-//             node.nodeDisplacement =
-//                 NodeDisplacement::create(DisplType::UzRxRy, values);
+//             NodeDisplacementUzPsixPsiy disp =
+//                 NodeDisplacementUzPsixPsiy(true, true, true);
+//             node.nodeDisplacement = &disp;
 //           }
 //         }
 
@@ -121,4 +122,11 @@ unsigned Mesh::maxNodeIndexInList(const QList<Node> &list) {
 //   }
 // }
 
-// template <> void Mesh::createDefaultMesh<ElementType::MITC4MY>() {}
+void Mesh::meshManager(ElementType type) {
+  switch (type) {
+  case ElementType::MITC4MY:
+    createDefaultMesh<MITC4MY>();
+  default:
+    throw std::runtime_error("Unknown element tipe");
+  }
+}

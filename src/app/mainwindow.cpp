@@ -30,10 +30,11 @@
 #include <qnamespace.h>
 #include <qobject.h>
 #include <qthread.h>
-#include <stdexcept>
+// #include <stdexcept>
 
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.h"
+// #include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
+// #include "/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.h"
+#include "context-menu/treeContextMenu.h"
 
 MainWindow::MainWindow() {
   setWindowTitle("Fem test");
@@ -268,54 +269,5 @@ void MainWindow::onTreeContextMenuRequested(const QPoint &pos) {
 // Функция, отрабатываемая при нажатии кнопки "Create default scheme" У treewiev
 // для plate
 void MainWindow::createDefaultPlateScheme(QTreeWidgetItem *item) {
-  QDialog d = QDialog(this);
-  d.setFixedSize({500, 260});
-  d.setWindowTitle("Settings of scheme");
-  // d->setModal(true);
-  // d->setWindowFlag(Qt);
-  // d->setWindowFlags(Qt::Window | Qt::CustomizeWindowHint |
-  // Qt::WindowTitleHint | Qt::WindowCloseButtonHint);
-
-  QVBoxLayout mainLayout = QVBoxLayout(&d);
-  QFormLayout formLayout = QFormLayout();
-  QComboBox comboBox = QComboBox(&d);
-  comboBox.addItem("MITC4");
-  comboBox.addItem("MITC9");
-  comboBox.addItem("MITC16");
-  formLayout.addRow("Тип элемента:", &comboBox);
-
-  // Выравнивание
-  formLayout.setLabelAlignment(Qt::AlignRight | Qt::AlignVCenter);
-  formLayout.setFieldGrowthPolicy(QFormLayout::FieldsStayAtSizeHint);
-  formLayout.setRowWrapPolicy(QFormLayout::DontWrapRows);
-
-  d.setSizeGripEnabled(true); // Добавляет маркер изменения размера в углу
-
-  // 2. Создаем панель с кнопками
-  QDialogButtonBox buttonBox = QDialogButtonBox(&d);
-  // Добавляем стандартные кнопки
-  buttonBox.setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-  // Подключаем сигналы: нажатие OK/Отмена закроет диалог с соответствующим
-  // результатом
-  connect(&buttonBox, &QDialogButtonBox::accepted, &d, &QDialog::accept);
-  connect(&buttonBox, &QDialogButtonBox::rejected, &d, &QDialog::reject);
-
-  // 3. Задаем основную компоновку
-  mainLayout.addLayout(&formLayout);
-  mainLayout.addWidget(&buttonBox); // Панель кнопок — внизу
-  // d->setLayout(mainLayout);
-  d.show();
-
-  QThread thread;
-
-  if (d.exec() == QDialog::Accepted) {
-    Mesh mesh;
-    auto choosedType = comboBox.currentIndex();
-    switch (choosedType) {
-    case 0:
-      mesh.createDefaultMesh<ElementType::MITC4MY>();
-    default:
-      throw std::runtime_error("Unknown element type");
-    }
-  }
+  TreeContextMenu::createDiologDefualtSchemePlate(this);
 }

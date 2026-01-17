@@ -5,6 +5,8 @@
 #include <QObject>
 #include <QTreeWidget>
 #include <QTreeWidgetItem>
+#include <qobject.h>
+#include <qwidget.h>
 
 class TreeContextMenu : public QObject {
   Q_OBJECT
@@ -27,6 +29,8 @@ public:
 
   // Создать стандартное меню
   void createDefaultMenu();
+
+  static void createDiologDefualtSchemePlate(QWidget *mainWindow);
 
 signals:
   // Сигналы для различных действий

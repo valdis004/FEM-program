@@ -6,81 +6,11 @@
 
 include CMakeFiles/impl-Debug.ninja
 
-build install: phony install$:Debug
-
-build install/local: phony install/local$:Debug
-
-build install/strip: phony install/strip$:Debug
-
-build src/app/install: phony src/app/install$:Debug
-
-build src/app/install/local: phony src/app/install/local$:Debug
-
-build src/app/install/strip: phony src/app/install/strip$:Debug
-
-build src/graphics/install: phony src/graphics/install$:Debug
-
-build src/graphics/install/local: phony src/graphics/install/local$:Debug
-
-build src/graphics/install/strip: phony src/graphics/install/strip$:Debug
-
-build src/graphics/glfw/install: phony src/graphics/glfw/install$:Debug
-
-build src/graphics/glfw/install/local: phony src/graphics/glfw/install/local$:Debug
-
-build src/graphics/glfw/install/strip: phony src/graphics/glfw/install/strip$:Debug
-
-build src/graphics/glfw/src/install: phony src/graphics/glfw/src/install$:Debug
-
-build src/graphics/glfw/src/install/local: phony src/graphics/glfw/src/install/local$:Debug
-
-build src/graphics/glfw/src/install/strip: phony src/graphics/glfw/src/install/strip$:Debug
-
-build src/graphics/glfw/docs/install: phony src/graphics/glfw/docs/install$:Debug
-
-build src/graphics/glfw/docs/install/local: phony src/graphics/glfw/docs/install/local$:Debug
-
-build src/graphics/glfw/docs/install/strip: phony src/graphics/glfw/docs/install/strip$:Debug
-
-build src/graphics/glad/install: phony src/graphics/glad/install$:Debug
-
-build src/graphics/glad/install/local: phony src/graphics/glad/install/local$:Debug
-
-build src/graphics/glad/install/strip: phony src/graphics/glad/install/strip$:Debug
-
 build FEM-program: phony src/app/Debug/FEM-program
 
 build FEM-program_autogen: phony src/app/FEM-program_autogen$:Debug
 
 build FEM-program_autogen_timestamp_deps: phony src/app/FEM-program_autogen_timestamp_deps$:Debug
-
-build glad: phony src/graphics/glad/Debug/libglad.a
-
-build glad_autogen: phony src/graphics/glad/glad_autogen$:Debug
-
-build glad_autogen_timestamp_deps: phony src/graphics/glad/glad_autogen_timestamp_deps$:Debug
-
-build glfw: phony src/graphics/glfw/src/Debug/libglfw3.a
-
-build glfw_autogen: phony src/graphics/glfw/src/glfw_autogen$:Debug
-
-build glfw_autogen_timestamp_deps: phony src/graphics/glfw/src/glfw_autogen_timestamp_deps$:Debug
-
-build libglad.a: phony src/graphics/glad/Debug/libglad.a
-
-build libglfw3.a: phony src/graphics/glfw/src/Debug/libglfw3.a
-
-build libopengl.a: phony src/graphics/Debug/libopengl.a
-
-build opengl: phony src/graphics/Debug/libopengl.a
-
-build opengl_autogen: phony src/graphics/opengl_autogen$:Debug
-
-build opengl_autogen_timestamp_deps: phony src/graphics/opengl_autogen_timestamp_deps$:Debug
-
-build uninstall: phony src/graphics/glfw/uninstall$:Debug
-
-build update_mappings: phony src/graphics/glfw/src/update_mappings$:Debug
 
 
 #############################################
@@ -93,36 +23,6 @@ build all: phony all$:Debug
 # Folder: /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app
 
 build src/app/all: phony src/app/all$:Debug
-
-
-#############################################
-# Folder: /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics
-
-build src/graphics/all: phony src/graphics/all$:Debug
-
-
-#############################################
-# Folder: /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad
-
-build src/graphics/glad/all: phony src/graphics/glad/all$:Debug
-
-
-#############################################
-# Folder: /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw
-
-build src/graphics/glfw/all: phony src/graphics/glfw/all$:Debug
-
-
-#############################################
-# Folder: /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/docs
-
-build src/graphics/glfw/docs/all: phony src/graphics/glfw/docs/all$:Debug
-
-
-#############################################
-# Folder: /home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src
-
-build src/graphics/glfw/src/all: phony src/graphics/glfw/src/all$:Debug
 
 build clean: phony clean$:Debug
 
