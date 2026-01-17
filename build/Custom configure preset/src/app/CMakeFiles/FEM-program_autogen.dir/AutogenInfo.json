@@ -32,6 +32,12 @@
 			null
 		],
 		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/src/elements/displacement/femdisplacement.h",
+			"MU",
+			"JAYWTG6FWL/moc_femdisplacement.cpp",
+			null
+		],
+		[
 			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/src/elements/element.h",
 			"MU",
 			"LFVNSI46CU/moc_element.cpp",
@@ -227,6 +233,11 @@
 		],
 		[
 			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/src/elements/displacement/displacement.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/src/elements/displacement/femdisplacement.cpp",
 			"MU",
 			null
 		],

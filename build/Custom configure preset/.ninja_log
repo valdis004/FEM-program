@@ -1,101 +1,152 @@
 # ninja log v5
-17	25	1768339175298977806	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/fractional-scale-v1-client-protocol-code.h	d1dcbc977aaff9c3
-119	331	1768339175601971031	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/posix_module.c.o	df8e1764ab3c2332
+14	27	1768339175302977716	src/graphics/glfw/src/xdg-shell-client-protocol.h	7040baa23878a839
+16	25	1768339175299977783	src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol-code.h	2e8706d15f1265a4
+14	71	1768601687267539496	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+17	25	1768339175298977806	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol.h	35c6ec9a0231ed2f
+355	605	1768339175877964859	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/xkb_unicode.c.o	66174687de322eed
+447	693	1768339175965962892	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/posix_poll.c.o	fa6666507e60966a
 14	27	1768339175302977716	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/xdg-shell-client-protocol.h	7040baa23878a839
 335	816	1768339176090518601	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/x11_window.c.o	462f2339bc512278
-17	25	1768339175299748789	src/graphics/glfw/src/xdg-activation-v1-client-protocol.h	fd9f1be22a4fb6f8
-425	665	1768339175939006846	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/wl_monitor.c.o	678319fc64b5815d
-24	112	1768339175374976106	src/graphics/glad/glad_autogen/timestamp	66c7879c9ecf848d
-17	25	1768339175298977806	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/xdg-activation-v1-client-protocol-code.h	fd9b23e1ee766684
+17	25	1768339175298977806	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/fractional-scale-v1-client-protocol-code.h	d1dcbc977aaff9c3
+119	331	1768339175601971031	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/posix_module.c.o	df8e1764ab3c2332
 15	27	1768339175301977739	src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol.h	6474b024604ed640
 116	516	1768339175785966917	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/vulkan.c.o	50138e499335df04
-426	959	1768339176232708852	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/wl_window.c.o	a06439d346663314
-15	26	1768339175300977761	src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol-code.h	ed5a20578dc41b3
-13	25	1768339175299977783	src/graphics/glfw/src/viewporter-client-protocol-code.h	419a3ecf56470d87
-18	25	1768339175299748789	src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol-code.h	de36cea5ddc52192
-447	693	1768339175965962892	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/posix_poll.c.o	fa6666507e60966a
-6	26	0	CMakeFiles/clean.additional:Debug	ef993b15a92b8f11
-14	69	1768404635822524010	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
-1453	1475	1768339176746945455	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/displacement.cpp.o	2234f02b327f7d82
-1136	1195	1768339176463951773	src/graphics/CMakeFiles/opengl.dir/Debug/src/glfw.cpp.o	2aeb6b24c6dd1d3c
-181	425	1768339175698968862	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/posix_thread.c.o	b170ed237f641de6
-115	604	1768339175876964882	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/input.c.o	5419932b27092443
-15	25	1768339175300779659	src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol-code.h	c62cd6e910220d19
-1452	3560	1768339178824131689	src/app/CMakeFiles/FEM-program.dir/Debug/context-menu/treeContextMenu.cpp.o	799ed61cf3e4ad85
-16	25	1768339175299748789	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/fractional-scale-v1-client-protocol.h	72a70c80dc2a027b
-12	31	1768339175306388966	src/graphics/glfw/src/wayland-client-protocol.h	5594520c97c11847
-15	26	1768339175300977761	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol-code.h	ed5a20578dc41b3
-16	25	1768339175299977783	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol-code.h	2e8706d15f1265a4
-394	740	1768339176014033826	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/wl_init.c.o	f57e4faa894506bb
-17	25	1768339175298977806	src/graphics/glfw/src/xdg-activation-v1-client-protocol-code.h	fd9b23e1ee766684
+74	619	1768601079154661719	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/femload.cpp.o	958af2c5ac9e57a3
+317	2772	1768597880421172708	src/app/CMakeFiles/FEM-program.dir/Debug/FEM-program_autogen/mocs_compilation_Debug.cpp.o	96587adf1ad34ef4
 113	542	1768339175810954414	src/graphics/glad/CMakeFiles/glad.dir/Debug/src/glad.c.o	3634537650227bb0
-1452	3717	1768339178979583460	src/app/CMakeFiles/FEM-program.dir/Debug/mainwindow.cpp.o	dcfd5473c0af3b9a
-117	335	1768339175601971031	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/null_joystick.c.o	a0cbb83ff23a3db
-1064	1135	1768339176398953224	src/graphics/opengl_autogen/mocs_compilation_Debug.cpp	9dc72a1569d1d41c
-24	112	1768339175374976106	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/timestamp	66c7879c9ecf848d
-57	101	1768340430463813508	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/material/PlateMaterial.cpp.o	c715cb190521d910
-1453	4758	1768339180015457653	src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o	fe645c75dcd1b084
-1064	1135	1768339176398953224	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/mocs_compilation_Debug.cpp	9dc72a1569d1d41c
-31	113	1768339175374976106	src/graphics/glfw/src/glfw_autogen/mocs_compilation_Debug.cpp	7a2914dd136b9e36
-1195	1241	1768339176513950657	src/graphics/Debug/libopengl.a	d833107ab6d8f5c6
-72	6212	1768404641887436001	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/plates/plates.cpp.o	4e5db4ac7794e5e2
-182	646	1768339175919133931	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/x11_init.c.o	3e7b39b13364daad
-331	674	1768339175947664873	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/x11_monitor.c.o	9d4c8c550792934
-117	579	1768339175848032377	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/null_window.c.o	52b6442fec6ed37f
-433	716	1768339175989565304	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/linux_joystick.c.o	9f142734c5ad357d
+31	113	1768339175374976106	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/mocs_compilation_Debug.cpp	7a2914dd136b9e36
+14	71	1768601687267539496	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+24	112	1768339175374976106	src/graphics/glad/glad_autogen/mocs_compilation_Debug.cpp	66c7879c9ecf848d
+120	355	1768339175628949383	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/posix_time.c.o	70d57fb85a5b1f36
+117	426	1768339175696361509	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/null_init.c.o	a333b6e852a46e96
+74	2830	1768601081369790817	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/element.cpp.o	ca754c5edaf8bae0
 1064	1135	1768339176398953224	src/graphics/opengl_autogen/timestamp	9dc72a1569d1d41c
 15	27	1768339175301977739	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol.h	6474b024604ed640
-16	25	1768339175299748789	src/graphics/glfw/src/fractional-scale-v1-client-protocol.h	72a70c80dc2a027b
-117	445	1768339175717181639	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/null_monitor.c.o	b536eb3f3999e8a8
-16	25	1768339175298977806	src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol.h	3b042706f8541085
-14	24	1768339175298977806	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol.h	badaf1ff83092651
-17	25	1768339175298977806	src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol.h	35c6ec9a0231ed2f
-31	113	1768339175374976106	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/timestamp	7a2914dd136b9e36
-16	25	1768339175298977806	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol.h	3b042706f8541085
-17	25	1768339175299748789	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/xdg-activation-v1-client-protocol.h	fd9f1be22a4fb6f8
-116	433	1768339175698430674	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/osmesa_context.c.o	5d94cd855640d6e6
-959	1064	1768339176333149830	src/graphics/glfw/src/Debug/libglfw3.a	39fa6473ce4596aa
-13	25	1768339175299748789	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/viewporter-client-protocol.h	fad6a900ee06dbc7
-116	584	1768339175856965329	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/window.c.o	f4f95074469978cb
-1453	1479	1768339176749945388	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/load.cpp.o	5b1e592eaa6f796f
-13	29	1768339175303977694	src/graphics/glfw/src/wayland-client-protocol-code.h	3cba343257fe8366
+12	31	1768339175306388966	src/graphics/glfw/src/wayland-client-protocol.h	5594520c97c11847
+394	740	1768339176014033826	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/wl_init.c.o	f57e4faa894506bb
+17	25	1768339175298977806	src/graphics/glfw/src/xdg-activation-v1-client-protocol-code.h	fd9b23e1ee766684
+72	2792	1768601081331633170	src/app/CMakeFiles/FEM-program.dir/Debug/__/mesh/mesh.cpp.o	a82f5a7a89c86a13
 13	25	1768339175299977783	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/viewporter-client-protocol-code.h	419a3ecf56470d87
-1451	3469	1768339178732041222	src/app/CMakeFiles/FEM-program.dir/Debug/FEM-program_autogen/mocs_compilation_Debug.cpp.o	96587adf1ad34ef4
-71	2063	1768404637805381811	src/app/CMakeFiles/FEM-program.dir/Debug/__/mesh/mesh.cpp.o	a82f5a7a89c86a13
-117	426	1768339175696361509	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/null_init.c.o	a333b6e852a46e96
-72	2066	1768404637809920704	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/element.cpp.o	ca754c5edaf8bae0
-120	355	1768339175628949383	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/posix_time.c.o	70d57fb85a5b1f36
-24	112	1768339175374976106	src/graphics/glad/glad_autogen/mocs_compilation_Debug.cpp	66c7879c9ecf848d
-31	113	1768339175374976106	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/mocs_compilation_Debug.cpp	7a2914dd136b9e36
-14	69	1768404635822524010	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
-12	31	1768339175306388966	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/wayland-client-protocol.h	5594520c97c11847
-1064	1135	1768339176398953224	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/timestamp	9dc72a1569d1d41c
-24	112	1768339175374976106	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/mocs_compilation_Debug.cpp	66c7879c9ecf848d
-112	182	1768339175446974496	src/graphics/glad/CMakeFiles/glad.dir/Debug/glad_autogen/mocs_compilation_Debug.cpp.o	b85dfd141f4ddf81
-114	452	1768339175717181639	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/init.c.o	72cac6ce7d72f2e0
-116	488	1768339175760967476	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/egl_context.c.o	a4125bdc75a26e21
-17	25	1768339175298977806	src/graphics/glfw/src/fractional-scale-v1-client-protocol-code.h	d1dcbc977aaff9c3
-6212	6715	1768404642458860927	src/app/Debug/FEM-program	ae3df4cae7656757
-31	113	1768339175374976106	src/graphics/glfw/src/glfw_autogen/timestamp	7a2914dd136b9e36
-386	662	1768339175935127225	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/glx_context.c.o	a9b175c41026b628
-15	25	1768339175300779659	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol-code.h	c62cd6e910220d19
+13	29	1768339175303977694	src/graphics/glfw/src/wayland-client-protocol-code.h	3cba343257fe8366
+73	3665	1768601690851629184	src/app/CMakeFiles/FEM-program.dir/Debug/mainwindow.cpp.o	dcfd5473c0af3b9a
 13	29	1768339175303977694	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/wayland-client-protocol-code.h	3cba343257fe8366
 542	684	1768339175952429624	src/graphics/glad/Debug/libglad.a	c35a72c5aadf42f3
 115	548	1768339175819966156	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/monitor.c.o	7674683aadb99a62
 18	25	1768339175299748789	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol-code.h	de36cea5ddc52192
-16	25	1768339175299977783	src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol-code.h	2e8706d15f1265a4
-14	27	1768339175302977716	src/graphics/glfw/src/xdg-shell-client-protocol.h	7040baa23878a839
-14	69	1768404635822524010	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
-26	43	0	clean:Debug	d1d9d068de73bfac
-114	383	1768339175655838210	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/context.c.o	18250fe5b3f876cf
-1452	3386	1768339178651903004	src/app/CMakeFiles/FEM-program.dir/Debug/main.cpp.o	4a993fa49e6448e6
-14	27	1768339175301977739	src/graphics/glfw/src/xdg-shell-client-protocol-code.h	f631bc2e76fe2e9e
+1195	1241	1768339176513950657	src/graphics/Debug/libopengl.a	d833107ab6d8f5c6
+31	113	1768339175374976106	src/graphics/glfw/src/glfw_autogen/mocs_compilation_Debug.cpp	7a2914dd136b9e36
+117	335	1768339175601971031	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/null_joystick.c.o	a0cbb83ff23a3db
+1064	1135	1768339176398953224	src/graphics/opengl_autogen/mocs_compilation_Debug.cpp	9dc72a1569d1d41c
+57	101	1768340430463813508	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/material/PlateMaterial.cpp.o	c715cb190521d910
+1453	4758	1768339180015457653	src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o	fe645c75dcd1b084
+1064	1135	1768339176398953224	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/mocs_compilation_Debug.cpp	9dc72a1569d1d41c
+17	25	1768339175299748789	src/graphics/glfw/src/xdg-activation-v1-client-protocol.h	fd9f1be22a4fb6f8
+31	113	1768339175374976106	src/graphics/glfw/src/glfw_autogen/timestamp	7a2914dd136b9e36
+15	26	1768339175300977761	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol-code.h	ed5a20578dc41b3
+16	25	1768339175299977783	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol-code.h	2e8706d15f1265a4
+112	182	1768339175446974496	src/graphics/glad/CMakeFiles/glad.dir/Debug/glad_autogen/mocs_compilation_Debug.cpp.o	b85dfd141f4ddf81
+6833	7317	1768601085855573825	src/app/Debug/FEM-program	8a4daea05621fc5e
+17	25	1768339175298977806	src/graphics/glfw/src/fractional-scale-v1-client-protocol-code.h	d1dcbc977aaff9c3
+116	488	1768339175760967476	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/egl_context.c.o	a4125bdc75a26e21
+114	452	1768339175717181639	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/init.c.o	72cac6ce7d72f2e0
+31	113	1768339175374976106	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/glfw_autogen/timestamp	7a2914dd136b9e36
+116	433	1768339175698430674	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/osmesa_context.c.o	5d94cd855640d6e6
+13	25	1768339175299748789	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/viewporter-client-protocol.h	fad6a900ee06dbc7
+959	1064	1768339176333149830	src/graphics/glfw/src/Debug/libglfw3.a	39fa6473ce4596aa
+182	646	1768339175919133931	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/x11_init.c.o	3e7b39b13364daad
+317	2694	1768597880343074705	src/app/CMakeFiles/FEM-program.dir/Debug/main.cpp.o	4a993fa49e6448e6
+73	6833	1768601085304416273	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/plates/plates.cpp.o	4e5db4ac7794e5e2
+12	31	1768339175306388966	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/wayland-client-protocol.h	5594520c97c11847
+331	674	1768339175947664873	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/x11_monitor.c.o	9d4c8c550792934
+24	112	1768339175374976106	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/mocs_compilation_Debug.cpp	66c7879c9ecf848d
+1064	1135	1768339176398953224	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/opengl_autogen/timestamp	9dc72a1569d1d41c
+1136	1195	1768339176463951773	src/graphics/CMakeFiles/opengl.dir/Debug/src/glfw.cpp.o	2aeb6b24c6dd1d3c
+72	931	1768601079464657654	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/displacement.cpp.o	2234f02b327f7d82
+6	26	0	CMakeFiles/clean.additional:Debug	ef993b15a92b8f11
+14	71	1768601687267539496	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+17	25	1768339175298977806	src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol.h	35c6ec9a0231ed2f
+14	24	1768339175298977806	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol.h	badaf1ff83092651
+117	579	1768339175848032377	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/null_window.c.o	52b6442fec6ed37f
+433	716	1768339175989565304	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/linux_joystick.c.o	9f142734c5ad357d
+115	604	1768339175876964882	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/input.c.o	5419932b27092443
+181	425	1768339175698968862	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/posix_thread.c.o	b170ed237f641de6
+117	445	1768339175717181639	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/null_monitor.c.o	b536eb3f3999e8a8
+16	25	1768339175298977806	src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol.h	3b042706f8541085
+16	25	1768339175299748789	src/graphics/glfw/src/fractional-scale-v1-client-protocol.h	72a70c80dc2a027b
+17	25	1768339175298977806	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/xdg-activation-v1-client-protocol-code.h	fd9b23e1ee766684
 14	24	1768339175298977806	src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol.h	badaf1ff83092651
 113	181	1768339175445974519	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/glfw_autogen/mocs_compilation_Debug.cpp.o	42a1a5a9b24d8980
+14	27	1768339175301977739	src/graphics/glfw/src/xdg-shell-client-protocol-code.h	f631bc2e76fe2e9e
+16	25	1768339175299748789	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/fractional-scale-v1-client-protocol.h	72a70c80dc2a027b
+15	25	1768339175300779659	src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol-code.h	c62cd6e910220d19
+1452	3560	1768339178824131689	src/app/CMakeFiles/FEM-program.dir/Debug/context-menu/treeContextMenu.cpp.o	799ed61cf3e4ad85
+26	43	0	clean:Debug	d1d9d068de73bfac
+114	383	1768339175655838210	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/context.c.o	18250fe5b3f876cf
+13	25	1768339175299977783	src/graphics/glfw/src/viewporter-client-protocol-code.h	419a3ecf56470d87
+18	25	1768339175299748789	src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol-code.h	de36cea5ddc52192
+15	25	1768339175300779659	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/idle-inhibit-unstable-v1-client-protocol-code.h	c62cd6e910220d19
+386	662	1768339175935127225	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/glx_context.c.o	a9b175c41026b628
+17	25	1768339175299748789	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/xdg-activation-v1-client-protocol.h	fd9f1be22a4fb6f8
+16	25	1768339175298977806	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/relative-pointer-unstable-v1-client-protocol.h	3b042706f8541085
+13	25	1768339175299748789	src/graphics/glfw/src/viewporter-client-protocol.h	fad6a900ee06dbc7
 14	27	1768339175301977739	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/xdg-shell-client-protocol-code.h	f631bc2e76fe2e9e
 115	394	1768339175666969578	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/platform.c.o	33de3b3787739310
-13	25	1768339175299748789	src/graphics/glfw/src/viewporter-client-protocol.h	fad6a900ee06dbc7
+76	1904	1768601080435644921	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/femdisplacement.cpp.o	682b66c64e8338f5
+116	584	1768339175856965329	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/window.c.o	f4f95074469978cb
+72	2740	1768601081279633852	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/load.cpp.o	5b1e592eaa6f796f
 1135	1170	1768339176440952286	src/graphics/CMakeFiles/opengl.dir/Debug/opengl_autogen/mocs_compilation_Debug.cpp.o	c130740b9264c6b7
-14	69	1768404635822524010	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
-355	605	1768339175877964859	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/xkb_unicode.c.o	66174687de322eed
-17	25	1768339175298977806	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glfw/src/xdg-decoration-unstable-v1-client-protocol.h	35c6ec9a0231ed2f
+14	71	1768601687267539496	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+24	112	1768339175374976106	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/graphics/glad/glad_autogen/timestamp	66c7879c9ecf848d
+426	959	1768339176232708852	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/wl_window.c.o	a06439d346663314
+15	26	1768339175300977761	src/graphics/glfw/src/pointer-constraints-unstable-v1-client-protocol-code.h	ed5a20578dc41b3
+24	112	1768339175374976106	src/graphics/glad/glad_autogen/timestamp	66c7879c9ecf848d
+425	665	1768339175939006846	src/graphics/glfw/src/CMakeFiles/glfw.dir/Debug/wl_monitor.c.o	678319fc64b5815d
+11	55	1768601798837589496	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+11	55	1768601798837589496	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+11	55	1768601798837589496	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+11	55	1768601798837589496	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+14	71	1768601952152374521	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+14	71	1768601952152374521	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+14	71	1768601952152374521	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+14	71	1768601952152374521	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+74	2179	1768601954246918968	src/app/CMakeFiles/FEM-program.dir/Debug/__/mesh/mesh.cpp.o	a82f5a7a89c86a13
+2179	2661	1768601954730912389	src/app/Debug/FEM-program	8a4daea05621fc5e
+6	34	1768602157341018494	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+6	34	1768602157341018494	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+6	34	1768602157341018494	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+6	34	1768602157341018494	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+36	1404	1768602158701744338	src/app/CMakeFiles/FEM-program.dir/Debug/__/mesh/mesh.cpp.o	a82f5a7a89c86a13
+14	73	1768602205443803903	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+14	73	1768602205443803903	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+14	73	1768602205443803903	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+14	73	1768602205443803903	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+14	75	1768602336425972655	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+14	75	1768602336425972655	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+14	75	1768602336425972655	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+14	75	1768602336425972655	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+12	70	1768602390010220256	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+12	70	1768602390010220256	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+12	70	1768602390010220256	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+12	70	1768602390010220256	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+74	2440	1768602392371196911	src/app/CMakeFiles/FEM-program.dir/Debug/__/mesh/mesh.cpp.o	a82f5a7a89c86a13
+73	3917	1768602393843429600	src/app/CMakeFiles/FEM-program.dir/Debug/mainwindow.cpp.o	dcfd5473c0af3b9a
+3917	4396	1768602394327167721	src/app/Debug/FEM-program	8a4daea05621fc5e
+12	72	1768602433661826091	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+12	72	1768602433661826091	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+12	72	1768602433661826091	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+12	72	1768602433661826091	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+75	2000	1768602435581077163	src/app/CMakeFiles/FEM-program.dir/Debug/__/mesh/mesh.cpp.o	a82f5a7a89c86a13
+2000	2474	1768602436055546667	src/app/Debug/FEM-program	8a4daea05621fc5e
+12	58	1768657457154062983	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+12	58	1768657457154062983	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+12	58	1768657457154062983	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+12	58	1768657457154062983	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+61	115	1768657457206062282	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/femload.cpp.o	958af2c5ac9e57a3
+60	584	1768657457671056021	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/displacement.cpp.o	2234f02b327f7d82
+62	1579	1768657458667042609	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/femdisplacement.cpp.o	682b66c64e8338f5
+61	2071	1768657459159035984	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/load.cpp.o	5b1e592eaa6f796f
+60	2075	1768657459162035944	src/app/CMakeFiles/FEM-program.dir/Debug/__/mesh/mesh.cpp.o	a82f5a7a89c86a13
+61	2140	1768657459227016973	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/element.cpp.o	ca754c5edaf8bae0
+60	3533	1768657460614306477	src/app/CMakeFiles/FEM-program.dir/Debug/mainwindow.cpp.o	dcfd5473c0af3b9a
+61	6265	1768657463281081845	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/plates/plates.cpp.o	4e5db4ac7794e5e2
+6266	6760	1768657463844972886	src/app/Debug/FEM-program	8a4daea05621fc5e

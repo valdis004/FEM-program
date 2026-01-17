@@ -1,6 +1,7 @@
 #pragma once
 
 #include "context-menu/treeContextMenu.h"
+#include <QDialogButtonBox>
 #include <QMainWindow>
 
 class MainWindow : public QMainWindow {

@@ -4,12 +4,13 @@ add_executable(FEM-program
     context-menu/treeContextMenu.cpp
      ../graphics/qtgl/qtgl.cpp
      # модули FEM
-     ../mesh/mesh.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/mesh/mesh.cpp
      ${CMAKE_HOME_DIRECTORY}/src/elements/displacement/displacement.cpp
    ${CMAKE_HOME_DIRECTORY}/src/elements/load/load.cpp
    ${CMAKE_HOME_DIRECTORY}/src/elements/plates/plates.cpp
    ${CMAKE_HOME_DIRECTORY}/src/elements/element.cpp
    ${CMAKE_HOME_DIRECTORY}/src/elements/load/femload.cpp
+   ${CMAKE_HOME_DIRECTORY}/src/elements/displacement/femdisplacement.cpp
 #   ${CMAKE_HOME_DIRECTORY}/src/elements/material/PlateMaterial.cpp
 
 )

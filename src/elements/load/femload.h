@@ -1,34 +1,46 @@
 #pragma once
 
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/element.h"
+// #include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.h"
+
+class Node;
 
 class NodeLoad {
 public:
+  double *values{nullptr};
+  int countValues{0};
   //   double fx, fy, fz, mx, my, mz;
 
-  virtual void setValues(double *value, double *coefs) = 0;
+  virtual void setNodeLoadValues(double *values, double *coefs) = 0;
 
-  static NodeLoad *create(LoadType type, double *value, double *coefs);
+  virtual NodeLoad *create(double *values, double *coefs) = 0;
+
+  virtual ~NodeLoad() = default;
 };
 
-class NodeLoadPlateFull : public NodeLoad {
+class NodeLoadFzMxMy : public NodeLoad {
 public:
   double fz, mx, my;
 
-  virtual void setValues(double *value, double *coefs) override;
+  virtual void setNodeLoadValues(double *values, double *coefs) override;
+
+  virtual NodeLoad *create(double *values, double *coefs) override;
 };
 
-class NodeLoadPlateFz : public NodeLoad {
+class NodeLoadFz : public NodeLoad {
 public:
   double fz;
 
-  virtual void setValues(double *value, double *coefs) override;
+  virtual void setNodeLoadValues(double *values, double *coefs) override;
+
+  virtual NodeLoad *create(double *values, double *coefs) override;
 };
 
-class NodeLoadPlateMxMy : public NodeLoad {
+class NodeLoadMxMy : public NodeLoad {
 public:
   double mx, my;
 
-  virtual void setValues(double *value, double *coefs) override;
+  virtual void setNodeLoadValues(double *values, double *coefs) override;
+
+  virtual NodeLoad *create(double *values, double *coefs) override;
 };

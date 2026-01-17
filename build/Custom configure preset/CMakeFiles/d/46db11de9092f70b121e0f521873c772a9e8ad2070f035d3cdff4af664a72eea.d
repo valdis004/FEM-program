@@ -8,8 +8,12 @@ src/app/FEM-program_autogen/timestamp: \
   /home/vladislav/Документы/FEM/FEM\ program/src/app/mainwindow.h \
   /home/vladislav/Документы/FEM/FEM\ program/src/elements/displacement/displacement.cpp \
   /home/vladislav/Документы/FEM/FEM\ program/src/elements/displacement/displacement.h \
+  /home/vladislav/Документы/FEM/FEM\ program/src/elements/displacement/femdisplacement.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/elements/displacement/femdisplacement.h \
   /home/vladislav/Документы/FEM/FEM\ program/src/elements/element.cpp \
   /home/vladislav/Документы/FEM/FEM\ program/src/elements/element.h \
+  /home/vladislav/Документы/FEM/FEM\ program/src/elements/load/femload.cpp \
+  /home/vladislav/Документы/FEM/FEM\ program/src/elements/load/femload.h \
   /home/vladislav/Документы/FEM/FEM\ program/src/elements/load/load.cpp \
   /home/vladislav/Документы/FEM/FEM\ program/src/elements/load/load.h \
   /home/vladislav/Документы/FEM/FEM\ program/src/elements/plates/plates.cpp \
@@ -414,6 +418,7 @@ src/app/FEM-program_autogen/timestamp: \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qvalidator.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QDialogButtonBox \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTreeWidget \
@@ -423,6 +428,7 @@ src/app/FEM-program_autogen/timestamp: \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractspinbox.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialogbuttonbox.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \

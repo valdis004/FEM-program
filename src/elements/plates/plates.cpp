@@ -86,12 +86,14 @@ constexpr static auto NDiffAny = [](double *arr, double xi, double eta,
   return arr;
 };
 
-MITC4PlateMy::MITC4PlateMy(size_t id, const Node *nodes)
-    : AbstractElement(id, nodes, ElementType::MITC4MY) {};
+// const int MITC4PlateMy::nodeCOunt = 4;
+
+MITC4PlateMy::MITC4PlateMy(size_t id, const Node *nodes, int count)
+    : AbstractElement(id, nodes, count, ElementType::MITC4MY) {};
 
 MITC4PlateMy::MITC4PlateMy(size_t id, const Node *nodes,
-                           const Material &material)
-    : AbstractElement(id, nodes, material, ElementType::MITC4MY) {};
+                           const Material &material, int count)
+    : AbstractElement(id, nodes, count, material, ElementType::MITC4MY) {};
 
 MatrixXd MITC4PlateMy::jMatrix(double xi, double eta) {
   double y1 = nodes[0].point.y;
@@ -250,17 +252,14 @@ MatrixXd MITC4PlateMy::integrateingFn(double xi, double eta, int type) {
 }
 
 MatrixXd MITC4PlateMy::getLocalStiffMatrix() {
-  auto xiSet = props.xiSet;
-  auto etaSet = props.etaSet;
-  auto kElem =
-      integrateingFn(ElementProvider::props[type].xiSet[0], etaSet[0], 0) +
-      integrateingFn(xiSet[0], etaSet[1], 0) +
-      integrateingFn(xiSet[1], etaSet[0], 0) +
-      integrateingFn(xiSet[1], etaSet[1], 0) +
-      integrateingFn(xiSet[0], etaSet[0], 1) +
-      integrateingFn(xiSet[0], etaSet[1], 1) +
-      integrateingFn(xiSet[1], etaSet[0], 1) +
-      integrateingFn(xiSet[1], etaSet[1], 1);
+  auto kElem = integrateingFn(XI_SET[0], ETA_SET[0], 0) +
+               integrateingFn(XI_SET[0], ETA_SET[1], 0) +
+               integrateingFn(XI_SET[1], ETA_SET[0], 0) +
+               integrateingFn(XI_SET[1], ETA_SET[1], 0) +
+               integrateingFn(XI_SET[0], ETA_SET[0], 1) +
+               integrateingFn(XI_SET[0], ETA_SET[1], 1) +
+               integrateingFn(XI_SET[1], ETA_SET[0], 1) +
+               integrateingFn(XI_SET[1], ETA_SET[1], 1);
 
   return kElem;
 }
@@ -275,9 +274,9 @@ VectorXd MITC4PlateMy::getLoadVector() {
 
   for (size_t i = 0; i < 2; i++) {
     for (size_t j = 0; j < 2; j++) {
-      loadCoefVector += N(props.xiSet[i], props.etaSet[j]) *
-                        jMatrix(props.xiSet[i], props.etaSet[j]) *
-                        props.wCoefs[i * 2 + j] * props.wCoefs[i * 2 + j];
+      loadCoefVector += N(XI_SET[i], ETA_SET[j]) *
+                        jMatrix(XI_SET[i], ETA_SET[j]) * W_COEFS[i * 2 + j] *
+                        W_COEFS[i * 2 + j];
     }
   }
 
