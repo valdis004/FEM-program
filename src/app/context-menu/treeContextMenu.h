@@ -4,9 +4,13 @@
 #include <QMenu>
 #include <QObject>
 #include <QTreeWidget>
+
 #include <QTreeWidgetItem>
+#include <qmessagebox.h>
 #include <qobject.h>
 #include <qwidget.h>
+
+class Qtgl;
 
 class TreeContextMenu : public QObject {
   Q_OBJECT
@@ -30,7 +34,7 @@ public:
   // Создать стандартное меню
   void createDefaultMenu();
 
-  static void createDiologDefualtSchemePlate(QWidget *mainWindow);
+  void createDiologDefualtSchemePlate(QWidget *mainWindow, Qtgl *scene);
 
 signals:
   // Сигналы для различных действий
@@ -43,6 +47,8 @@ protected:
 
 protected slots:
   virtual void onActionTriggered();
+  void updateProgress(QMessageBox *mes, int percent);
+  void showResult(QMessageBox *mes, int count);
 
 protected:
   QTreeWidget *treeWidget;

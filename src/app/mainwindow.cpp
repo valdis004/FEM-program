@@ -51,7 +51,7 @@ void MainWindow::createLeftDock() {
   QMdiArea *m_pma = new QMdiArea(this);
   m_pma->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
   m_pma->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
-  Qtgl *scene = new Qtgl(this);
+  scene = new Qtgl(this);
   scene->setWindowTitle("Graphic window");
   m_pma->addSubWindow(scene);
   m_pma->setViewMode(QMdiArea::TabbedView);
@@ -269,5 +269,5 @@ void MainWindow::onTreeContextMenuRequested(const QPoint &pos) {
 // Функция, отрабатываемая при нажатии кнопки "Create default scheme" У treewiev
 // для plate
 void MainWindow::createDefaultPlateScheme(QTreeWidgetItem *item) {
-  TreeContextMenu::createDiologDefualtSchemePlate(this);
+  treeContextMenu->createDiologDefualtSchemePlate(this, scene);
 }

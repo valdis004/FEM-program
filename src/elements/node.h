@@ -26,14 +26,21 @@ public:
   unsigned id;
   NodeLoad *nodeLoad{nullptr};
   NodeDisplacement *nodeDisplacement{nullptr};
-  unsigned firstGlobId;
+  unsigned firstGlobStiffId;
 
   Node() = default;
   Node(Point3 point, int dofCount, int id)
       : point(point), dofCount(dofCount), id(id) {}
 
   ~Node() {
-    delete nodeLoad;
-    delete nodeDisplacement;
+    if (!nodeLoad)
+      delete nodeLoad;
+
+    if (!nodeDisplacement)
+      delete nodeDisplacement;
+  }
+
+  void setValues(Point3 point, int dofCount, int id) {
+    this->point = point, this->dofCount = dofCount, this->id = id;
   }
 };

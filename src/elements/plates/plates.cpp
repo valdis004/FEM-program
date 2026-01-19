@@ -88,22 +88,22 @@ constexpr static auto NDiffAny = [](double *arr, double xi, double eta,
 
 // const int MITC4PlateMy::nodeCOunt = 4;
 
-MITC4PlateMy::MITC4PlateMy(size_t id, const Node *nodes, int count)
+MITC4PlateMy::MITC4PlateMy(size_t id, Node **nodes, int count)
     : AbstractElement(id, nodes, count, ElementType::MITC4MY) {};
 
-MITC4PlateMy::MITC4PlateMy(size_t id, const Node *nodes,
-                           const Material &material, int count)
+MITC4PlateMy::MITC4PlateMy(size_t id, Node **nodes, const Material &material,
+                           int count)
     : AbstractElement(id, nodes, count, material, ElementType::MITC4MY) {};
 
 MatrixXd MITC4PlateMy::jMatrix(double xi, double eta) {
-  double y1 = nodes[0].point.y;
-  double y2 = nodes[1].point.y;
-  double y3 = nodes[2].point.y;
-  double y4 = nodes[3].point.y;
-  double x1 = nodes[0].point.x;
-  double x2 = nodes[1].point.x;
-  double x3 = nodes[2].point.x;
-  double x4 = nodes[3].point.x;
+  double y1 = nodes[0]->point.y;
+  double y2 = nodes[1]->point.y;
+  double y3 = nodes[2]->point.y;
+  double y4 = nodes[3]->point.y;
+  double x1 = nodes[0]->point.x;
+  double x2 = nodes[1]->point.x;
+  double x3 = nodes[2]->point.x;
+  double x4 = nodes[3]->point.x;
 
   double j11 = (-1.0 / 4.0) * (1 - eta) * x1 + (1.0 / 4.0) * (1 - eta) * x2 +
                (1.0 / 4.0) * (1 + eta) * x3 - (1.0 / 4.0) * (1 + eta) * x4;
@@ -190,8 +190,8 @@ MatrixXd MITC4PlateMy::bMatrix(double xi, double eta, int type) {
   double xCoords[4];
   double yCoords[4];
   for (int i = 0; i < 4; i++) {
-    xCoords[i] = nodes[i].point.x;
-    yCoords[i] = nodes[i].point.y;
+    xCoords[i] = nodes[i]->point.x;
+    yCoords[i] = nodes[i]->point.y;
   }
 
   auto Ngm = MatrixXd{
@@ -252,14 +252,15 @@ MatrixXd MITC4PlateMy::integrateingFn(double xi, double eta, int type) {
 }
 
 MatrixXd MITC4PlateMy::getLocalStiffMatrix() {
-  auto kElem = integrateingFn(XI_SET[0], ETA_SET[0], 0) +
-               integrateingFn(XI_SET[0], ETA_SET[1], 0) +
-               integrateingFn(XI_SET[1], ETA_SET[0], 0) +
-               integrateingFn(XI_SET[1], ETA_SET[1], 0) +
-               integrateingFn(XI_SET[0], ETA_SET[0], 1) +
-               integrateingFn(XI_SET[0], ETA_SET[1], 1) +
-               integrateingFn(XI_SET[1], ETA_SET[0], 1) +
-               integrateingFn(XI_SET[1], ETA_SET[1], 1);
+  auto kElem =
+      integrateingFn(DATA::DATA::XI_SET[0], DATA::DATA::ETA_SET[0], 0) +
+      integrateingFn(DATA::DATA::XI_SET[0], DATA::DATA::ETA_SET[1], 0) +
+      integrateingFn(DATA::DATA::XI_SET[1], DATA::DATA::ETA_SET[0], 0) +
+      integrateingFn(DATA::DATA::XI_SET[1], DATA::DATA::ETA_SET[1], 0) +
+      integrateingFn(DATA::DATA::XI_SET[0], DATA::DATA::ETA_SET[0], 1) +
+      integrateingFn(DATA::DATA::XI_SET[0], DATA::DATA::ETA_SET[1], 1) +
+      integrateingFn(DATA::DATA::XI_SET[1], DATA::DATA::ETA_SET[0], 1) +
+      integrateingFn(DATA::DATA::XI_SET[1], DATA::DATA::ETA_SET[1], 1);
 
   return kElem;
 }
@@ -274,9 +275,10 @@ VectorXd MITC4PlateMy::getLoadVector() {
 
   for (size_t i = 0; i < 2; i++) {
     for (size_t j = 0; j < 2; j++) {
-      loadCoefVector += N(XI_SET[i], ETA_SET[j]) *
-                        jMatrix(XI_SET[i], ETA_SET[j]) * W_COEFS[i * 2 + j] *
-                        W_COEFS[i * 2 + j];
+      loadCoefVector +=
+          N(DATA::XI_SET[i], DATA::ETA_SET[j]) *
+          jMatrix(DATA::XI_SET[i], DATA::ETA_SET[j]).determinant() *
+          DATA::W_COEFS[i * 2 + j] * DATA::W_COEFS[i * 2 + j];
     }
   }
 

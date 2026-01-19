@@ -1,6 +1,7 @@
 #pragma once
 
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
+
 #include "femload.h"
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.h"
 
@@ -9,10 +10,6 @@ class NodeLoad;
 class Load {
 public:
   virtual void setValues(double *values) = 0;
-
-  template <ElementType type>
-  static NodeLoad *createNodeLoadFromLoad(Load *load, double *coefs,
-                                          int localNodeId);
 };
 
 class AreaLoadQzMxMy : public Load {

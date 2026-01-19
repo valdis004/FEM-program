@@ -29,7 +29,7 @@ NodeDisplacementUzPsixPsiy::NodeDisplacementUzPsixPsiy(bool u_z, bool psi_x,
 }
 
 /*virtual*/ void NodeDisplacementUzPsixPsiy::setIndexesToZero(Node *node) {
-  unsigned firstGlobalIndex = node->firstGlobId;
+  unsigned firstGlobalIndex = node->firstGlobStiffId;
   nodeIdsToZero = new unsigned[nodesCountToZero];
 
   bool dislps[] = {u_z, psi_x, psi_y};
@@ -58,7 +58,7 @@ NodeDisplacementUz::NodeDisplacementUz(bool u_z) : u_z(u_z) {
 }
 
 /*virtual*/ void NodeDisplacementUz::setIndexesToZero(Node *node) {
-  unsigned firstGlobalIndex = node->firstGlobId;
+  unsigned firstGlobalIndex = node->firstGlobStiffId;
   nodeIdsToZero = new unsigned[nodesCountToZero];
 
   u_z ? *nodeIdsToZero = firstGlobalIndex : 0;
@@ -82,7 +82,7 @@ NodeDisplacementPsixPsiy::NodeDisplacementPsixPsiy(bool psi_x, bool psi_y)
 }
 
 /*virtual*/ void NodeDisplacementPsixPsiy::setIndexesToZero(Node *node) {
-  unsigned firstGlobalIndex = node->firstGlobId;
+  unsigned firstGlobalIndex = node->firstGlobStiffId;
   nodeIdsToZero = new unsigned[nodesCountToZero];
 
   bool dislps[] = {psi_x, psi_y};

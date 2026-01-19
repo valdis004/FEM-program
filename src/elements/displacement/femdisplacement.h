@@ -13,7 +13,7 @@ public:
 
   virtual void setIndexesToZero(Node *node) = 0;
 
-  virtual NodeDisplacement *create(bool *value, Node *node) = 0;
+  // virtual NodeDisplacement *create(bool *value, Node *node) = 0;
 
   virtual ~NodeDisplacement() = default;
 };
@@ -26,7 +26,7 @@ public:
 
   virtual void setIndexesToZero(Node *node) override;
 
-  virtual NodeDisplacement *create(bool *value, Node *node) override;
+  static NodeDisplacement *create(bool *value, Node *node);
 };
 
 class NodeDisplacementUz : public NodeDisplacement {
@@ -37,7 +37,7 @@ public:
 
   virtual void setIndexesToZero(Node *node) override;
 
-  virtual NodeDisplacement *create(bool *value, Node *node) override;
+  static NodeDisplacement *create(bool *value, Node *node);
 };
 
 class NodeDisplacementPsixPsiy : public NodeDisplacement {
@@ -48,5 +48,5 @@ public:
 
   virtual void setIndexesToZero(Node *node) override;
 
-  virtual NodeDisplacement *create(bool *value, Node *node) override;
+  static NodeDisplacement *create(bool *value, Node *node);
 };

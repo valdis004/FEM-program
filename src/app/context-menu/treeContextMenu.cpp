@@ -1,12 +1,17 @@
 #include "treeContextMenu.h"
+#include "/home/vladislav/Документы/FEM/FEM program/src/graphics/qtgl/qtgl.h"
 #include "/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.h"
 #include <QContextMenuEvent>
 #include <QDialog>
+#include <QMessageBox>
+#include <QThread>
 #include <qboxlayout.h>
 #include <qcombobox.h>
 #include <qdialogbuttonbox.h>
 #include <qformlayout.h>
+#include <qmessagebox.h>
 #include <qwidget.h>
+#include <vector>
 
 #define TEXT_PLATE_STANDART_SCHEME "Create default scheme"
 
@@ -78,7 +83,8 @@ void TreeContextMenu::onActionTriggered() {
   emit actionTriggered(actionName, currentItem);
 }
 
-void TreeContextMenu::createDiologDefualtSchemePlate(QWidget *mainWindow) {
+void TreeContextMenu::createDiologDefualtSchemePlate(QWidget *mainWindow,
+                                                     Qtgl *scene) {
   QDialog *d = new QDialog(mainWindow);
   d->setFixedSize({500, 260});
   d->setWindowTitle("Settings of scheme");
@@ -118,12 +124,51 @@ void TreeContextMenu::createDiologDefualtSchemePlate(QWidget *mainWindow) {
   // d->setLayout(mainLayout);
   d->show();
 
-  Mesh mesh;
-
   ElementType type = (ElementType)comboBox->currentIndex();
 
-  // if (d->exec() == QDialog::Accepted) {
-  //   QThread *thread = QThread::create([](){});
-  //   thread->start();
-  // }
+  if (d->exec() == QDialog::Accepted) {
+    QMessageBox *mes = new QMessageBox(mainWindow);
+    mes->setWindowTitle("Generating default mesh...");
+    mes->show();
+
+    Mesh *mesh = new Mesh();
+
+    connect(mesh, &Mesh::progressChanged, this,
+            &TreeContextMenu::updateProgress);
+    connect(mesh, &Mesh::meshFinished, this, &TreeContextMenu::showResult);
+
+    QThread *thread = QThread::create([scene, mesh, mes, type, this]() {
+      mesh->meshManager(mes, type);
+
+      std::vector<Node *> nodes = mesh->nodes;
+      std::vector<AbstractElement *> elements = mesh->elements;
+
+      // Передаем в основной поток
+      QMetaObject::invokeMethod(
+          this,
+          [this, scene, nodes, elements, mes]() {
+            scene->setMeshData(nodes, elements);
+            mes->accept();
+            mes->deleteLater();
+          },
+          Qt::QueuedConnection);
+    });
+
+    // Переносим mesh в поток
+    mesh->moveToThread(thread);
+
+    // Когда поток закончит работу, удаляем его
+    connect(thread, &QThread::finished, thread, &QThread::deleteLater);
+
+    // Запускаем поток
+    thread->start();
+  }
+}
+
+void TreeContextMenu::updateProgress(QMessageBox *mes, int count) {
+  mes->setText(QString("Creating element: %1").arg(count));
+}
+
+void TreeContextMenu::showResult(QMessageBox *mes, int count) {
+  mes->setText(QString("Sucsesfully Created %1 elements").arg(count));
 }

@@ -2,6 +2,7 @@
 
 // #include "displacement/displacement.h"
 // #include "displacement/displacement.h"
+// #include "elementprovider.h
 #include "material/material.h"
 // #include "node.h"
 // #include "plates/plates.h"
@@ -11,6 +12,8 @@
 // #include <exception>
 // #include "elementprovider.h"
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/displacement.h"
+// #include "/home/vladislav/Документы/FEM/FEM
+// program/src/elements/elementprovider.h"
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.h"
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/point.h"
@@ -27,19 +30,19 @@ class AbstractElement {
 private:
   // const ElementData &check(ElementType type);
 
-protected:
+public:
   const ElementType type;
-  QVector<Node> nodes;
+  QVector<Node *> nodes;
+  unsigned nodesCount;
   size_t id;
   Load *generalLoad;
   Displacement *generalDisp;
 
 public:
-  AbstractElement(size_t id, const Node *nodes, int count,
+  AbstractElement(size_t id, Node **nodes, int count,
                   ElementType type = ElementType::NONE);
 
-  AbstractElement(size_t id, const Node *nodes, int count,
-                  const Material &material,
+  AbstractElement(size_t id, Node **nodes, int count, const Material &material,
                   ElementType type = ElementType::NONE);
 
   virtual MatrixXd getLocalStiffMatrix() = 0;
@@ -50,8 +53,9 @@ public:
 
   virtual ~AbstractElement() = default;
 
-  static AbstractElement *create(size_t id, ElementType type, const Node *nodes,
-                                 int count, void *ptr);
+  static AbstractElement *create(size_t id, ElementType type, Node **nodes,
+                                 int count);
+  void setLoad(Load *load) { this->generalLoad = load; }
 
-  template <ElementType type> static void setCalcProps(AbstractElement *ptr);
+  void setDisp(Displacement *disp) { this->generalDisp = disp; }
 };

@@ -15,7 +15,8 @@ Qtgl::Qtgl(QWidget *pwgt /*= 0*/)
 
   pFunc->glEnable(GL_DEPTH_TEST);
   glShadeModel(GL_FLAT);
-  m_nPyramid = createPyramid(0.9f);
+
+  createMeshDisplayList();
 }
 
 // ----------------------------------------------------------------------
@@ -23,7 +24,7 @@ Qtgl::Qtgl(QWidget *pwgt /*= 0*/)
   glViewport(0, 0, (GLint)nWidth, (GLint)nHeight);
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
-  glFrustum(-1.0, 1.0, -1.0, 1.0, 1.0, 10.0);
+  glFrustum(-0.2, 0.2, -0.2, 0.2, 0.2, 20.0);
 }
 
 // ----------------------------------------------------------------------
@@ -37,7 +38,10 @@ Qtgl::Qtgl(QWidget *pwgt /*= 0*/)
   glRotatef(m_xRotate, 1.0, 0.0, 0.0);
   glRotatef(m_yRotate, 0.0, 1.0, 0.0);
 
-  glCallList(m_nPyramid);
+  // Рисуем сетку
+  if (m_meshDataValid) {
+    glCallList(m_nMesh);
+  }
 }
 
 // ----------------------------------------------------------------------
@@ -72,31 +76,183 @@ void Qtgl::wheelEvent(QWheelEvent *pe) {
   m_ptPosition = pe->pos();
 }
 
+void Qtgl::setMeshData(const std::vector<Node *> &nodes,
+                       const std::vector<AbstractElement *> &elements) {
+  m_nodes = nodes;
+  m_elements = elements;
+  m_meshDataValid = !nodes.empty() && !elements.empty();
+
+  if (m_meshDataValid) {
+    // Нормируем данные для лучшего отображения
+    normalizeMeshData();
+
+    // Пересоздаем дисплейный список
+    if (m_nMesh) {
+      glDeleteLists(m_nMesh, 1);
+    }
+    createMeshDisplayList();
+    update();
+  }
+}
+
+void Qtgl::createMeshDisplayList() {
+  if (!m_meshDataValid)
+    return;
+
+  if (m_nMesh) {
+    glDeleteLists(m_nMesh, 1);
+  }
+
+  m_nMesh = glGenLists(1);
+  glNewList(m_nMesh, GL_COMPILE);
+
+  // 1. Рисуем элементы (прямоугольники)
+  glColor4f(0.8f, 0.8f, 0.8f, 0.7f); // Полупрозрачный серый для элементов
+
+  for (const auto &element : m_elements) {
+    glBegin(GL_QUADS);
+    // Рисуем прямоугольник по 4 узлам
+    for (int i = 0; i < element->nodesCount; i++) {
+      const Node *node = element->nodes[i];
+      glVertex3f(node->point.x, node->point.z, node->point.y);
+    }
+    glEnd();
+
+    // Рисуем контур элемента (черный)
+    glBegin(GL_LINE_LOOP);
+    glColor4f(0.0f, 0.0f, 0.0f, 1.0f);
+    for (int i = 0; i < element->nodesCount; i++) {
+      const Node *node = element->nodes[i];
+      glVertex3f(node->point.x, node->point.z, node->point.y);
+    }
+    glEnd();
+
+    glColor4f(0.8f, 0.8f, 0.8f,
+              0.7f); // Возвращаем цвет для следующих элементов
+  }
+
+  // 2. Рисуем узлы (красные точки)
+  glPointSize(5.0f);
+  glBegin(GL_POINTS);
+  glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
+
+  for (const auto node : m_nodes) {
+    glVertex3f(node->point.x, node->point.z, node->point.y);
+  }
+  glEnd();
+
+  glEndList();
+}
+
+void Qtgl::calculateMeshBounds() {
+  if (m_nodes.empty())
+    return;
+
+  m_minX = m_maxX = m_nodes[0]->point.x;
+  m_minY = m_maxY = m_nodes[0]->point.y;
+  m_minZ = m_maxZ = m_nodes[0]->point.z;
+
+  for (const auto node : m_nodes) {
+    m_minX = std::min(m_minX, node->point.x);
+    m_maxX = std::max(m_maxX, node->point.x);
+    m_minY = std::min(m_minY, node->point.y);
+    m_maxY = std::max(m_maxY, node->point.y);
+    m_minZ = std::min(m_minZ, node->point.z);
+    m_maxZ = std::max(m_maxZ, node->point.z);
+  }
+
+  m_centerX = (m_minX + m_maxX) * 0.5f;
+  m_centerY = (m_minY + m_maxY) * 0.5f;
+  m_centerZ = (m_minZ + m_maxZ) * 0.5f;
+
+  // Находим максимальный размер для масштабирования
+  float dx = m_maxX - m_minX;
+  float dy = m_maxY - m_minY;
+  float dz = m_maxZ - m_minZ;
+  m_scaleFactor = std::max({dx, dy, dz});
+
+  if (m_scaleFactor < 0.001f)
+    m_scaleFactor = 1.0f;
+}
+
+void Qtgl::normalizeMeshData() {
+  calculateMeshBounds();
+
+  // Центрируем и нормируем узлы
+  for (auto node : m_nodes) {
+    node->point.x = (node->point.x - m_centerX) / m_scaleFactor;
+    node->point.y = (node->point.y - m_centerY) / m_scaleFactor;
+    node->point.z = (node->point.z - m_centerZ) / m_scaleFactor;
+  }
+}
+
 // ----------------------------------------------------------------------
 GLuint Qtgl::createPyramid(GLfloat fSize /*=1.0f*/) {
   GLuint n = glGenLists(1);
 
   glNewList(n, GL_COMPILE);
-  glBegin(GL_TRIANGLE_FAN);
-  glColor4f(0.0f, 1.0f, 0.0f, 1.0f);
-  glVertex3f(0.0, fSize, 0.0);
-  glVertex3f(-fSize, -fSize, fSize);
-  glVertex3f(fSize, -fSize, fSize);
-  glColor4f(1.0f, 1.0f, 0.0f, 1.0f);
-  glVertex3f(fSize, -fSize, -fSize);
-  glColor4f(0.0f, 0.0f, 1.0f, 1.0f);
-  glVertex3f(-fSize, -fSize, -fSize);
-  glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-  glVertex3f(-fSize, -fSize, fSize);
+
+  int gridSize = 10;
+
+  float cellSize = 2.0f * fSize / gridSize;
+  float halfSize = fSize;
+
+  // 1. Сначала рисуем залитые квадраты
+  for (int i = 0; i < gridSize; i++) {
+    for (int j = 0; j < gridSize; j++) {
+      float x1 = -halfSize + i * cellSize;
+      float x2 = x1 + cellSize;
+      float z1 = -halfSize + j * cellSize;
+      float z2 = z1 + cellSize;
+
+      // Чередование цветов для наглядности
+      float r = ((i + j) % 2 == 0) ? 0.8f : 0.6f;
+      float g = ((i + j) % 2 == 0) ? 0.8f : 0.7f;
+      float b = ((i + j) % 2 == 0) ? 1.0f : 0.9f;
+
+      glBegin(GL_QUADS);
+      glColor4f(r, g, b, 0.8f); // Немного прозрачный
+      glVertex3f(x1, 0.0f, z1);
+      glVertex3f(x2, 0.0f, z1);
+      glVertex3f(x2, 0.0f, z2);
+      glVertex3f(x1, 0.0f, z2);
+      glEnd();
+    }
+  }
+
+  // 2. Рисуем линии сетки
+  glBegin(GL_LINES);
+  glColor4f(0.0f, 0.0f, 0.0f, 1.0f);
+
+  // Вертикальные линии (по X)
+  for (int i = 0; i <= gridSize; i++) {
+    float x = -halfSize + i * cellSize;
+    glVertex3f(x, 0.001f, -halfSize);
+    glVertex3f(x, 0.001f, halfSize);
+  }
+
+  // Горизонтальные линии (по Z)
+  for (int j = 0; j <= gridSize; j++) {
+    float z = -halfSize + j * cellSize;
+    glVertex3f(-halfSize, 0.001f, z);
+    glVertex3f(halfSize, 0.001f, z);
+  }
   glEnd();
 
-  glBegin(GL_QUADS);
+  // 3. Рисуем узлы сетки (точки)
+  glPointSize(4.0f);
+  glBegin(GL_POINTS);
   glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
-  glVertex3f(-fSize, -fSize, fSize);
-  glVertex3f(fSize, -fSize, fSize);
-  glVertex3f(fSize, -fSize, -fSize);
-  glVertex3f(-fSize, -fSize, -fSize);
+
+  for (int i = 0; i <= gridSize; i++) {
+    for (int j = 0; j <= gridSize; j++) {
+      float x = -halfSize + i * cellSize;
+      float z = -halfSize + j * cellSize;
+      glVertex3f(x, 0.002f, z); // Еще выше для узлов
+    }
+  }
   glEnd();
+
   glEndList();
 
   return n;

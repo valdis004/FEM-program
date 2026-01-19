@@ -3,12 +3,14 @@
 #include "context-menu/treeContextMenu.h"
 #include <QDialogButtonBox>
 #include <QMainWindow>
+class Qtgl;
 
 class MainWindow : public QMainWindow {
   Q_OBJECT
 
 public:
   MainWindow();
+  Qtgl *scene;
 
 private:
   void createLeftDock();

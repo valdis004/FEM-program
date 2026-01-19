@@ -1,8 +1,11 @@
 #pragma once
 
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
+// #include "/home/vladislav/Документы/FEM/FEM
+// program/src/elements/elementprovider.h" #include
+// "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
+
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
-#include "femdisplacement.h"
+// #include "femdisplacement.h"
 #include <qglobal.h>
 class Node;
 class NodeDisplacement;
@@ -14,10 +17,6 @@ public:
   virtual void setValues(bool *values) = 0;
 
   // virtual NodeDisplacement *createChildNodeDisplacement() = 0;
-
-  static NodeDisplacement *createNodeDisplacementFromDisplacement(
-      DisplType disType, Displacement *displ, Node *node,
-      NodeDisplacement *(*fn)(bool *value, Node *node));
 };
 
 class DisplacementUzPsixPsiy : public Displacement {

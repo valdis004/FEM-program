@@ -1,19 +1,6 @@
 #include "load.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/elementprovider.h"
-#include "femload.h"
-
-template <ElementType type>
-NodeLoad *Load::createNodeLoadFromLoad(Load *load, double *coefs,
-                                       int localNodeId) {
-
-  const int dof = ElementProvider<type>::data.DOF_COUNT;
-  auto fn = ElementProvider<type>::data.LOAD_FN_MAP[localNodeId];
-
-  double values[dof];
-  load->setValues(values);
-
-  return fn(values, coefs);
-}
+// #include "/home/vladislav/Документы/FEM/FEM
+// program/src/elements/elementprovider.h" #include "femload.h"
 
 AreaLoadQzMxMy::AreaLoadQzMxMy(double qz, double mx, double my)
     : qz(qz), mx(mx), my(my) {};

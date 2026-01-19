@@ -10,8 +10,9 @@
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/displacement.h"
 #include "mesh.h"
 
-bool Mesh::isEqual(Point3 p1, Point3 p2) {
-  return p1.x - p2.x < 0.001 && p1.y - p2.y < 0.001 && p1.y - p2.y < 0.001;
+bool Mesh::isEqual(const Point3 &p1, const Point3 &p2) {
+  return abs(p1.x - p2.x) < 0.001 && abs(p1.y - p2.y) < 0.001 &&
+         abs(p1.y - p2.y) < 0.001;
 }
 
 unsigned Mesh::maxNodeIndexInList(const QList<Node> &list) {
@@ -122,10 +123,11 @@ unsigned Mesh::maxNodeIndexInList(const QList<Node> &list) {
 //   }
 // }
 
-void Mesh::meshManager(ElementType type) {
+void Mesh::meshManager(QMessageBox *mes, ElementType type) {
   switch (type) {
   case ElementType::MITC4MY:
-    createDefaultMesh<MITC4MY>();
+    createDefaultMesh<MITC4MY>(mes);
+    break;
   default:
     throw std::runtime_error("Unknown element tipe");
   }
