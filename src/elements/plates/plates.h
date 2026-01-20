@@ -7,8 +7,6 @@
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/point.h"
 #include <stdexcept>
 
-#define DATA ElementData<ElementType::MITC4MY>
-
 // #include "../material/PlateMaterial.h"
 
 class MITC4PlateMy : public AbstractElement {
@@ -22,10 +20,10 @@ private:
   MatrixXd bMatrix(double xi, double eta, int type);
 
 public:
-  MITC4PlateMy(size_t id, Node **nodes, int count = DATA::NODES_COUNT);
+  MITC4PlateMy(size_t id, Node **nodes, int count = 4);
 
   MITC4PlateMy(size_t id, Node **nodes, const Material &material,
-               int count = DATA::NODES_COUNT);
+               int count = 4);
 
   virtual MatrixXd getLocalStiffMatrix() override;
 

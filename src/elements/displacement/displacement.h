@@ -1,8 +1,8 @@
 #pragma once
 
 // #include "/home/vladislav/Документы/FEM/FEM
-// program/src/elements/elementprovider.h" #include
-// "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
+// program/src/elements/elementprovider.h"
+// #include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
 
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
 // #include "femdisplacement.h"

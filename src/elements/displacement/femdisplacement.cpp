@@ -1,6 +1,7 @@
 #include "femdisplacement.h"
 // #include "/home/vladislav/Документы/FEM/FEM
 // program/src/elements/displacement/displacement.h"
+#include "/home/vladislav/Документы/FEM/FEM program/src/elements/elementprovider.h"
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
 
 // /*static*/ NodeDisplacement *NodeDisplacement::create(DisplType type,
@@ -17,6 +18,18 @@
 //     throw std::runtime_error("Unknown displacement type");
 //   }
 // }
+
+NodeDisplacement *NodeDisplacement::createNodeDisplacementFromDisplacement(
+    ElementType type, Displacement *displ, Node *node, int locId) {
+  auto data = ElementProvider::elementData[type];
+
+  bool values[data.NODES_COUNT];
+  displ->setValues(
+      values); // To get disp value from parameter Displacement *displ
+
+  // Cretate for those parameteres node Disp
+  return data.DISP_FN_MAP[locId](values, node);
+}
 
 /* NodeDisplacementUzPsixPsiy */
 

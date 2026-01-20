@@ -138,10 +138,10 @@ void TreeContextMenu::createDiologDefualtSchemePlate(QWidget *mainWindow,
     connect(mesh, &Mesh::meshFinished, this, &TreeContextMenu::showResult);
 
     QThread *thread = QThread::create([scene, mesh, mes, type, this]() {
-      mesh->meshManager(mes, type);
+      mesh->createDefaultMesh(type, mes);
 
-      std::vector<Node *> nodes = mesh->nodes;
-      std::vector<AbstractElement *> elements = mesh->elements;
+      QVector<Node *> nodes = mesh->nodes;
+      QVector<AbstractElement *> elements = mesh->elements;
 
       // Передаем в основной поток
       QMetaObject::invokeMethod(

@@ -6,6 +6,8 @@
 using ShapeFunc = double (*)(double, double);
 using DerivFunc = double (*)(double);
 
+auto &data = ElementProvider::elementData[ElementType::MITC4MY];
+
 constexpr static auto N1 = [](double xi, double eta) {
   return 0.25f * (1 - eta) * (1 - xi);
 };
@@ -252,15 +254,14 @@ MatrixXd MITC4PlateMy::integrateingFn(double xi, double eta, int type) {
 }
 
 MatrixXd MITC4PlateMy::getLocalStiffMatrix() {
-  auto kElem =
-      integrateingFn(DATA::DATA::XI_SET[0], DATA::DATA::ETA_SET[0], 0) +
-      integrateingFn(DATA::DATA::XI_SET[0], DATA::DATA::ETA_SET[1], 0) +
-      integrateingFn(DATA::DATA::XI_SET[1], DATA::DATA::ETA_SET[0], 0) +
-      integrateingFn(DATA::DATA::XI_SET[1], DATA::DATA::ETA_SET[1], 0) +
-      integrateingFn(DATA::DATA::XI_SET[0], DATA::DATA::ETA_SET[0], 1) +
-      integrateingFn(DATA::DATA::XI_SET[0], DATA::DATA::ETA_SET[1], 1) +
-      integrateingFn(DATA::DATA::XI_SET[1], DATA::DATA::ETA_SET[0], 1) +
-      integrateingFn(DATA::DATA::XI_SET[1], DATA::DATA::ETA_SET[1], 1);
+  auto kElem = integrateingFn(data.XI_SET[0], data.ETA_SET[0], 0) +
+               integrateingFn(data.XI_SET[0], data.ETA_SET[1], 0) +
+               integrateingFn(data.XI_SET[1], data.ETA_SET[0], 0) +
+               integrateingFn(data.XI_SET[1], data.ETA_SET[1], 0) +
+               integrateingFn(data.XI_SET[0], data.ETA_SET[0], 1) +
+               integrateingFn(data.XI_SET[0], data.ETA_SET[1], 1) +
+               integrateingFn(data.XI_SET[1], data.ETA_SET[0], 1) +
+               integrateingFn(data.XI_SET[1], data.ETA_SET[1], 1);
 
   return kElem;
 }
@@ -273,12 +274,13 @@ VectorXd MITC4PlateMy::getLoadVector() {
                      N4(xi, eta), 0, 0}};
   };
 
+  auto x = data.XI_SET[0];
+
   for (size_t i = 0; i < 2; i++) {
     for (size_t j = 0; j < 2; j++) {
-      loadCoefVector +=
-          N(DATA::XI_SET[i], DATA::ETA_SET[j]) *
-          jMatrix(DATA::XI_SET[i], DATA::ETA_SET[j]).determinant() *
-          DATA::W_COEFS[i * 2 + j] * DATA::W_COEFS[i * 2 + j];
+      loadCoefVector += N(data.XI_SET[i], data.ETA_SET[j]) *
+                        jMatrix(data.XI_SET[i], data.ETA_SET[j]).determinant() *
+                        data.W_COEFS[i * 2 + j] * data.W_COEFS[i * 2 + j];
     }
   }
 

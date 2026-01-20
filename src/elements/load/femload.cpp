@@ -3,45 +3,19 @@
 // #include <exception>
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
 // #include <stdexcept>
+#include "/home/vladislav/Документы/FEM/FEM program/src/elements/elementprovider.h"
 
-// void NodeLoad::operator=(const NodeLoad &right) {
-//   if (values == nullptr) {
-//     values = new double[right.countValues];
-//     for (std::size_t i = 0; i < countValues; i++) {
-//       values[i] = right.values[i];
-//     }
-//     return;
-//   }
+NodeLoad *NodeLoad::createNodeLoadFromLoad(ElementType type, Load *load,
+                                           double *coefs, int localNodeId) {
 
-//   if (countValues != right.countValues) {
-//     throw std::runtime_error(
-//         "Не совпадает количество степеней свободы при работе оператора+=");
+  auto data = ElementProvider::elementData[type];
+  const int dof = data.FULL_DOF_COUNT;
 
-//     for (std::size_t i = 0; i < countValues; i++) {
-//       values[i] += right.values[i];
-//     }
-//   }
-// }
+  double values[dof];
+  load->setValues(values);
 
-// void NodeLoad::operator=(const NodeLoad *right) {
-//   if (values == nullptr) {
-//     values = new double[right->countValues];
-//     for (std::size_t i = 0; i < countValues; i++) {
-//       values[i] = right->values[i];
-//     }
-//     return;
-//   }
-
-//   if (countValues != right->countValues) {
-//     throw std::runtime_error(
-//         "Не совпадает количество степеней свободы при работе оператора+=");
-
-//     for (std::size_t i = 0; i < countValues; i++) {
-//       values[i] += right->values[i];
-//     }
-//   }
-//   delete right;
-// }
+  return data.LOAD_FN_MAP[localNodeId](values, coefs);
+}
 
 /* virtual */ void NodeLoadFzMxMy::appendValuesToNodeLoad(Load *generalLoad,
                                                           double *coefs) {

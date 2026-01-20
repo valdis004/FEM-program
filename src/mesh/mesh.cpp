@@ -1,11 +1,11 @@
 #include <QList>
 #include <QtAlgorithms>
-#include <stdexcept>
+// #include <stdexcept>
 
 // #include <new>
 
 // #include "../elements/element.h"
-// #include "../elements/elementprovider.h"
+#include "../elements/elementprovider.h"
 // #include "../elements/load/load.h"
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/displacement.h"
 #include "mesh.h"
@@ -27,108 +27,81 @@ unsigned Mesh::maxNodeIndexInList(const QList<Node> &list) {
   return maxIndex;
 }
 
-// template <ElementType type> void Mesh::createDefaultMesh() {
-//   // ElementProvider::initialize();
+void Mesh::createDefaultMesh(ElementType type, QMessageBox *mes) {
+  // ElementProvider::initialize();
 
-//   auto data = ElementProvider<type>::data;
-//   AreaLoadQzMxMy load = AreaLoadQzMxMy(-100);
+  auto DATA = ElementProvider::elementData[type];
+  Load *load = new AreaLoadQzMxMy(-100);
 
-//   float startx = 0;
-//   float starty = 0;
-//   float startz = 0;
-//   Point3 point00{startx, starty, startz};
+  float startx = 0;
+  float starty = 0;
+  float startz = 0;
+  Point3 point00{startx, starty, startz};
 
-//   float step = 100;
-//   float lz = 1000;
-//   float lenghtPlate = 3000; // В мм
-//   int steps = (int)(lenghtPlate / step);
-//   int elementCount = lenghtPlate * lenghtPlate / (step * step);
+  float step = 250;
+  float lenghtPlate = 3000; // В мм
+  int steps = (int)(lenghtPlate / step);
+  int elementCount = lenghtPlate * lenghtPlate / (step * step);
 
-//   // Allocation for element array
-//   void *elementMemory = operator new(sizeof(AbstractElement) * elementCount);
+  this->elements.reserve(elements.size() + elementCount);
+  this->nodes.reserve(nodes.size() + elementCount * 20);
 
-//   elements.reserve(elementCount);
-//   nodes.reserve(elementCount);
+  float sinA = 0;
+  float cosA = 1;
 
-//   float sinA = 0;
-//   float cosA = 1;
+  int crtdElmtsCnt = 0;
+  int crtdNdsCnt = 0;
 
-//   for (int l = 0; l < steps; l++) {
-//     for (int k = 0; k < steps; k++) {
+  for (int l = 0; l < steps; l++) {
+    for (int k = 0; k < steps; k++) {
 
-//       Point3 point0{point00.x + l * step * cosA, point00.y + k * step,
-//                     point00.x + l * step * sinA};
-//       Node node;
-//       const int count = data.NODES_COUNT;
-//       Node nodesToElem[count];
-//       float checkValue = 0.01f;
+      Point3 point0{point00.x + l * step * cosA, point00.y + k * step,
+                    point00.x + l * step * sinA};
+      const int ndsCntElm = DATA.NODES_COUNT;
+      Node *nodesToElem[ndsCntElm];
+      float checkValue = 0.01f;
 
-//       int elementsCount = 0;
+      for (int j = 0; j < ndsCntElm; j++) {
 
-//       for (int j = 0; j < count; j++) {
+        Point3 pointForNode =
+            DATA.GET_POINT_FROM_INDEX_FN(j, point0, step, cosA, sinA);
 
-//         Point3 pointForNode =
-//             data.GET_POINT_FROM_INDEX_FN(j, point0, step, cosA, sinA);
+        // Проверка на то есть в этой точке уже нод или нет
+        Node *node;
+        for (auto item : nodes) {
+          if (isEqual(item->point, pointForNode)) {
 
-//         Node possibleNode;
-//         bool flag = false;
-//         if (j != 0) {
-//           // Проверка на то есть в этой точке уже нод или нет
-//           for (auto item : this->nodes) {
-//             if (isEqual(item.point, pointForNode)) {
-//               possibleNode = item;
-//               flag = true;
-//               break;
-//             }
-//           }
-//         }
+            node = item;
+            goto nodeAlreadyExists;
+          }
+        }
 
-//         if (flag) {
-//           node =
-//               Node(possibleNode.point, possibleNode.dofCount,
-//               possibleNode.id);
-//         } else {
-//           int index = 0;
+        node = new Node(pointForNode, DATA.FULL_DOF_COUNT, crtdNdsCnt++);
 
-//           if (j != 0) {
-//             index = maxNodeIndexInList(this->nodes) + 1;
-//           }
+        // Add displ
+        if (node->point.x == startx || node->point.x == startx + lenghtPlate) {
+          NodeDisplacementUzPsixPsiy *disp =
+              new NodeDisplacementUzPsixPsiy(true, true, true);
+          node->nodeDisplacement = disp;
+        }
 
-//           node = Node(pointForNode, data.DOF_COUNT, index);
+        this->nodes.push_back(node);
+      nodeAlreadyExists:
+        nodesToElem[j] = node;
+      }
 
-//           // Load standart sheme add
-//           // if (node.point.y == starty)
-//           //   node.nodeLoad = &load;
+      auto element = AbstractElement::create(crtdElmtsCnt++, type, nodesToElem,
+                                             DATA.NODES_COUNT);
+      element->setLoad(load);
+      this->elements.push_back(element);
+      AbstractElement::setCalcProps(element, globaStiffMatrixSize);
 
-//           // Add displ
-//           if (node.point.y == starty || node.point.y == starty + lenghtPlate)
-//           {
-//             NodeDisplacementUzPsixPsiy disp =
-//                 NodeDisplacementUzPsixPsiy(true, true, true);
-//             node.nodeDisplacement = &disp;
-//           }
-//         }
-
-//         nodesToElem[j] = node;
-//         this->nodes.push_back(node);
-//       }
-
-//       void *ptr = static_cast<char *>(elementMemory) +
-//                   elementCount * sizeof(AbstractElement);
-
-//       this->elements.push_back(AbstractElement::create(
-//           elementsCount, type, nodesToElem, data.NODES_COUNT, ptr));
-//       elementsCount++;
-//     }
-//   }
-// }
-
-void Mesh::meshManager(QMessageBox *mes, ElementType type) {
-  switch (type) {
-  case ElementType::MITC4MY:
-    createDefaultMesh<MITC4MY>(mes);
-    break;
-  default:
-    throw std::runtime_error("Unknown element tipe");
+      emit progressChanged(mes, crtdElmtsCnt);
+    }
   }
+
+  tripletsCount +=
+      elementCount * DATA.STIFF_MATRIX_SIZE * DATA.STIFF_MATRIX_SIZE;
+
+  emit meshFinished(mes, elementCount);
 }

@@ -25,4 +25,5 @@ private:
 private slots:
   void onTreeContextMenuRequested(const QPoint &pos);
   void createDefaultPlateScheme(QTreeWidgetItem *item);
+  void calculateButtonClicked();
 };

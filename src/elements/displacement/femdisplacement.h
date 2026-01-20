@@ -2,9 +2,10 @@
 
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
 
-// #include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
+#include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
 
 class Node;
+class Displacement;
 
 class NodeDisplacement {
 public:
@@ -12,6 +13,10 @@ public:
   unsigned nodesCountToZero{0};
 
   virtual void setIndexesToZero(Node *node) = 0;
+
+  static NodeDisplacement *
+  createNodeDisplacementFromDisplacement(ElementType type, Displacement *displ,
+                                         Node *node, int locId);
 
   // virtual NodeDisplacement *create(bool *value, Node *node) = 0;
 

@@ -30,6 +30,7 @@
 #include <qnamespace.h>
 #include <qobject.h>
 #include <qthread.h>
+#include <qtoolbutton.h>
 // #include <stdexcept>
 
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
@@ -105,8 +106,10 @@ void MainWindow::createToolBar() {
   QToolButton *newBtn = new QToolButton(mainTab);
   newBtn->setFixedHeight(30);
   newBtn->setAutoRaise(true);
-  newBtn->setText("Кнопка");
+  newBtn->setText("Calculate");
   row1Layout->addWidget(newBtn);
+  connect(newBtn, &QToolButton::clicked, this,
+          &MainWindow::calculateButtonClicked);
 
   QPushButton *openBtn =
       new QPushButton(QIcon::fromTheme("document-open"), "Открыть");
@@ -271,3 +274,5 @@ void MainWindow::onTreeContextMenuRequested(const QPoint &pos) {
 void MainWindow::createDefaultPlateScheme(QTreeWidgetItem *item) {
   treeContextMenu->createDiologDefualtSchemePlate(this, scene);
 }
+
+void MainWindow::calculateButtonClicked() { /*if (scene->)*/ }

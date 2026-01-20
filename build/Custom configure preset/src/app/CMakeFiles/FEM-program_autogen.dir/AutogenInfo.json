@@ -44,6 +44,12 @@
 			null
 		],
 		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/src/elements/elementprovider.h",
+			"MU",
+			"LFVNSI46CU/moc_elementprovider.cpp",
+			null
+		],
+		[
 			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/src/elements/load/femload.h",
 			"MU",
 			"VOYFB2GSZI/moc_femload.cpp",
@@ -240,6 +246,11 @@
 		],
 		[
 			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/src/elements/element.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/src/elements/elementprovider.cpp",
 			"MU",
 			null
 		],

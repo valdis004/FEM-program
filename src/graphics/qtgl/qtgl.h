@@ -2,8 +2,14 @@
 
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/element.h"
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
+#include "/home/vladislav/Документы/FEM/FEM program/src/elements/point.h"
 #include <QOpenGLWidget>
 #include <qevent.h>
+#include <qglobal.h>
+
+struct GraphickElement {
+  QVector<Point3> points;
+};
 
 class Qtgl : public QOpenGLWidget {
 private:
@@ -14,9 +20,13 @@ private:
   QPoint m_ptPosition;
   bool isLeftBut = false;
 
-  std::vector<Node *> m_nodes;               // Храним узлы
-  std::vector<AbstractElement *> m_elements; // Храним элементы
-  bool m_meshDataValid = false;              // Флаг наличия данных
+  QVector<Node *> m_nodes;               // Храним узлы
+  QVector<AbstractElement *> m_elements; // Храним элементы
+
+  QVector<Point3> mp_nodes;             // Храним узлы
+  QVector<GraphickElement> mp_elements; // Храним элементы
+
+  bool m_meshDataValid = false; // Флаг наличия данных
   float m_minX, m_maxX, m_minY, m_maxY, m_minZ, m_maxZ;
   float m_centerX, m_centerY, m_centerZ, m_scaleFactor;
 
@@ -35,6 +45,6 @@ protected:
 
 public:
   Qtgl(QWidget *pwgt = 0);
-  void setMeshData(const std::vector<Node *> &nodes,
-                   const std::vector<AbstractElement *> &elements);
+  void setMeshData(const QVector<Node *> &nodes,
+                   const QVector<AbstractElement *> &elements);
 };

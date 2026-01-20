@@ -1,18 +1,55 @@
 # ninja log v5
-1237	3393	1768770371834873063	src/app/CMakeFiles/FEM-program.dir/Debug/main.cpp.o	f43ad535c788acd9
-570	1071	1768738798796988470	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/displacement.cpp.o	f37d902353a88d73
-11	1061	1768772047759681572	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
-82	4404	1768771951812983675	src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o	746909159f2d68a4
-488	2038	1768759781661134167	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/element.cpp.o	2e720149757954d5
-4400	4866	1768772051569007833	src/app/Debug/FEM-program	39c8c691f43654f6
-1127	2361	1768752563551176185	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/femdisplacement.cpp.o	f36cf68ed19f5936
-11	1061	1768772047759681572	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
-1237	4363	1768770372800467101	src/app/CMakeFiles/FEM-program.dir/Debug/mainwindow.cpp.o	c3d6e0daa5ab908
-75	158	1768755579481755801	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/femload.cpp.o	3903350c8aeabbd6
-488	6158	1768759785689958332	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/plates/plates.cpp.o	9f047e1bb967d7c6
-11	1061	1768772047759681572	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
-11	1061	1768772047759681572	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
-1062	3628	1768772050330895617	src/app/CMakeFiles/FEM-program.dir/Debug/__/mesh/mesh.cpp.o	7ee8d8be371a0dce
-1061	4002	1768772050702725203	src/app/CMakeFiles/FEM-program.dir/Debug/FEM-program_autogen/mocs_compilation_Debug.cpp.o	e5f18830b4c60b36
-1126	1188	1768752562378186851	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/load.cpp.o	ed2c5a334f9c3b84
-1062	4400	1768772051095029802	src/app/CMakeFiles/FEM-program.dir/Debug/context-menu/treeContextMenu.cpp.o	bfaeae700ff5c178
+826	9982	1768913916399116301	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/plates/plates.cpp.o	9f047e1bb967d7c6
+10	75	1768918672209848618	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+10	75	1768918672209848618	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+79	5822	1768918677954455935	src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o	746909159f2d68a4
+827	3462	1768913909898372152	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/element.cpp.o	2e720149757954d5
+828	2669	1768913909104995217	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/elementprovider.cpp.o	e9c1fc76b7383a92
+1121	1862	1768846908291765296	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/displacement.cpp.o	f37d902353a88d73
+10	75	1768918672209848618	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+826	4525	1768913910960900553	src/app/CMakeFiles/FEM-program.dir/Debug/__/mesh/mesh.cpp.o	7ee8d8be371a0dce
+337	3420	1768916209408823550	src/app/CMakeFiles/FEM-program.dir/Debug/FEM-program_autogen/mocs_compilation_Debug.cpp.o	e5f18830b4c60b36
+79	4561	1768918676693231709	src/app/CMakeFiles/FEM-program.dir/Debug/context-menu/treeContextMenu.cpp.o	bfaeae700ff5c178
+1122	1208	1768846907638779973	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/load.cpp.o	ed2c5a334f9c3b84
+827	2671	1768913909107319415	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/load/femload.cpp.o	3903350c8aeabbd6
+78	4301	1768918676435607537	src/app/CMakeFiles/FEM-program.dir/Debug/mainwindow.cpp.o	c3d6e0daa5ab908
+338	2789	1768916208778593646	src/app/CMakeFiles/FEM-program.dir/Debug/main.cpp.o	f43ad535c788acd9
+10	75	1768918672209848618	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+827	2598	1768913909034358906	src/app/CMakeFiles/FEM-program.dir/Debug/__/elements/displacement/femdisplacement.cpp.o	f36cf68ed19f5936
+5822	6422	1768918678545462193	src/app/Debug/FEM-program	ab91e2164acfa6e7
+10	78	1768918812214194219	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+10	78	1768918812214194219	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+10	78	1768918812214194219	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+10	78	1768918812214194219	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+81	5675	1768918817809814559	src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o	746909159f2d68a4
+5675	6272	1768918818396689911	src/app/Debug/FEM-program	ab91e2164acfa6e7
+12	85	1768919584527790777	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+12	85	1768919584527790777	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+12	85	1768919584527790777	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+12	85	1768919584527790777	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+88	5059	1768919589500723442	src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o	746909159f2d68a4
+5059	5649	1768919590081471655	src/app/Debug/FEM-program	ab91e2164acfa6e7
+12	91	1768919673905539747	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+12	91	1768919673905539747	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+12	91	1768919673905539747	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+12	91	1768919673905539747	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+94	5536	1768919679349192827	src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o	746909159f2d68a4
+5536	6126	1768919679930765278	src/app/Debug/FEM-program	ab91e2164acfa6e7
+11	84	1768919865906836913	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+11	84	1768919865906836913	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+11	84	1768919865906836913	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+11	84	1768919865906836913	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+87	5131	1768919870954394435	src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o	746909159f2d68a4
+5131	5749	1768919871561904047	src/app/Debug/FEM-program	ab91e2164acfa6e7
+11	86	1768920001047214423	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+11	86	1768920001047214423	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+11	86	1768920001047214423	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+11	86	1768920001047214423	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+89	6532	1768920007493856265	src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o	746909159f2d68a4
+6532	7120	1768920008072677901	src/app/Debug/FEM-program	ab91e2164acfa6e7
+12	85	1768920092417566275	src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+12	85	1768920092417566275	src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+12	85	1768920092417566275	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/timestamp	fc4a009ebb035b56
+12	85	1768920092417566275	/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/FEM-program_autogen/mocs_compilation_Debug.cpp	fc4a009ebb035b56
+89	5759	1768920098089620861	src/app/CMakeFiles/FEM-program.dir/Debug/__/graphics/qtgl/qtgl.cpp.o	746909159f2d68a4
+5759	6357	1768920098677103219	src/app/Debug/FEM-program	ab91e2164acfa6e7

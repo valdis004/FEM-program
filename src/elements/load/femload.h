@@ -1,6 +1,6 @@
 #pragma once
 
-// #include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
+#include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.h"
 
 // #include <stdexcept>
@@ -16,6 +16,9 @@ public:
   virtual void setNodeLoadValues(double *values, double *coefs) = 0;
 
   virtual void appendValuesToNodeLoad(Load *generalLoad, double *coefs) = 0;
+
+  static NodeLoad *createNodeLoadFromLoad(ElementType type, Load *load,
+                                          double *coefs, int localNodeId);
 
   virtual ~NodeLoad() = default;
 };

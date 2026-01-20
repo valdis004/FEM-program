@@ -12,6 +12,7 @@ src/app/FEM-program_autogen/timestamp: \
   /home/vladislav/Документы/FEM/FEM\ program/src/elements/displacement/femdisplacement.h \
   /home/vladislav/Документы/FEM/FEM\ program/src/elements/element.cpp \
   /home/vladislav/Документы/FEM/FEM\ program/src/elements/element.h \
+  /home/vladislav/Документы/FEM/FEM\ program/src/elements/elementprovider.cpp \
   /home/vladislav/Документы/FEM/FEM\ program/src/elements/elementprovider.h \
   /home/vladislav/Документы/FEM/FEM\ program/src/elements/femtypes.h \
   /home/vladislav/Документы/FEM/FEM\ program/src/elements/load/femload.cpp \
@@ -501,6 +502,7 @@ src/app/FEM-program_autogen/timestamp: \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QMap \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QVector \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h \

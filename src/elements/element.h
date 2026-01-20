@@ -3,6 +3,7 @@
 // #include "displacement/displacement.h"
 // #include "displacement/displacement.h"
 // #include "elementprovider.h
+#include "elementprovider.h"
 #include "material/material.h"
 // #include "node.h"
 // #include "plates/plates.h"
@@ -32,6 +33,7 @@ private:
 
 public:
   const ElementType type;
+  ElementData &data;
   QVector<Node *> nodes;
   unsigned nodesCount;
   size_t id;
@@ -55,6 +57,9 @@ public:
 
   static AbstractElement *create(size_t id, ElementType type, Node **nodes,
                                  int count);
+
+  static void setCalcProps(AbstractElement *ptr, unsigned &globalMatrixSize);
+
   void setLoad(Load *load) { this->generalLoad = load; }
 
   void setDisp(Displacement *disp) { this->generalDisp = disp; }

@@ -76,10 +76,11 @@ void Qtgl::wheelEvent(QWheelEvent *pe) {
   m_ptPosition = pe->pos();
 }
 
-void Qtgl::setMeshData(const std::vector<Node *> &nodes,
-                       const std::vector<AbstractElement *> &elements) {
+void Qtgl::setMeshData(const QVector<Node *> &nodes,
+                       const QVector<AbstractElement *> &elements) {
   m_nodes = nodes;
   m_elements = elements;
+
   m_meshDataValid = !nodes.empty() && !elements.empty();
 
   if (m_meshDataValid) {
