@@ -10,6 +10,8 @@
 #include <qobject.h>
 #include <qwidget.h>
 
+#include "/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.h"
+
 class Qtgl;
 
 class TreeContextMenu : public QObject {
@@ -34,7 +36,8 @@ public:
   // Создать стандартное меню
   void createDefaultMenu();
 
-  void createDiologDefualtSchemePlate(QWidget *mainWindow, Qtgl *scene);
+  void createDiologDefualtSchemePlate(QWidget *mainWindow, Qtgl *scene,
+                                      Mesh *&mesh);
 
 signals:
   // Сигналы для различных действий

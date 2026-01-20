@@ -22,6 +22,7 @@
 class Node {
 public:
   Point3 point;
+  Point3 glPoint;
   int dofCount;
   unsigned id;
   NodeLoad *nodeLoad{nullptr};
@@ -30,7 +31,7 @@ public:
 
   Node() = default;
   Node(Point3 point, int dofCount, int id)
-      : point(point), dofCount(dofCount), id(id) {}
+      : point(point), glPoint(point), dofCount(dofCount), id(id) {}
 
   ~Node() {
     if (!nodeLoad)

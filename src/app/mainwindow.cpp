@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "../graphics/qtgl/qtgl.h"
+#include "/home/vladislav/Документы/FEM/FEM program/src/solver/solver.h"
 
 #include <QButtonGroup>
 #include <QComboBox>
@@ -45,6 +46,12 @@ MainWindow::MainWindow() {
   createLeftDock();
   createToolStrip();
   setupTreeContextMenu(); // Настройка контекстного меню для работы
+}
+
+MainWindow::~MainWindow() {
+  delete scene;
+  delete solver;
+  delete mesh;
 }
 
 void MainWindow::createLeftDock() {
@@ -272,7 +279,51 @@ void MainWindow::onTreeContextMenuRequested(const QPoint &pos) {
 // Функция, отрабатываемая при нажатии кнопки "Create default scheme" У treewiev
 // для plate
 void MainWindow::createDefaultPlateScheme(QTreeWidgetItem *item) {
-  treeContextMenu->createDiologDefualtSchemePlate(this, scene);
+  treeContextMenu->createDiologDefualtSchemePlate(this, scene, mesh);
 }
 
-void MainWindow::calculateButtonClicked() { /*if (scene->)*/ }
+void MainWindow::calculateButtonClicked() {
+  if (!this->mesh) {
+    return;
+  }
+
+  QMessageBox *mes = new QMessageBox(this);
+  mes->setWindowTitle("Calculating...");
+  mes->show();
+  mes->setText("const QString &text");
+
+  Solver *solver = new Solver();
+  this->solver = solver;
+
+  connect(solver, &Solver::progressChanged, this, [mes](unsigned count) {
+    mes->setText(
+        QString("Creating local stiff matrix for element %1").arg(count));
+  });
+  connect(solver, &Solver::calcFinished, this,
+          [mes]() { mes->setText("Global stiff matrix sucsesfully created"); });
+
+  // Создаем отдельный поток для mesh_
+  QThread *workerThread = new QThread();
+  solver->moveToThread(workerThread); // mesh_ теперь принадлежит workerThread
+
+  // Когда поток запустится, выполним расчет
+  connect(workerThread, &QThread::started, this, [=]() {
+    solver->calculate(this->mesh);
+
+    // Передаем в основной поток
+    QMetaObject::invokeMethod(
+        this,
+        [workerThread]() {
+          // Завершаем поток
+          workerThread->quit();
+        },
+        Qt::QueuedConnection);
+  });
+
+  // Удаляем поток и mesh_ при завершении
+  connect(workerThread, &QThread::finished, workerThread,
+          &QThread::deleteLater);
+  // connect(workerThread, &QThread::finished, mesh_, &Mesh::deleteLater);
+
+  workerThread->start();
+}

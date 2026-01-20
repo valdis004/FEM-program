@@ -3,8 +3,10 @@
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/element.h"
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/point.h"
+#include <QList>
 #include <QOpenGLWidget>
 #include <qevent.h>
+
 #include <qglobal.h>
 
 struct GraphickElement {
@@ -23,8 +25,8 @@ private:
   QVector<Node *> m_nodes;               // Храним узлы
   QVector<AbstractElement *> m_elements; // Храним элементы
 
-  QVector<Point3> mp_nodes;             // Храним узлы
-  QVector<GraphickElement> mp_elements; // Храним элементы
+  QVector<Point3> mp_nodes{};             // Храним узлы
+  QVector<GraphickElement> mp_elements{}; // Храним элементы
 
   bool m_meshDataValid = false; // Флаг наличия данных
   float m_minX, m_maxX, m_minY, m_maxY, m_minZ, m_maxZ;

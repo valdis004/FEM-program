@@ -1,6 +1,8 @@
 #include "qtgl.h"
 #include <QOpenGLFunctions>
 #include <QtGui>
+#include <cstddef>
+#include <qglobal.h>
 #include <qmatrix4x4.h>
 #include <qnamespace.h>
 #include <qpoint.h>
@@ -83,6 +85,7 @@ void Qtgl::setMeshData(const QVector<Node *> &nodes,
 
   m_meshDataValid = !nodes.empty() && !elements.empty();
 
+  // Это не выполняется
   if (m_meshDataValid) {
     // Нормируем данные для лучшего отображения
     normalizeMeshData();
@@ -115,7 +118,7 @@ void Qtgl::createMeshDisplayList() {
     // Рисуем прямоугольник по 4 узлам
     for (int i = 0; i < element->nodesCount; i++) {
       const Node *node = element->nodes[i];
-      glVertex3f(node->point.x, node->point.z, node->point.y);
+      glVertex3f(node->glPoint.x, node->glPoint.z, node->glPoint.y);
     }
     glEnd();
 
@@ -124,7 +127,7 @@ void Qtgl::createMeshDisplayList() {
     glColor4f(0.0f, 0.0f, 0.0f, 1.0f);
     for (int i = 0; i < element->nodesCount; i++) {
       const Node *node = element->nodes[i];
-      glVertex3f(node->point.x, node->point.z, node->point.y);
+      glVertex3f(node->glPoint.x, node->glPoint.z, node->glPoint.y);
     }
     glEnd();
 
@@ -138,7 +141,7 @@ void Qtgl::createMeshDisplayList() {
   glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
 
   for (const auto node : m_nodes) {
-    glVertex3f(node->point.x, node->point.z, node->point.y);
+    glVertex3f(node->glPoint.x, node->glPoint.z, node->glPoint.y);
   }
   glEnd();
 
@@ -154,12 +157,12 @@ void Qtgl::calculateMeshBounds() {
   m_minZ = m_maxZ = m_nodes[0]->point.z;
 
   for (const auto node : m_nodes) {
-    m_minX = std::min(m_minX, node->point.x);
-    m_maxX = std::max(m_maxX, node->point.x);
-    m_minY = std::min(m_minY, node->point.y);
-    m_maxY = std::max(m_maxY, node->point.y);
-    m_minZ = std::min(m_minZ, node->point.z);
-    m_maxZ = std::max(m_maxZ, node->point.z);
+    m_minX = std::min(m_minX, node->glPoint.x);
+    m_maxX = std::max(m_maxX, node->glPoint.x);
+    m_minY = std::min(m_minY, node->glPoint.y);
+    m_maxY = std::max(m_maxY, node->glPoint.y);
+    m_minZ = std::min(m_minZ, node->glPoint.z);
+    m_maxZ = std::max(m_maxZ, node->glPoint.z);
   }
 
   m_centerX = (m_minX + m_maxX) * 0.5f;
@@ -181,9 +184,9 @@ void Qtgl::normalizeMeshData() {
 
   // Центрируем и нормируем узлы
   for (auto node : m_nodes) {
-    node->point.x = (node->point.x - m_centerX) / m_scaleFactor;
-    node->point.y = (node->point.y - m_centerY) / m_scaleFactor;
-    node->point.z = (node->point.z - m_centerZ) / m_scaleFactor;
+    node->glPoint.x = (node->glPoint.x - m_centerX) / m_scaleFactor;
+    node->glPoint.y = (node->glPoint.y - m_centerY) / m_scaleFactor;
+    node->glPoint.z = (node->glPoint.z - m_centerZ) / m_scaleFactor;
   }
 }
 

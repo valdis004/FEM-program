@@ -78,6 +78,12 @@
 			"MU",
 			"LD7W27ASRM/moc_mesh.cpp",
 			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/src/solver/solver.h",
+			"MU",
+			"LACER7ZNF2/moc_solver.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -276,6 +282,11 @@
 		],
 		[
 			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/src/mesh/mesh.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/vladislav/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/FEM/FEM program/src/solver/solver.cpp",
 			"MU",
 			null
 		]

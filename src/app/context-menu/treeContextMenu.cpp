@@ -84,7 +84,7 @@ void TreeContextMenu::onActionTriggered() {
 }
 
 void TreeContextMenu::createDiologDefualtSchemePlate(QWidget *mainWindow,
-                                                     Qtgl *scene) {
+                                                     Qtgl *scene, Mesh *&mesh) {
   QDialog *d = new QDialog(mainWindow);
   d->setFixedSize({500, 260});
   d->setWindowTitle("Settings of scheme");
@@ -131,37 +131,44 @@ void TreeContextMenu::createDiologDefualtSchemePlate(QWidget *mainWindow,
     mes->setWindowTitle("Generating default mesh...");
     mes->show();
 
-    Mesh *mesh = new Mesh();
+    mesh = new Mesh();
 
     connect(mesh, &Mesh::progressChanged, this,
             &TreeContextMenu::updateProgress);
     connect(mesh, &Mesh::meshFinished, this, &TreeContextMenu::showResult);
 
-    QThread *thread = QThread::create([scene, mesh, mes, type, this]() {
+    // Создаем отдельный поток для mesh_
+    QThread *workerThread = new QThread();
+    mesh->moveToThread(workerThread); // mesh_ теперь принадлежит workerThread
+
+    // Когда поток запустится, выполним создание меша
+    connect(workerThread, &QThread::started, this, [=]() {
       mesh->createDefaultMesh(type, mes);
 
+      // Копируем данные в локальные переменные
       QVector<Node *> nodes = mesh->nodes;
       QVector<AbstractElement *> elements = mesh->elements;
 
       // Передаем в основной поток
       QMetaObject::invokeMethod(
           this,
-          [this, scene, nodes, elements, mes]() {
+          [=]() {
             scene->setMeshData(nodes, elements);
             mes->accept();
             mes->deleteLater();
+
+            // Завершаем поток
+            workerThread->quit();
           },
           Qt::QueuedConnection);
     });
 
-    // Переносим mesh в поток
-    mesh->moveToThread(thread);
+    // Удаляем поток и mesh_ при завершении
+    connect(workerThread, &QThread::finished, workerThread,
+            &QThread::deleteLater);
+    // connect(workerThread, &QThread::finished, mesh_, &Mesh::deleteLater);
 
-    // Когда поток закончит работу, удаляем его
-    connect(thread, &QThread::finished, thread, &QThread::deleteLater);
-
-    // Запускаем поток
-    thread->start();
+    workerThread->start();
   }
 }
 

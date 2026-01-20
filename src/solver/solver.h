@@ -1,10 +1,12 @@
 #pragma once
 
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/elementprovider.h"
+// #include "/home/vladislav/Документы/FEM/FEM
+// program/src/elements/elementprovider.h"
 #include "/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.h"
 #include <Eigen/Dense>
 #include <Eigen/Sparse>
 #include <QVector>
+#include <utility>
 
 using Eigen::MatrixXd;
 using Eigen::SparseMatrix;
@@ -13,12 +15,14 @@ using Eigen::VectorXd;
 
 class AbstractElement;
 
-class Solver {
+class Solver : public QObject {
+  Q_OBJECT
 private:
-  inline unsigned setParams(size_t i, const AbstractElement *element,
-                            unsigned &correction, unsigned curDof,
-                            unsigned localId, unsigned nodeId,
-                            unsigned &fullDof);
+  unsigned globalMatrixSize = 0;
+
+  inline void setParams(size_t i, const AbstractElement *element,
+                        unsigned &correction, unsigned &curDof,
+                        unsigned &localId, unsigned &nodeId, unsigned &fullDof);
 
   inline unsigned
   getGlobalIndexAndSetLoad(size_t i, const AbstractElement *element,
@@ -26,13 +30,22 @@ private:
 
   inline unsigned getGlobalIndex(size_t i, const AbstractElement *element);
 
-  SparseMatrix<double> getGlobalStiffMatrix(const Mesh &mesh);
+  std::pair<SparseMatrix<double>, SparseVector<double>>
+  getGlobalStiffMatrixAndLoadVector(Mesh *mesh);
 
-  SparseVector<double> getGlobalLoadVector(const Mesh &mesh);
+  SparseVector<double> getGlobalLoadVector(Mesh *mesh);
 
   void applyBaundaryConditions(SparseMatrix<double> &globalMatrix,
-                               const Mesh &mesh);
+                               SparseVector<double> &globalVector, Mesh *mesh);
 
 public:
-  void calculate();
+  void calculate(Mesh *mesh);
+
+signals:
+  void progressChanged(unsigned count);
+  void calcFinished();
+
+  // public slots:
+  //   void updateProgress(QMessageBox *mes, int count);
+  //   void showResult(QMessageBox *mes);
 };

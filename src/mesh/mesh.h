@@ -34,6 +34,8 @@ public:
 
   void meshManager(QMessageBox *mes, ElementType type);
 
+  ~Mesh();
+
 signals:
   void progressChanged(QMessageBox *mes, int count);
   void meshFinished(QMessageBox *mes, int count);

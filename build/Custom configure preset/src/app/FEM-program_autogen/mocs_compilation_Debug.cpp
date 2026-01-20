@@ -2,3 +2,4 @@
 #include <CO7GBIKHLH/moc_treeContextMenu.cpp>
 #include <EWIEGA46WW/moc_mainwindow.cpp>
 #include <LD7W27ASRM/moc_mesh.cpp>
+#include <LACER7ZNF2/moc_solver.cpp>

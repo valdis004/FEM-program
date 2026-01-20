@@ -10,6 +10,16 @@
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/displacement.h"
 #include "mesh.h"
 
+Mesh::~Mesh() {
+  for (auto node : nodes) {
+    delete node;
+  }
+
+  for (auto element : elements) {
+    delete element;
+  }
+}
+
 bool Mesh::isEqual(const Point3 &p1, const Point3 &p2) {
   return abs(p1.x - p2.x) < 0.001 && abs(p1.y - p2.y) < 0.001 &&
          abs(p1.y - p2.y) < 0.001;
@@ -38,8 +48,8 @@ void Mesh::createDefaultMesh(ElementType type, QMessageBox *mes) {
   float startz = 0;
   Point3 point00{startx, starty, startz};
 
-  float step = 250;
-  float lenghtPlate = 3000; // В мм
+  float step = 500;
+  float lenghtPlate = 1000; // В мм
   int steps = (int)(lenghtPlate / step);
   int elementCount = lenghtPlate * lenghtPlate / (step * step);
 
