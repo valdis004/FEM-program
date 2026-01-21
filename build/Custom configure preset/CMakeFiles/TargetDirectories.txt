@@ -1,7 +1,0 @@
-/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/CMakeFiles/edit_cache.dir
-/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/CMakeFiles/rebuild_cache.dir
-/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/CMakeFiles/FEM-program.dir
-/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/CMakeFiles/edit_cache.dir
-/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/CMakeFiles/rebuild_cache.dir
-/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/CMakeFiles/FEM-program_autogen_timestamp_deps.dir
-/home/vladislav/Документы/FEM/FEM program/build/Custom configure preset/src/app/CMakeFiles/FEM-program_autogen.dir
