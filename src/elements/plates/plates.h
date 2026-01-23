@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../element.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/elementprovider.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
+#include "../femelement.h"
+// #include "/home/vladislav/Документы/FEM/FEM
+// program/src/elements/elementprovider.h" #include
+// "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/point.h"
-#include <stdexcept>
+// #include "/home/vladislav/Документы/FEM/FEM program/src/elements/point.h"
+#include <QVector>
+// #include <stdexcept>
 
 // #include "../material/PlateMaterial.h"
 
-class MITC4PlateMy : public AbstractElement {
+class MITC4PlateMy : public AbstractFemElement {
 private:
   MatrixXd jMatrix(double xi, double eta);
 
@@ -29,5 +31,6 @@ public:
 
   virtual VectorXd getLoadVector() override;
 
-  virtual VectorXd getResultVector(VectorXd U, double xi, int index) override;
+  virtual QVector<double> getResultVector(VectorXd U, double xi,
+                                          double eta) override;
 };

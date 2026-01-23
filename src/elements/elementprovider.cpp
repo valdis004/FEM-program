@@ -5,12 +5,16 @@
 /* static */ void ElementProvider::init() {
   struct ElementData MITC4 = {
       4,
+      QVector<double>{-1, 1, 1, -1},
+      QVector<double>{-1, -1, 1, 1},
+      4,
       4,
       12,
       true,
       3,
       -1,
       -1,
+      8,
       QVector<double>{-1.0 / SQRT_3, 1.0 / SQRT_3},
       QVector<double>{-1.0 / SQRT_3, 1.0 / SQRT_3},
       QVector<double>{1.0, 1.0, 1.0, 1.0},
@@ -19,6 +23,8 @@
       QVector<short>{},
       QVector<LoadType>{LoadType::FyMxMz, LoadType::FyMxMz, LoadType::FyMxMz,
                         LoadType::FyMxMz},
+      QVector<short>{-1, -1, 0, 1, 2, -1, -1, -1, -1, 3, 4, 5, 6, 7},
+      QVector<QString>{"U_z", "R_x", "R_y", "Q_x", "Q_y", "M_x", "M_y", "M_xy"},
 
       QVector<MethodPtrDisp>{
           &NodeDisplacementUzPsixPsiy::create,

@@ -1,7 +1,8 @@
 #include "solver.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/element.h"
+#include "/home/vladislav/Документы/FEM/FEM program/src/elements/femelement.h"
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
 #include <Eigen/SparseLU>
+#include <Eigen/src/Core/Matrix.h>
 #include <Eigen/src/SparseCore/SparseVector.h>
 #include <QVector>
 #include <cstddef>
@@ -9,7 +10,7 @@
 #include <qglobal.h>
 #include <stdexcept>
 
-void Solver::setParams(size_t i, const AbstractElement *element,
+void Solver::setParams(size_t i, const AbstractFemElement *element,
                        unsigned &correction, unsigned &curDof,
                        unsigned &localId, unsigned &nodeId, unsigned &fullDof) {
   auto data = element->data;
@@ -27,7 +28,7 @@ void Solver::setParams(size_t i, const AbstractElement *element,
   }
 }
 
-unsigned Solver::getGlobalIndex(size_t i, const AbstractElement *element) {
+unsigned Solver::getGlobalIndex(size_t i, const AbstractFemElement *element) {
   unsigned correction;
   unsigned localId;
   unsigned nodeId;
@@ -39,8 +40,8 @@ unsigned Solver::getGlobalIndex(size_t i, const AbstractElement *element) {
 }
 
 unsigned
-Solver::getGlobalIndexAndSetLoad(size_t i, const AbstractElement *element,
-                                 SparseVector<double> globalLoadVector) {
+Solver::getGlobalIndexAndSetLoad(size_t i, const AbstractFemElement *element,
+                                 SparseVector<double> &globalLoadVector) {
   unsigned correction;
   unsigned localId;
   unsigned nodeId;
@@ -49,10 +50,11 @@ Solver::getGlobalIndexAndSetLoad(size_t i, const AbstractElement *element,
   setParams(i, element, correction, curDof, localId, nodeId, fullDof);
 
   unsigned dofIndex = i % curDof;
-  globalLoadVector.insert(i) =
-      element->nodes[localId]->nodeLoad->values[dofIndex];
+  double value = element->nodes[localId]->nodeLoad->values[dofIndex];
+  double globalId = nodeId * fullDof + dofIndex - correction;
+  globalLoadVector.coeffRef(globalId) = value;
 
-  return nodeId * fullDof + dofIndex - correction;
+  return globalId;
 }
 
 std::pair<SparseMatrix<double>, SparseVector<double>>
@@ -62,7 +64,7 @@ Solver::getGlobalStiffMatrixAndLoadVector(Mesh *mesh) {
   SparseVector<double> globalLoadVector(globalMatrixSize);
 
   auto elements = mesh->elements;
-  for (AbstractElement *element : elements) {
+  for (AbstractFemElement *element : elements) {
     unsigned count = 0;
     emit progressChanged(count++);
 
@@ -78,6 +80,7 @@ Solver::getGlobalStiffMatrixAndLoadVector(Mesh *mesh) {
           getGlobalIndexAndSetLoad(i, element, globalLoadVector);
       for (size_t j = 0; j < data.STIFF_MATRIX_SIZE; j++) {
         unsigned rowGlobId = getGlobalIndex(j, element);
+        double loc = localStiffMatrix(i, j);
         globalStiffMatrix.coeffRef(rowGlobId, colGlobId) +=
             localStiffMatrix(i, j);
 
@@ -125,16 +128,90 @@ void Solver::calculate(Mesh *mesh) {
   auto stiff = stiffAndLoad.first;
   auto load = stiffAndLoad.second;
 
+  for (size_t i = 0; i < stiff.rows(); i++) {
+    for (size_t j = 0; j < stiff.cols(); j++) {
+      qDebug() << stiff.coeff(i, j);
+    }
+    qDebug() << "\n\n\n";
+  }
+
+  applyBaundaryConditions(stiff, load, mesh);
+
+  qDebug() << " LOAD VECTOR  ";
+
+  for (size_t i = 0; i < load.size(); i++) {
+    qDebug() << i << " " << load.coeff(i) << " ";
+  }
+
   Eigen::SparseLU<Eigen::SparseMatrix<double>> solver;
   solver.compute(stiff); // Шаг 1: факторизация/анализ
   if (solver.info() != Eigen::Success) {
     throw std::runtime_error("Solver info not success");
   }
 
-  Eigen::VectorXd u = solver.solve(load); // Шаг 2: решение
+  SparseVector<double> u = solver.solve(load); // Шаг 2: решение
 
   for (size_t i = 0; i < u.size(); i++) {
-    qDebug() << i << " " << u[i] << "\n";
+    qDebug() << i << " " << u.coeff(i) << "\n";
+  }
+
+  setOutputValuesToNodes(mesh, u);
+}
+
+void Solver::setOutputValuesToNodes(Mesh *mesh,
+                                    const SparseVector<double> &globalU) {
+  bool flag = true;
+
+  double maxAbsValues[ElementProvider::outputCounts]{0};
+  double maxValues[ElementProvider::outputCounts]{0};
+  double minValues[ElementProvider::outputCounts]{0};
+  short count = mesh->elements.first()->data.OUTPUT_VALUES_COUNT;
+  this->data = &(mesh->elements.first()->data);
+
+  for (auto &element : mesh->elements) {
+    auto data = element->data;
+
+    VectorXd elementU{data.STIFF_MATRIX_SIZE};
+    for (size_t i = 0; i < data.STIFF_MATRIX_SIZE; i++) {
+      unsigned globalId = getGlobalIndex(i, element);
+      elementU(i) = globalU.coeff(globalId);
+    }
+
+    for (size_t i = 0; i < data.MAIN_NODES_COUNT; i++) {
+      Node *curNode = element->nodes[i];
+
+      QVector<double> outputValues = element->getResultVector(
+          elementU, data.MAIN_NODES_XI_SET[i], data.MAIN_NODES_ETA_SET[i]);
+      if (flag) {
+        for (size_t i = 0; i < outputValues.size(); i++) {
+          maxAbsValues[i] = abs(outputValues[i]);
+          minValues[i] = outputValues[i];
+          maxValues[i] = outputValues[i];
+        }
+        flag = false;
+      }
+      curNode->outputValues = outputValues;
+
+      for (size_t j = 0; j < outputValues.size(); j++) {
+        if (abs(outputValues[i]) > maxAbsValues[i]) {
+          maxAbsValues[i] = abs(outputValues[i]);
+        }
+
+        if (outputValues[i] > maxValues[i]) {
+          maxValues[i] = outputValues[i];
+        }
+
+        if (outputValues[i] < outputValues[i]) {
+          minValues[i] = outputValues[i];
+        }
+      }
+    }
+  }
+
+  for (size_t j = 0; j < count; j++) {
+    this->maxAbsValues.push_back(maxAbsValues[j]);
+    this->maxValues.push_back(maxValues[j]);
+    this->minValues.push_back(minValues[j]);
   }
 }
 

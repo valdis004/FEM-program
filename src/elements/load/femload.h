@@ -5,7 +5,7 @@
 
 // #include <stdexcept>
 class Node;
-class Load;
+class AbstractLoad;
 
 class NodeLoad {
 public:
@@ -15,9 +15,10 @@ public:
 
   virtual void setNodeLoadValues(double *values, double *coefs) = 0;
 
-  virtual void appendValuesToNodeLoad(Load *generalLoad, double *coefs) = 0;
+  virtual void appendValuesToNodeLoad(AbstractLoad *generalLoad,
+                                      double *coefs) = 0;
 
-  static NodeLoad *createNodeLoadFromLoad(ElementType type, Load *load,
+  static NodeLoad *createNodeLoadFromLoad(ElementType type, AbstractLoad *load,
                                           double *coefs, int localNodeId);
 
   virtual ~NodeLoad() = default;
@@ -29,7 +30,7 @@ public:
 
   virtual void setNodeLoadValues(double *values, double *coefs) override;
 
-  virtual void appendValuesToNodeLoad(Load *generalLoad,
+  virtual void appendValuesToNodeLoad(AbstractLoad *generalLoad,
                                       double *coefs) override;
 
   static NodeLoad *create(double *values, double *coefs);
@@ -41,7 +42,7 @@ public:
 
   virtual void setNodeLoadValues(double *values, double *coefs) override;
 
-  virtual void appendValuesToNodeLoad(Load *generalLoad,
+  virtual void appendValuesToNodeLoad(AbstractLoad *generalLoad,
                                       double *coefs) override;
 
   static NodeLoad *create(double *values, double *coefs);
@@ -53,7 +54,7 @@ public:
 
   virtual void setNodeLoadValues(double *values, double *coefs) override;
 
-  virtual void appendValuesToNodeLoad(Load *generalLoad,
+  virtual void appendValuesToNodeLoad(AbstractLoad *generalLoad,
                                       double *coefs) override;
 
   static NodeLoad *create(double *values, double *coefs);

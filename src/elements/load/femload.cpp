@@ -1,11 +1,11 @@
 #include "femload.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.h"
+#include "/home/vladislav/Документы/FEM/FEM program/src/generalElement/load/load.h"
 // #include <exception>
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
 // #include <stdexcept>
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/elementprovider.h"
 
-NodeLoad *NodeLoad::createNodeLoadFromLoad(ElementType type, Load *load,
+NodeLoad *NodeLoad::createNodeLoadFromLoad(ElementType type, AbstractLoad *load,
                                            double *coefs, int localNodeId) {
 
   auto data = ElementProvider::elementData[type];
@@ -17,8 +17,9 @@ NodeLoad *NodeLoad::createNodeLoadFromLoad(ElementType type, Load *load,
   return data.LOAD_FN_MAP[localNodeId](values, coefs);
 }
 
-/* virtual */ void NodeLoadFzMxMy::appendValuesToNodeLoad(Load *generalLoad,
-                                                          double *coefs) {
+/* virtual */ void
+NodeLoadFzMxMy::appendValuesToNodeLoad(AbstractLoad *generalLoad,
+                                       double *coefs) {
   double values[3];
   generalLoad->setValues(values);
   this->values[0] += values[0] * coefs[0];
@@ -45,7 +46,7 @@ NodeLoad *NodeLoad::createNodeLoadFromLoad(ElementType type, Load *load,
   return nodeLoad;
 }
 
-/* virtual */ void NodeLoadFz::appendValuesToNodeLoad(Load *generalLoad,
+/* virtual */ void NodeLoadFz::appendValuesToNodeLoad(AbstractLoad *generalLoad,
                                                       double *coefs) {
   double values[3];
   generalLoad->setValues(values);
@@ -66,8 +67,8 @@ NodeLoad *NodeLoad::createNodeLoadFromLoad(ElementType type, Load *load,
   return nodeLoad;
 }
 
-/* virtual */ void NodeLoadMxMy::appendValuesToNodeLoad(Load *generalLoad,
-                                                        double *coefs) {
+/* virtual */ void
+NodeLoadMxMy::appendValuesToNodeLoad(AbstractLoad *generalLoad, double *coefs) {
   double values[3];
   generalLoad->setValues(values);
   this->values[0] += values[1] * coefs[1];

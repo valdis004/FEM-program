@@ -3,6 +3,8 @@
 #include "context-menu/treeContextMenu.h"
 #include <QDialogButtonBox>
 #include <QMainWindow>
+#include <qglobal.h>
+#include <qtoolbutton.h>
 
 class mesh;
 class Qtgl;
@@ -16,6 +18,7 @@ public:
   Qtgl *scene{nullptr};
   Mesh *mesh{nullptr};
   Solver *solver{nullptr};
+  QVector<QToolButton *> resultButtons;
 
   ~MainWindow();
 
@@ -33,4 +36,5 @@ private slots:
   void onTreeContextMenuRequested(const QPoint &pos);
   void createDefaultPlateScheme(QTreeWidgetItem *item);
   void calculateButtonClicked();
+  // void uzButtonClicked();
 };

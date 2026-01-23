@@ -14,5 +14,6 @@ find_package(Eigen3 3.4 REQUIRED)
 
 qt_standard_project_setup()
 
+
 add_subdirectory(src/app)
 

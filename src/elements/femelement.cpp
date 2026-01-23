@@ -1,5 +1,5 @@
-#include "element.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/displacement.h"
+#include "femelement.h"
+#include "../generalElement/displacement/displacement.h"
 #include "elementprovider.h"
 #include "load/femload.h"
 // #include "load/load.h"
@@ -7,10 +7,12 @@
 #include <Eigen/src/Core/Matrix.h>
 #include <cstddef>
 #include <exception>
+#include <qdebug.h>
 #include <qexception.h>
+#include <qglobal.h>
 
-AbstractElement::AbstractElement(size_t id, Node **nodes, int count,
-                                 ElementType type)
+AbstractFemElement::AbstractFemElement(size_t id, Node **nodes, int count,
+                                       ElementType type)
     : data(ElementProvider::elementData[type]), id(id), type(type) {
   for (size_t i = 0; i < count; i++) {
     this->nodes.push_back(nodes[i]);
@@ -18,12 +20,13 @@ AbstractElement::AbstractElement(size_t id, Node **nodes, int count,
   nodesCount = count;
 }
 
-AbstractElement::AbstractElement(size_t id, Node **nodes, int count,
-                                 const Material &material, ElementType type)
-    : AbstractElement(id, nodes, count, type) {}
+AbstractFemElement::AbstractFemElement(size_t id, Node **nodes, int count,
+                                       const Material &material,
+                                       ElementType type)
+    : AbstractFemElement(id, nodes, count, type) {}
 
-AbstractElement *AbstractElement::create(size_t id, ElementType type,
-                                         Node **nodes, int count) {
+AbstractFemElement *AbstractFemElement::create(size_t id, ElementType type,
+                                               Node **nodes, int count) {
   switch (type) {
   case ElementType::MITC4MY: {
     return new MITC4PlateMy(id, nodes);
@@ -33,14 +36,18 @@ AbstractElement *AbstractElement::create(size_t id, ElementType type,
   }
 }
 
-void AbstractElement::setCalcProps(AbstractElement *ptr,
-                                   unsigned &globalMatrixSize) {
+void AbstractFemElement::setCalcProps(AbstractFemElement *ptr,
+                                      unsigned &globalMatrixSize) {
 
   auto &data = ElementProvider::elementData[ptr->type];
   // Set load parameters
   bool isLoad = ptr->generalLoad != nullptr;
   bool isDispl = ptr->generalDisp != nullptr;
   VectorXd coefs = ptr->getLoadVector();
+
+  for (size_t i = 0; i < coefs.size(); i++) {
+    qDebug() << coefs[i];
+  }
 
   // Bad dof parameters
   short badDofBegin = data.BAD_DOF_BEGIN;

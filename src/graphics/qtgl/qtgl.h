@@ -1,6 +1,6 @@
 #pragma once
 
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/element.h"
+#include "/home/vladislav/Документы/FEM/FEM program/src/elements/femelement.h"
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/point.h"
 #include <QList>
@@ -22,11 +22,14 @@ private:
   QPoint m_ptPosition;
   bool isLeftBut = false;
 
-  QVector<Node *> m_nodes;               // Храним узлы
-  QVector<AbstractElement *> m_elements; // Храним элементы
+  QVector<Node *> m_nodes;                  // Храним узлы
+  QVector<AbstractFemElement *> m_elements; // Храним элементы
 
-  QVector<Point3> mp_nodes{};             // Храним узлы
-  QVector<GraphickElement> mp_elements{}; // Храним элементы
+  QVector<double> maxAbsValues;
+  QVector<double> maxValues;
+  QVector<double> minValues;
+
+  short resultIndex{-1};
 
   bool m_meshDataValid = false; // Флаг наличия данных
   float m_minX, m_maxX, m_minY, m_maxY, m_minZ, m_maxZ;
@@ -35,6 +38,7 @@ private:
   void normalizeMeshData();   // Нормировка данных сетки
   void calculateMeshBounds(); // Вычисление границ
   void createMeshDisplayList();
+  void normalizeOutData();
 
 protected:
   virtual void initializeGL();
@@ -48,5 +52,11 @@ protected:
 public:
   Qtgl(QWidget *pwgt = 0);
   void setMeshData(const QVector<Node *> &nodes,
-                   const QVector<AbstractElement *> &elements);
+                   const QVector<AbstractFemElement *> &elements);
+
+  void setResulthData(const QVector<double> &maxAbsValues,
+                      const QVector<double> &maxValues,
+                      const QVector<double> &minValues);
+
+  void setResulthIndex(short index);
 };

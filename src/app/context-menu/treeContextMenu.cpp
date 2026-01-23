@@ -147,7 +147,7 @@ void TreeContextMenu::createDiologDefualtSchemePlate(QWidget *mainWindow,
 
       // Копируем данные в локальные переменные
       QVector<Node *> nodes = mesh->nodes;
-      QVector<AbstractElement *> elements = mesh->elements;
+      QVector<AbstractFemElement *> elements = mesh->elements;
 
       // Передаем в основной поток
       QMetaObject::invokeMethod(

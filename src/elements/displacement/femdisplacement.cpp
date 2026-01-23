@@ -20,7 +20,7 @@
 // }
 
 NodeDisplacement *NodeDisplacement::createNodeDisplacementFromDisplacement(
-    ElementType type, Displacement *displ, Node *node, int locId) {
+    ElementType type, AbstractDisplacement *displ, Node *node, int locId) {
   auto data = ElementProvider::elementData[type];
 
   bool values[data.NODES_COUNT];
@@ -46,8 +46,8 @@ NodeDisplacementUzPsixPsiy::NodeDisplacementUzPsixPsiy(bool u_z, bool psi_x,
   nodeIdsToZero = new unsigned[nodesCountToZero];
 
   bool dislps[] = {u_z, psi_x, psi_y};
+  int count = 0;
   for (std::size_t i = 0; i < 3 /* 3 dof in this class */; i++) {
-    int count = 0;
     if (dislps[i]) {
       nodeIdsToZero[count++] = firstGlobalIndex + i;
     }
@@ -99,8 +99,8 @@ NodeDisplacementPsixPsiy::NodeDisplacementPsixPsiy(bool psi_x, bool psi_y)
   nodeIdsToZero = new unsigned[nodesCountToZero];
 
   bool dislps[] = {psi_x, psi_y};
+  int count = 0;
   for (std::size_t i = 0; i < 2 /* 3 dof in this class */; i++) {
-    int count = 0;
     if (dislps[i]) {
       nodeIdsToZero[count++] = firstGlobalIndex + i;
     }

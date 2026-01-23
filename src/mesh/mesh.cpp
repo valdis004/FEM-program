@@ -7,7 +7,7 @@
 // #include "../elements/element.h"
 #include "../elements/elementprovider.h"
 // #include "../elements/load/load.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/displacement.h"
+#include "../generalElement/displacement/displacement.h"
 #include "mesh.h"
 
 Mesh::~Mesh() {
@@ -41,15 +41,16 @@ void Mesh::createDefaultMesh(ElementType type, QMessageBox *mes) {
   // ElementProvider::initialize();
 
   auto DATA = ElementProvider::elementData[type];
-  Load *load = new AreaLoadQzMxMy(-100);
+  double loadv[] = {-100, 0, 0};
+  AbstractLoad *load = new AreaLoadFzMxMy(loadv, 3);
 
   float startx = 0;
   float starty = 0;
   float startz = 0;
   Point3 point00{startx, starty, startz};
 
-  float step = 500;
-  float lenghtPlate = 1000; // В мм
+  float step = 200;
+  float lenghtPlate = 2000; // В мм
   int steps = (int)(lenghtPlate / step);
   int elementCount = lenghtPlate * lenghtPlate / (step * step);
 
@@ -86,7 +87,8 @@ void Mesh::createDefaultMesh(ElementType type, QMessageBox *mes) {
           }
         }
 
-        node = new Node(pointForNode, DATA.FULL_DOF_COUNT, crtdNdsCnt++);
+        node = new Node(pointForNode, DATA.FULL_DOF_COUNT, crtdNdsCnt++,
+                        DATA.OUTPUT_VALUES_COUNT);
 
         // Add displ
         if (node->point.x == startx || node->point.x == startx + lenghtPlate) {
@@ -100,11 +102,11 @@ void Mesh::createDefaultMesh(ElementType type, QMessageBox *mes) {
         nodesToElem[j] = node;
       }
 
-      auto element = AbstractElement::create(crtdElmtsCnt++, type, nodesToElem,
-                                             DATA.NODES_COUNT);
+      auto element = AbstractFemElement::create(crtdElmtsCnt++, type,
+                                                nodesToElem, DATA.NODES_COUNT);
       element->setLoad(load);
       this->elements.push_back(element);
-      AbstractElement::setCalcProps(element, globaStiffMatrixSize);
+      AbstractFemElement::setCalcProps(element, globaStiffMatrixSize);
 
       emit progressChanged(mes, crtdElmtsCnt);
     }

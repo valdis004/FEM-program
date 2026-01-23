@@ -79,7 +79,7 @@ void Qtgl::wheelEvent(QWheelEvent *pe) {
 }
 
 void Qtgl::setMeshData(const QVector<Node *> &nodes,
-                       const QVector<AbstractElement *> &elements) {
+                       const QVector<AbstractFemElement *> &elements) {
   m_nodes = nodes;
   m_elements = elements;
 
@@ -97,6 +97,33 @@ void Qtgl::setMeshData(const QVector<Node *> &nodes,
     createMeshDisplayList();
     update();
   }
+}
+
+void Qtgl::setResulthData(const QVector<double> &maxAbsValues,
+                          const QVector<double> &maxValues,
+                          const QVector<double> &minValues) {
+  this->maxAbsValues = maxAbsValues;
+  this->maxValues = maxValues;
+  this->minValues = minValues;
+}
+
+void Qtgl::setResulthIndex(short index) {
+  resultIndex = index;
+
+  double scaleForOutput = 1000.0 / maxAbsValues[resultIndex];
+
+  for (const auto &node : m_nodes) {
+    double value = node->outputValues[resultIndex];
+    node->glOutputValue = value * scaleForOutput + node->point.z;
+  }
+
+  normalizeOutData();
+
+  if (m_nMesh) {
+    glDeleteLists(m_nMesh, 1);
+  }
+  createMeshDisplayList();
+  update();
 }
 
 void Qtgl::createMeshDisplayList() {
@@ -131,12 +158,23 @@ void Qtgl::createMeshDisplayList() {
     }
     glEnd();
 
+    // Рисуем расчетный параметр
+    if (resultIndex != -1) {
+      glBegin(GL_LINE_LOOP);
+      glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
+      for (int i = 0; i < element->nodesCount; i++) {
+        const Node *node = element->nodes[i];
+        glVertex3f(node->glPoint.x, node->glOutputValue, node->glPoint.y);
+      }
+      glEnd();
+    }
+
     glColor4f(0.8f, 0.8f, 0.8f,
               0.7f); // Возвращаем цвет для следующих элементов
   }
 
   // 2. Рисуем узлы (красные точки)
-  glPointSize(5.0f);
+  glPointSize(15.0f);
   glBegin(GL_POINTS);
   glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
 
@@ -187,6 +225,14 @@ void Qtgl::normalizeMeshData() {
     node->glPoint.x = (node->glPoint.x - m_centerX) / m_scaleFactor;
     node->glPoint.y = (node->glPoint.y - m_centerY) / m_scaleFactor;
     node->glPoint.z = (node->glPoint.z - m_centerZ) / m_scaleFactor;
+
+    // node->glOutputValue = (node->glOutputValue - m_centerZ) / m_scaleFactor;
+  }
+}
+
+void Qtgl::normalizeOutData() {
+  for (const auto &node : m_nodes) {
+    node->glOutputValue = (node->glOutputValue - m_centerZ) / m_scaleFactor;
   }
 }
 

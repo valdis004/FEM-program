@@ -2,8 +2,8 @@
 
 #include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
 // #include "../elements/elementprovider.h"
-#include "../elements/element.h"
-#include "../elements/elementprovider.h"
+#include "../elements/femelement.h"
+// #include "../elements/elementprovider.h"
 #include "../elements/point.h"
 #include <QList>
 #include <QMessageBox>
@@ -13,12 +13,12 @@
 #include <qnamespace.h>
 #include <qobject.h>
 #include <qtmetamacros.h>
-#include <vector>
+// #include <vector>
 
 class Mesh : public QObject {
   Q_OBJECT
 public:
-  QVector<AbstractElement *> elements{};
+  QVector<AbstractFemElement *> elements{};
   QVector<Node *> nodes{};
   unsigned globaStiffMatrixSize = 0;
   unsigned tripletsCount = 0; // Колчиество узлов во всех элементах, считая

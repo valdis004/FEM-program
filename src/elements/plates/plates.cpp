@@ -1,5 +1,7 @@
 #include <cstddef>
 #include <exception>
+#include <qdebug.h>
+#include <qglobal.h>
 
 #include "plates.h"
 
@@ -91,21 +93,21 @@ constexpr static auto NDiffAny = [](double *arr, double xi, double eta,
 // const int MITC4PlateMy::nodeCOunt = 4;
 
 MITC4PlateMy::MITC4PlateMy(size_t id, Node **nodes, int count)
-    : AbstractElement(id, nodes, count, ElementType::MITC4MY) {};
+    : AbstractFemElement(id, nodes, count, ElementType::MITC4MY) {};
 
 MITC4PlateMy::MITC4PlateMy(size_t id, Node **nodes, const Material &material,
                            int count)
-    : AbstractElement(id, nodes, count, material, ElementType::MITC4MY) {};
+    : AbstractFemElement(id, nodes, count, material, ElementType::MITC4MY) {};
 
 MatrixXd MITC4PlateMy::jMatrix(double xi, double eta) {
-  double y1 = nodes[0]->point.y;
-  double y2 = nodes[1]->point.y;
-  double y3 = nodes[2]->point.y;
-  double y4 = nodes[3]->point.y;
-  double x1 = nodes[0]->point.x;
-  double x2 = nodes[1]->point.x;
-  double x3 = nodes[2]->point.x;
-  double x4 = nodes[3]->point.x;
+  double y1 = nodes[0]->point.y / 1000.0;
+  double y2 = nodes[1]->point.y / 1000.0;
+  double y3 = nodes[2]->point.y / 1000.0;
+  double y4 = nodes[3]->point.y / 1000.0;
+  double x1 = nodes[0]->point.x / 1000.0;
+  double x2 = nodes[1]->point.x / 1000.0;
+  double x3 = nodes[2]->point.x / 1000.0;
+  double x4 = nodes[3]->point.x / 1000.0;
 
   double j11 = (-1.0 / 4.0) * (1 - eta) * x1 + (1.0 / 4.0) * (1 - eta) * x2 +
                (1.0 / 4.0) * (1 + eta) * x3 - (1.0 / 4.0) * (1 + eta) * x4;
@@ -135,15 +137,15 @@ MatrixXd MITC4PlateMy::cMatrix(int type) {
   // double D = physicalProperties[4];
   // double G = physicalProperties[5];
 
-  double Em = 190;
-  double K = 190;
-  double nu = 190;
-  double t = 190;
-  double D = 190;
-  double G = 190;
+  double Em = 100;
+  double K = 0.8333;
+  double nu = 0.25;
+  double t = 0.5;
+  double D = 3;
+  double G = Em / (2 * (1 + nu));
 
-  auto Cb = MatrixXd(3, 3);
-  auto Cs = MatrixXd(2, 2);
+  MatrixXd Cb = MatrixXd(3, 3);
+  MatrixXd Cs = MatrixXd(2, 2);
 
   Cb(0, 0) = D;
   Cb(0, 1) = D * nu;
@@ -165,8 +167,8 @@ MatrixXd MITC4PlateMy::cMatrix(int type) {
 }
 
 MatrixXd MITC4PlateMy::bMatrix(double xi, double eta, int type) {
-  auto J = jMatrix(xi, eta);
-  auto Gm = J.transpose().inverse();
+  MatrixXd J = jMatrix(xi, eta);
+  MatrixXd Gm = J.transpose().inverse();
 
   double Gm11 = Gm(0, 0), Gm12 = Gm(0, 1), Gm21 = Gm(1, 0), Gm22 = Gm(1, 1);
 
@@ -183,7 +185,7 @@ MatrixXd MITC4PlateMy::bMatrix(double xi, double eta, int type) {
   //    Ndx(3) }
   // });
 
-  auto Nbm =
+  MatrixXd Nbm =
       MatrixXd{{0, 0, -Ndx[0], 0, 0, -Ndx[1], 0, 0, -Ndx[2], 0, 0, -Ndx[3]},
                {0, Ndy[0], 0, 0, Ndy[1], 0, 0, Ndy[2], 0, 0, Ndy[3], 0},
                {0, Ndx[0], -Ndy[0], 0, Ndx[1], -Ndy[1], 0, Ndx[2], -Ndy[2], 0,
@@ -196,12 +198,12 @@ MatrixXd MITC4PlateMy::bMatrix(double xi, double eta, int type) {
     yCoords[i] = nodes[i]->point.y;
   }
 
-  auto Ngm = MatrixXd{
+  MatrixXd Ngm = MatrixXd{
       {1, eta, 0, 0},
       {0, 0, 1, xi},
   };
 
-  auto Mgm = MatrixXd{
+  MatrixXd Mgm = MatrixXd{
       {1.0, -1.0, 0, 0},
       {1.0, 1.0, 0, 0},
       {0, 0, 1.0, 1.0},
@@ -217,7 +219,7 @@ MatrixXd MITC4PlateMy::bMatrix(double xi, double eta, int type) {
   double NdyD[4];
   NDiffAny(NdyD, -1, 0, Gm21, Gm22);
 
-  auto Nd = MatrixXd{
+  MatrixXd Nd = MatrixXd{
       {NdxA[0], 0, N[0](0, -1), NdxA[1], 0, N[1](0, -1), NdxA[2], 0,
        N[2](0, -1), NdxA[3], 0, N[3](0, -1)},
       {NdxC[0], 0, N[0](0, 1), NdxC[1], 0, N[1](0, 1), NdxC[2], 0, N[2](0, 1),
@@ -228,8 +230,8 @@ MatrixXd MITC4PlateMy::bMatrix(double xi, double eta, int type) {
        -N[2](-1, 0), 0, NdyD[3], -N[3](-1, 0), 0},
   };
 
-  auto Bb = Nbm;
-  auto Bs = Ngm * Mgm.inverse() * Nd;
+  MatrixXd Bb = Nbm;
+  MatrixXd Bs = Ngm * Mgm.inverse() * Nd;
 
   if (type == 0) {
     return Bb;
@@ -241,10 +243,10 @@ MatrixXd MITC4PlateMy::bMatrix(double xi, double eta, int type) {
 MatrixXd MITC4PlateMy::integrateingFn(double xi, double eta, int type) {
   double detJ = jMatrix(xi, eta).determinant();
 
-  auto Bb = bMatrix(xi, eta, 0);
-  auto Bs = bMatrix(xi, eta, 1);
-  auto Cb = cMatrix(0);
-  auto Cs = cMatrix(1);
+  MatrixXd Bb = bMatrix(xi, eta, 0);
+  MatrixXd Bs = bMatrix(xi, eta, 1);
+  MatrixXd Cb = cMatrix(0);
+  MatrixXd Cs = cMatrix(1);
 
   if (type == 0) {
     return Bb.transpose() * Cb * Bb * detJ;
@@ -254,70 +256,75 @@ MatrixXd MITC4PlateMy::integrateingFn(double xi, double eta, int type) {
 }
 
 MatrixXd MITC4PlateMy::getLocalStiffMatrix() {
-  auto kElem = integrateingFn(data.XI_SET[0], data.ETA_SET[0], 0) +
-               integrateingFn(data.XI_SET[0], data.ETA_SET[1], 0) +
-               integrateingFn(data.XI_SET[1], data.ETA_SET[0], 0) +
-               integrateingFn(data.XI_SET[1], data.ETA_SET[1], 0) +
-               integrateingFn(data.XI_SET[0], data.ETA_SET[0], 1) +
-               integrateingFn(data.XI_SET[0], data.ETA_SET[1], 1) +
-               integrateingFn(data.XI_SET[1], data.ETA_SET[0], 1) +
-               integrateingFn(data.XI_SET[1], data.ETA_SET[1], 1);
+  MatrixXd kElem = integrateingFn(data.XI_SET[0], data.ETA_SET[0], 0) +
+                   integrateingFn(data.XI_SET[0], data.ETA_SET[1], 0) +
+                   integrateingFn(data.XI_SET[1], data.ETA_SET[0], 0) +
+                   integrateingFn(data.XI_SET[1], data.ETA_SET[1], 0) +
+                   integrateingFn(data.XI_SET[0], data.ETA_SET[0], 1) +
+                   integrateingFn(data.XI_SET[0], data.ETA_SET[1], 1) +
+                   integrateingFn(data.XI_SET[1], data.ETA_SET[0], 1) +
+                   integrateingFn(data.XI_SET[1], data.ETA_SET[1], 1);
 
   return kElem;
 }
 
 VectorXd MITC4PlateMy::getLoadVector() {
-  auto loadCoefVector = VectorXd(12);
+  VectorXd loadCoefVector = Eigen::VectorXd::Zero(12);
 
   auto N = [](double xi, double eta) {
     return VectorXd{{N1(xi, eta), 0, 0, N2(xi, eta), 0, 0, N3(xi, eta), 0, 0,
                      N4(xi, eta), 0, 0}};
   };
 
-  auto x = data.XI_SET[0];
-
   for (size_t i = 0; i < 2; i++) {
     for (size_t j = 0; j < 2; j++) {
+      // double jdet = jMatrix(data.XI_SET[i], data.ETA_SET[j]).determinant();
+      // double xi = data.XI_SET[i];
+      // double n0 = N(data.XI_SET[i], data.ETA_SET[j])(0);
+      // double n1 = N(data.XI_SET[i], data.ETA_SET[j])(1);
+      // double n2 = N(data.XI_SET[i], data.ETA_SET[j])(2);
+      // double n3 = N(data.XI_SET[i], data.ETA_SET[j])(3);
+      // double n4 = N(data.XI_SET[i], data.ETA_SET[j])(4);
+      // double n5 = N(data.XI_SET[i], data.ETA_SET[j])(5);
+      // double n6 = N(data.XI_SET[i], data.ETA_SET[j])(6);
+      // double n7 = N(data.XI_SET[i], data.ETA_SET[j])(7);
+      // double n8 = N(data.XI_SET[i], data.ETA_SET[j])(8);
+      // double n9 = N(data.XI_SET[i], data.ETA_SET[j])(9);
+      // double n10 = N(data.XI_SET[i], data.ETA_SET[j])(10);
+      // double n11 = N(data.XI_SET[i], data.ETA_SET[j])(11);
+
       loadCoefVector += N(data.XI_SET[i], data.ETA_SET[j]) *
                         jMatrix(data.XI_SET[i], data.ETA_SET[j]).determinant() *
                         data.W_COEFS[i * 2 + j] * data.W_COEFS[i * 2 + j];
     }
   }
 
+  // for (size_t k = 0; k < 12; k++) {
+  //   qDebug() << loadCoefVector(k) << " ";
+  // }
+
   return loadCoefVector;
 };
 
-VectorXd MITC4PlateMy::getResultVector(VectorXd U, double xi, int index) {
-  double eta = 0;
+QVector<double> MITC4PlateMy::getResultVector(VectorXd U, double xi,
+                                              double eta) {
 
-  double uy = N1(xi, eta) * U[0] + N2(xi, eta) * U[3] + N3(xi, eta) * U[6] +
+  double uz = N1(xi, eta) * U[0] + N2(xi, eta) * U[3] + N3(xi, eta) * U[6] +
               N4(xi, eta) * U[9];
   double psix = (N1(xi, eta) * U[2] + N2(xi, eta) * U[5] + N3(xi, eta) * U[8] +
                  N4(xi, eta) * U[11]);
 
-  auto Bb = bMatrix(xi, eta, 0);
-  auto Bs = bMatrix(xi, eta, 1);
+  double psiy = (N1(xi, eta) * U[1] + N2(xi, eta) * U[4] + N3(xi, eta) * U[7] +
+                 N4(xi, eta) * U[10]);
 
-  auto Cb = -cMatrix(0);
-  auto Cs = cMatrix(1);
+  MatrixXd Bb = bMatrix(xi, eta, 0);
+  MatrixXd Bs = bMatrix(xi, eta, 1);
+
+  MatrixXd Cb = -cMatrix(0);
+  MatrixXd Cs = cMatrix(1);
 
   VectorXd M = Cb * Bb * U;
   VectorXd Q = Cs * Bs * U;
 
-  //   if (index == 0)
-  //     return (1, uy);
-  //   else if (index == 1)
-  //     return (2, psix);
-  //   else if (index == 2)
-  //     return (4, Q[0]);
-  //   else if (index == 3)
-  //     return (3, M[0]);
-  //   else if (index == 4)
-  //     return (6, M[1]);
-  //   else if (index == 5)
-  //     return (7, M[2]);
-  //   else if (index == 6)
-  //     return (8, Q[1]);
-  //   else
-  return VectorXd{{Q[0], Q[1], M[0], M[1], M[2]}};
+  return QVector<double>{{uz, psix, psiy, Q[0], Q[1], M[0], M[1], M[2]}};
 };

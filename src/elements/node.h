@@ -23,21 +23,25 @@ class Node {
 public:
   Point3 point;
   Point3 glPoint;
+  double glOutputValue;
   int dofCount;
   unsigned id;
   NodeLoad *nodeLoad{nullptr};
   NodeDisplacement *nodeDisplacement{nullptr};
   unsigned firstGlobStiffId;
+  QVector<double> outputValues;
 
   Node() = default;
-  Node(Point3 point, int dofCount, int id)
-      : point(point), glPoint(point), dofCount(dofCount), id(id) {}
+  Node(Point3 point, int dofCount, int id, short outputCount)
+      : point(point), glPoint(point), dofCount(dofCount), id(id) {
+    outputValues.resize(outputCount + 1);
+  }
 
   ~Node() {
-    if (!nodeLoad)
+    if (nodeLoad)
       delete nodeLoad;
 
-    if (!nodeDisplacement)
+    if (nodeDisplacement)
       delete nodeDisplacement;
   }
 
