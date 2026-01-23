@@ -191,7 +191,7 @@ void MainWindow::createToolBar() {
   Uz->setText("U_z");
   connect(Uz, &QToolButton::clicked, this, [this]() {
     short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Uz];
-    scene->setResulthIndex(index);
+    scene->setResulthIndex(statusLabel, index);
   });
 
   QToolButton *Rx = new QToolButton(resultWindget);
@@ -200,7 +200,7 @@ void MainWindow::createToolBar() {
   Rx->setText("R_x");
   connect(Rx, &QToolButton::clicked, this, [this]() {
     short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Rx];
-    scene->setResulthIndex(index);
+    scene->setResulthIndex(statusLabel, index);
   });
 
   QToolButton *Ry = new QToolButton(resultWindget);
@@ -209,7 +209,7 @@ void MainWindow::createToolBar() {
   Ry->setText("R_y");
   connect(Ry, &QToolButton::clicked, this, [this]() {
     short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Ry];
-    scene->setResulthIndex(index);
+    scene->setResulthIndex(statusLabel, index);
   });
 
   QToolButton *Rz = new QToolButton(resultWindget);
@@ -238,7 +238,7 @@ void MainWindow::createToolBar() {
   Qx->setText("Q_x");
   connect(Qx, &QToolButton::clicked, this, [this]() {
     short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Qx];
-    scene->setResulthIndex(index);
+    scene->setResulthIndex(statusLabel, index);
   });
 
   QToolButton *Qy = new QToolButton(resultWindget);
@@ -247,7 +247,7 @@ void MainWindow::createToolBar() {
   Qy->setText("Q_y");
   connect(Qy, &QToolButton::clicked, this, [this]() {
     short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Qy];
-    scene->setResulthIndex(index);
+    scene->setResulthIndex(statusLabel, index);
   });
 
   QToolButton *Mx = new QToolButton(resultWindget);
@@ -256,7 +256,7 @@ void MainWindow::createToolBar() {
   Mx->setText("M_x");
   connect(Mx, &QToolButton::clicked, this, [this]() {
     short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Mx];
-    scene->setResulthIndex(index);
+    scene->setResulthIndex(statusLabel, index);
   });
 
   QToolButton *My = new QToolButton(resultWindget);
@@ -265,7 +265,7 @@ void MainWindow::createToolBar() {
   My->setText("M_y");
   connect(My, &QToolButton::clicked, this, [this]() {
     short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::My];
-    scene->setResulthIndex(index);
+    scene->setResulthIndex(statusLabel, index);
   });
 
   QToolButton *Mxy = new QToolButton(resultWindget);
@@ -274,7 +274,7 @@ void MainWindow::createToolBar() {
   Mxy->setText("M_xy");
   connect(Mxy, &QToolButton::clicked, this, [this]() {
     short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Mxy];
-    scene->setResulthIndex(index);
+    scene->setResulthIndex(statusLabel, index);
   });
 
   resultButtons = QVector<QToolButton *>{
@@ -323,14 +323,8 @@ void MainWindow::createToolStrip() {
   QStatusBar *statusBar = this->statusBar();
 
   // Статусные метки
-  QLabel *statusLabel = new QLabel("Готов");
+  statusLabel = new QLabel();
   statusBar->addWidget(statusLabel);
-
-  QLabel *posLabel = new QLabel("Строка: 1, Колонка: 1");
-  statusBar->addPermanentWidget(posLabel);
-
-  QLabel *zoomLabel = new QLabel("100%");
-  statusBar->addPermanentWidget(zoomLabel);
 
   // Прогресс-бар в статус-баре
   QProgressBar *progressBar = new QProgressBar();
@@ -420,8 +414,3 @@ void MainWindow::calculateButtonClicked() {
 
   workerThread->start();
 }
-
-// void MainWindow::uzButtonClicked() {
-//   short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Uz];
-//   scene->setResulthIndex(index);
-// }

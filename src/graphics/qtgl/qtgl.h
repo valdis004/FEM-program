@@ -7,6 +7,7 @@
 #include <QOpenGLWidget>
 #include <qevent.h>
 
+#include <QLabel>
 #include <qglobal.h>
 
 struct GraphickElement {
@@ -58,5 +59,5 @@ public:
                       const QVector<double> &maxValues,
                       const QVector<double> &minValues);
 
-  void setResulthIndex(short index);
+  void setResulthIndex(QLabel *statusLabel, short index);
 };

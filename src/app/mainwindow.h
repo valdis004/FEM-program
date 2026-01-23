@@ -19,6 +19,7 @@ public:
   Mesh *mesh{nullptr};
   Solver *solver{nullptr};
   QVector<QToolButton *> resultButtons;
+  QLabel *statusLabel;
 
   ~MainWindow();
 
@@ -36,5 +37,4 @@ private slots:
   void onTreeContextMenuRequested(const QPoint &pos);
   void createDefaultPlateScheme(QTreeWidgetItem *item);
   void calculateButtonClicked();
-  // void uzButtonClicked();
 };

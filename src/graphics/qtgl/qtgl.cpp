@@ -107,8 +107,11 @@ void Qtgl::setResulthData(const QVector<double> &maxAbsValues,
   this->minValues = minValues;
 }
 
-void Qtgl::setResulthIndex(short index) {
+void Qtgl::setResulthIndex(QLabel *statusLabel, short index) {
   resultIndex = index;
+  statusLabel->setText(QString("max value: %1, min value: %1")
+                           .arg(maxValues[index])
+                           .arg(minValues[index]));
 
   double scaleForOutput = 1000.0 / maxAbsValues[resultIndex];
 
