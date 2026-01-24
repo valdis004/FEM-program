@@ -4,6 +4,8 @@
 #include <QDialogButtonBox>
 #include <QMainWindow>
 #include <qglobal.h>
+#include <qmdiarea.h>
+#include <qtableview.h>
 #include <qtoolbutton.h>
 
 class mesh;
@@ -15,11 +17,13 @@ class MainWindow : public QMainWindow {
 
 public:
   MainWindow();
+  QMdiArea *m_pma;
   Qtgl *scene{nullptr};
   Mesh *mesh{nullptr};
   Solver *solver{nullptr};
   QVector<QToolButton *> resultButtons;
   QLabel *statusLabel;
+  QToolButton *tablesBtn;
 
   ~MainWindow();
 
@@ -37,4 +41,5 @@ private slots:
   void onTreeContextMenuRequested(const QPoint &pos);
   void createDefaultPlateScheme(QTreeWidgetItem *item);
   void calculateButtonClicked();
+  void createTableResultsTab();
 };

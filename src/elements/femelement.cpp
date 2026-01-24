@@ -45,9 +45,9 @@ void AbstractFemElement::setCalcProps(AbstractFemElement *ptr,
   bool isDispl = ptr->generalDisp != nullptr;
   VectorXd coefs = ptr->getLoadVector();
 
-  for (size_t i = 0; i < coefs.size(); i++) {
-    qDebug() << coefs[i];
-  }
+  // for (size_t i = 0; i < coefs.size(); i++) {
+  //   qDebug() << coefs[i];
+  // }
 
   // Bad dof parameters
   short badDofBegin = data.BAD_DOF_BEGIN;

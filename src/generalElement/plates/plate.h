@@ -1,5 +1,8 @@
-#include "../element.h"
+#include "generalElement/element.h"
 
 class Plate : public AbstractElement {
+public:
+  Plate(shared_ptr<AbstractLoad> load, ElementType type = ElementType::NONE);
+
   virtual shared_ptr<AbstractLoad> createAndAddLoad() override;
 };

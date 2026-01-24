@@ -1,8 +1,10 @@
 #include "qtgl.h"
+#include "../../app/mainwindow.h"
 #include <QOpenGLFunctions>
 #include <QtGui>
 #include <cstddef>
 #include <qglobal.h>
+#include <qmainwindow.h>
 #include <qmatrix4x4.h>
 #include <qnamespace.h>
 #include <qpoint.h>
@@ -107,11 +109,11 @@ void Qtgl::setResulthData(const QVector<double> &maxAbsValues,
   this->minValues = minValues;
 }
 
-void Qtgl::setResulthIndex(QLabel *statusLabel, short index) {
+void Qtgl::setResulthIndex(MainWindow *mainwindow, short index) {
   resultIndex = index;
-  statusLabel->setText(QString("max value: %1, min value: %1")
-                           .arg(maxValues[index])
-                           .arg(minValues[index]));
+  mainwindow->statusLabel->setText(
+      QString("max value: %1, ").arg(maxValues[index]) +
+      QString("min value: %1").arg(minValues[index]));
 
   double scaleForOutput = 1000.0 / maxAbsValues[resultIndex];
 
@@ -126,6 +128,11 @@ void Qtgl::setResulthIndex(QLabel *statusLabel, short index) {
     glDeleteLists(m_nMesh, 1);
   }
   createMeshDisplayList();
+
+  // if (!mainwindow->resultsView)
+  //   emit needOutputTableDock(m_nodes, isNeedSetCoods);
+
+  isNeedSetCoods = false;
   update();
 }
 
@@ -177,7 +184,7 @@ void Qtgl::createMeshDisplayList() {
   }
 
   // 2. Рисуем узлы (красные точки)
-  glPointSize(15.0f);
+  glPointSize(7.0f);
   glBegin(GL_POINTS);
   glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
 
@@ -237,76 +244,4 @@ void Qtgl::normalizeOutData() {
   for (const auto &node : m_nodes) {
     node->glOutputValue = (node->glOutputValue - m_centerZ) / m_scaleFactor;
   }
-}
-
-// ----------------------------------------------------------------------
-GLuint Qtgl::createPyramid(GLfloat fSize /*=1.0f*/) {
-  GLuint n = glGenLists(1);
-
-  glNewList(n, GL_COMPILE);
-
-  int gridSize = 10;
-
-  float cellSize = 2.0f * fSize / gridSize;
-  float halfSize = fSize;
-
-  // 1. Сначала рисуем залитые квадраты
-  for (int i = 0; i < gridSize; i++) {
-    for (int j = 0; j < gridSize; j++) {
-      float x1 = -halfSize + i * cellSize;
-      float x2 = x1 + cellSize;
-      float z1 = -halfSize + j * cellSize;
-      float z2 = z1 + cellSize;
-
-      // Чередование цветов для наглядности
-      float r = ((i + j) % 2 == 0) ? 0.8f : 0.6f;
-      float g = ((i + j) % 2 == 0) ? 0.8f : 0.7f;
-      float b = ((i + j) % 2 == 0) ? 1.0f : 0.9f;
-
-      glBegin(GL_QUADS);
-      glColor4f(r, g, b, 0.8f); // Немного прозрачный
-      glVertex3f(x1, 0.0f, z1);
-      glVertex3f(x2, 0.0f, z1);
-      glVertex3f(x2, 0.0f, z2);
-      glVertex3f(x1, 0.0f, z2);
-      glEnd();
-    }
-  }
-
-  // 2. Рисуем линии сетки
-  glBegin(GL_LINES);
-  glColor4f(0.0f, 0.0f, 0.0f, 1.0f);
-
-  // Вертикальные линии (по X)
-  for (int i = 0; i <= gridSize; i++) {
-    float x = -halfSize + i * cellSize;
-    glVertex3f(x, 0.001f, -halfSize);
-    glVertex3f(x, 0.001f, halfSize);
-  }
-
-  // Горизонтальные линии (по Z)
-  for (int j = 0; j <= gridSize; j++) {
-    float z = -halfSize + j * cellSize;
-    glVertex3f(-halfSize, 0.001f, z);
-    glVertex3f(halfSize, 0.001f, z);
-  }
-  glEnd();
-
-  // 3. Рисуем узлы сетки (точки)
-  glPointSize(4.0f);
-  glBegin(GL_POINTS);
-  glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
-
-  for (int i = 0; i <= gridSize; i++) {
-    for (int j = 0; j <= gridSize; j++) {
-      float x = -halfSize + i * cellSize;
-      float z = -halfSize + j * cellSize;
-      glVertex3f(x, 0.002f, z); // Еще выше для узлов
-    }
-  }
-  glEnd();
-
-  glEndList();
-
-  return n;
 }

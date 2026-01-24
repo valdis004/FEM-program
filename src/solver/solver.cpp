@@ -62,18 +62,15 @@ Solver::getGlobalStiffMatrixAndLoadVector(Mesh *mesh) {
   globalMatrixSize = mesh->globaStiffMatrixSize;
   SparseMatrix<double> globalStiffMatrix(globalMatrixSize, globalMatrixSize);
   SparseVector<double> globalLoadVector(globalMatrixSize);
+  unsigned count = 0;
 
   auto elements = mesh->elements;
   for (AbstractFemElement *element : elements) {
-    unsigned count = 0;
-    emit progressChanged(count++);
+    emit newElementStiffMatrixStep(count++);
 
     ElementData data = element->data;
     QVector<Node *> nodes = element->nodes;
     MatrixXd localStiffMatrix = element->getLocalStiffMatrix();
-
-    // QVector<Eigen::Triplet<double>> tripletList;
-    // tripletList.reserve(data.STIFF_MATRIX_SIZE * data.STIFF_MATRIX_SIZE);
 
     for (size_t i = 0; i < data.STIFF_MATRIX_SIZE; i++) {
       unsigned colGlobId =
@@ -83,17 +80,9 @@ Solver::getGlobalStiffMatrixAndLoadVector(Mesh *mesh) {
         double loc = localStiffMatrix(i, j);
         globalStiffMatrix.coeffRef(rowGlobId, colGlobId) +=
             localStiffMatrix(i, j);
-
-        // tripletList.push_back(Eigen::Triplet<double>(colGlobId, rowGlobId,
-        //                                              localStiffMatrix(i,
-        //                                          StartGUI.sh    j)));
       }
     }
-    // Сборка матрицы на основе триплетов с суммированием одинаковых индексов
-    // globalStiffMatrix.setFromTriplets(tripletList.begin(),
-    // tripletList.end());
   }
-  emit calcFinished();
   return {globalStiffMatrix, globalLoadVector};
 }
 
@@ -128,21 +117,23 @@ void Solver::calculate(Mesh *mesh) {
   auto stiff = stiffAndLoad.first;
   auto load = stiffAndLoad.second;
 
-  for (size_t i = 0; i < stiff.rows(); i++) {
-    for (size_t j = 0; j < stiff.cols(); j++) {
-      qDebug() << stiff.coeff(i, j);
-    }
-    qDebug() << "\n\n\n";
-  }
+  // for (size_t i = 0; i < stiff.rows(); i++) {
+  //   for (size_t j = 0; j < stiff.cols(); j++) {
+  //     qDebug() << stiff.coeff(i, j);
+  //   }
+  //   qDebug() << "\n\n\n";
+  // }
 
+  emit applyBaundaryConditionsStep();
   applyBaundaryConditions(stiff, load, mesh);
 
-  qDebug() << " LOAD VECTOR  ";
+  // qDebug() << " LOAD VECTOR  ";
 
-  for (size_t i = 0; i < load.size(); i++) {
-    qDebug() << i << " " << load.coeff(i) << " ";
-  }
+  // for (size_t i = 0; i < load.size(); i++) {
+  //   qDebug() << i << " " << load.coeff(i) << " ";
+  // }
 
+  emit solveSystemStep();
   Eigen::SparseLU<Eigen::SparseMatrix<double>> solver;
   solver.compute(stiff); // Шаг 1: факторизация/анализ
   if (solver.info() != Eigen::Success) {
@@ -151,11 +142,13 @@ void Solver::calculate(Mesh *mesh) {
 
   SparseVector<double> u = solver.solve(load); // Шаг 2: решение
 
-  for (size_t i = 0; i < u.size(); i++) {
-    qDebug() << i << " " << u.coeff(i) << "\n";
-  }
+  // for (size_t i = 0; i < u.size(); i++) {
+  //   qDebug() << i << " " << u.coeff(i) << "\n";
+  // }
 
+  void getOutputStep();
   setOutputValuesToNodes(mesh, u);
+  emit calcFinishedStep();
 }
 
 void Solver::setOutputValuesToNodes(Mesh *mesh,
@@ -193,16 +186,16 @@ void Solver::setOutputValuesToNodes(Mesh *mesh,
       curNode->outputValues = outputValues;
 
       for (size_t j = 0; j < outputValues.size(); j++) {
-        if (abs(outputValues[i]) > maxAbsValues[i]) {
-          maxAbsValues[i] = abs(outputValues[i]);
+        if (abs(outputValues[j]) > maxAbsValues[j]) {
+          maxAbsValues[j] = abs(outputValues[j]);
         }
 
-        if (outputValues[i] > maxValues[i]) {
-          maxValues[i] = outputValues[i];
+        if (outputValues[j] > maxValues[j]) {
+          maxValues[j] = outputValues[j];
         }
 
-        if (outputValues[i] < outputValues[i]) {
-          minValues[i] = outputValues[i];
+        if (outputValues[j] < minValues[j]) {
+          minValues[j] = outputValues[j];
         }
       }
     }

@@ -30,13 +30,13 @@ private:
   unsigned maxNodeIndexInList(const QList<Node> &list);
 
 public:
-  void createDefaultMesh(ElementType type, QMessageBox *mes);
+  void createDefaultMesh(ElementType type);
 
   void meshManager(QMessageBox *mes, ElementType type);
 
   ~Mesh();
 
 signals:
-  void progressChanged(QMessageBox *mes, int count);
-  void meshFinished(QMessageBox *mes, int count);
+  void progressChanged(int count);
+  void meshFinished(int count);
 };

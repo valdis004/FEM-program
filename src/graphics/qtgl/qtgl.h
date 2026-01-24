@@ -9,12 +9,18 @@
 
 #include <QLabel>
 #include <qglobal.h>
+#include <qmainwindow.h>
+#include <qtmetamacros.h>
+
+class MainWindow;
 
 struct GraphickElement {
   QVector<Point3> points;
 };
 
 class Qtgl : public QOpenGLWidget {
+  Q_OBJECT
+
 private:
   GLuint m_nMesh;
   GLfloat m_xRotate;
@@ -22,6 +28,7 @@ private:
   GLfloat m_scale = 1.0f;
   QPoint m_ptPosition;
   bool isLeftBut = false;
+  bool isNeedSetCoods = true;
 
   QVector<Node *> m_nodes;                  // Храним узлы
   QVector<AbstractFemElement *> m_elements; // Храним элементы
@@ -48,7 +55,6 @@ protected:
   virtual void mousePressEvent(QMouseEvent *pe);
   virtual void mouseMoveEvent(QMouseEvent *pe);
   virtual void wheelEvent(QWheelEvent *pe);
-  GLuint createPyramid(GLfloat fSize = 1.0f);
 
 public:
   Qtgl(QWidget *pwgt = 0);
@@ -59,5 +65,8 @@ public:
                       const QVector<double> &maxValues,
                       const QVector<double> &minValues);
 
-  void setResulthIndex(QLabel *statusLabel, short index);
+  void setResulthIndex(MainWindow *mainwindow, short index);
+
+signals:
+  void needOutputTableDock(const QVector<Node *> &nodes, bool isNeedSetCoods);
 };

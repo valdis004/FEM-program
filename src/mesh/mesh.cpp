@@ -37,7 +37,7 @@ unsigned Mesh::maxNodeIndexInList(const QList<Node> &list) {
   return maxIndex;
 }
 
-void Mesh::createDefaultMesh(ElementType type, QMessageBox *mes) {
+void Mesh::createDefaultMesh(ElementType type) {
   // ElementProvider::initialize();
 
   auto DATA = ElementProvider::elementData[type];
@@ -105,15 +105,15 @@ void Mesh::createDefaultMesh(ElementType type, QMessageBox *mes) {
       auto element = AbstractFemElement::create(crtdElmtsCnt++, type,
                                                 nodesToElem, DATA.NODES_COUNT);
       element->setLoad(load);
-      this->elements.push_back(element);
       AbstractFemElement::setCalcProps(element, globaStiffMatrixSize);
+      this->elements.push_back(element);
 
-      emit progressChanged(mes, crtdElmtsCnt);
+      emit progressChanged(crtdElmtsCnt);
     }
   }
 
   tripletsCount +=
       elementCount * DATA.STIFF_MATRIX_SIZE * DATA.STIFF_MATRIX_SIZE;
 
-  emit meshFinished(mes, elementCount);
+  emit meshFinished(elementCount);
 }

@@ -50,8 +50,6 @@ protected:
 
 protected slots:
   virtual void onActionTriggered();
-  void updateProgress(QMessageBox *mes, int percent);
-  void showResult(QMessageBox *mes, int count);
 
 protected:
   QTreeWidget *treeWidget;

@@ -10,6 +10,8 @@
 #include <qdialogbuttonbox.h>
 #include <qformlayout.h>
 #include <qmessagebox.h>
+#include <qprogressdialog.h>
+#include <qtimer.h>
 #include <qwidget.h>
 #include <vector>
 
@@ -127,41 +129,42 @@ void TreeContextMenu::createDiologDefualtSchemePlate(QWidget *mainWindow,
   ElementType type = (ElementType)comboBox->currentIndex();
 
   if (d->exec() == QDialog::Accepted) {
-    QMessageBox *mes = new QMessageBox(mainWindow);
+    QProgressDialog *mes = new QProgressDialog(mainWindow);
     mes->setWindowTitle("Generating default mesh...");
+    mes->setLabelText("Initializing calculation...");
+    mes->setModal(true);
+    mes->setRange(0, 0);
+    mes->setMinimumDuration(0);
     mes->show();
 
     mesh = new Mesh();
 
-    connect(mesh, &Mesh::progressChanged, this,
-            &TreeContextMenu::updateProgress);
-    connect(mesh, &Mesh::meshFinished, this, &TreeContextMenu::showResult);
+    connect(mesh, &Mesh::progressChanged, this, [mes](int count) {
+      mes->setLabelText(QString("Creating element: %1").arg(count));
+    });
+    connect(mesh, &Mesh::meshFinished, this, [mes](int count) {
+      mes->setLabelText(QString("Sucsesfully Created %1 elements").arg(count));
+      QTimer::singleShot(500, mes, &QProgressDialog::close);
+    });
 
     // Создаем отдельный поток для mesh_
     QThread *workerThread = new QThread();
     mesh->moveToThread(workerThread); // mesh_ теперь принадлежит workerThread
 
     // Когда поток запустится, выполним создание меша
-    connect(workerThread, &QThread::started, this, [=]() {
-      mesh->createDefaultMesh(type, mes);
+    connect(workerThread, &QThread::started, this,
+            [=]() { mesh->createDefaultMesh(type); });
 
-      // Копируем данные в локальные переменные
-      QVector<Node *> nodes = mesh->nodes;
-      QVector<AbstractFemElement *> elements = mesh->elements;
+    connect(mesh, &Mesh::meshFinished, this,
+            [mesh, scene, workerThread](int count) {
+              QVector<Node *> nodes = mesh->nodes;
+              QVector<AbstractFemElement *> elements = mesh->elements;
 
-      // Передаем в основной поток
-      QMetaObject::invokeMethod(
-          this,
-          [=]() {
-            scene->setMeshData(nodes, elements);
-            mes->accept();
-            mes->deleteLater();
+              scene->setMeshData(nodes, elements);
 
-            // Завершаем поток
-            workerThread->quit();
-          },
-          Qt::QueuedConnection);
-    });
+              // Завершаем поток
+              workerThread->quit();
+            });
 
     // Удаляем поток и mesh_ при завершении
     connect(workerThread, &QThread::finished, workerThread,
@@ -170,12 +173,4 @@ void TreeContextMenu::createDiologDefualtSchemePlate(QWidget *mainWindow,
 
     workerThread->start();
   }
-}
-
-void TreeContextMenu::updateProgress(QMessageBox *mes, int count) {
-  mes->setText(QString("Creating element: %1").arg(count));
-}
-
-void TreeContextMenu::showResult(QMessageBox *mes, int count) {
-  mes->setText(QString("Sucsesfully Created %1 elements").arg(count));
 }

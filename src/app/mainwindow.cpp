@@ -13,8 +13,10 @@
 #include <QMenuBar>
 #include <QObject>
 #include <QProgressBar>
+#include <QProgressDialog>
 #include <QPushButton>
 #include <QStatusBar>
+#include <QTableView>
 #include <QTextBrowser>
 #include <QTextEdit>
 #include <QToolBar>
@@ -24,6 +26,7 @@
 #include <QVBoxLayout>
 #include <QWidget>
 #include <cstddef>
+#include <qapplication.h>
 #include <qboxlayout.h>
 #include <qdialog.h>
 #include <qdialogbuttonbox.h>
@@ -32,8 +35,11 @@
 #include <qgridlayout.h>
 #include <qnamespace.h>
 #include <qobject.h>
+#include <qstandarditemmodel.h>
 #include <qthread.h>
+#include <qtimer.h>
 #include <qtoolbutton.h>
+#include <qwidget.h>
 // #include <stdexcept>
 
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
@@ -58,10 +64,10 @@ MainWindow::~MainWindow() {
 
 void MainWindow::createLeftDock() {
   // Центральный виджет - текстовый редактор
-  QMdiArea *m_pma = new QMdiArea(this);
+  m_pma = new QMdiArea(this);
   m_pma->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
   m_pma->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
-  scene = new Qtgl(this);
+  scene = new Qtgl(m_pma);
   scene->setWindowTitle("Graphic window");
   m_pma->addSubWindow(scene);
   m_pma->setViewMode(QMdiArea::TabbedView);
@@ -170,7 +176,10 @@ void MainWindow::createToolBar() {
 
   // ========== Вторая вкладка: Форматирование ==========
   QWidget *resultWindget = new QWidget();
-  QGridLayout *structuralForsesLayout = new QGridLayout(resultWindget);
+  QHBoxLayout *hlayout = new QHBoxLayout(resultWindget);
+  resultWindget->setLayout(hlayout);
+
+  QGridLayout *structuralForsesLayout = new QGridLayout();
   structuralForsesLayout->setContentsMargins(5, 5, 5, 5);
   structuralForsesLayout->setSpacing(5);
   structuralForsesLayout->setAlignment(Qt::AlignLeft);
@@ -191,7 +200,7 @@ void MainWindow::createToolBar() {
   Uz->setText("U_z");
   connect(Uz, &QToolButton::clicked, this, [this]() {
     short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Uz];
-    scene->setResulthIndex(statusLabel, index);
+    scene->setResulthIndex(this, index);
   });
 
   QToolButton *Rx = new QToolButton(resultWindget);
@@ -200,7 +209,7 @@ void MainWindow::createToolBar() {
   Rx->setText("R_x");
   connect(Rx, &QToolButton::clicked, this, [this]() {
     short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Rx];
-    scene->setResulthIndex(statusLabel, index);
+    scene->setResulthIndex(this, index);
   });
 
   QToolButton *Ry = new QToolButton(resultWindget);
@@ -209,7 +218,7 @@ void MainWindow::createToolBar() {
   Ry->setText("R_y");
   connect(Ry, &QToolButton::clicked, this, [this]() {
     short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Ry];
-    scene->setResulthIndex(statusLabel, index);
+    scene->setResulthIndex(this, index);
   });
 
   QToolButton *Rz = new QToolButton(resultWindget);
@@ -238,7 +247,7 @@ void MainWindow::createToolBar() {
   Qx->setText("Q_x");
   connect(Qx, &QToolButton::clicked, this, [this]() {
     short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Qx];
-    scene->setResulthIndex(statusLabel, index);
+    scene->setResulthIndex(this, index);
   });
 
   QToolButton *Qy = new QToolButton(resultWindget);
@@ -247,7 +256,7 @@ void MainWindow::createToolBar() {
   Qy->setText("Q_y");
   connect(Qy, &QToolButton::clicked, this, [this]() {
     short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Qy];
-    scene->setResulthIndex(statusLabel, index);
+    scene->setResulthIndex(this, index);
   });
 
   QToolButton *Mx = new QToolButton(resultWindget);
@@ -256,7 +265,7 @@ void MainWindow::createToolBar() {
   Mx->setText("M_x");
   connect(Mx, &QToolButton::clicked, this, [this]() {
     short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Mx];
-    scene->setResulthIndex(statusLabel, index);
+    scene->setResulthIndex(this, index);
   });
 
   QToolButton *My = new QToolButton(resultWindget);
@@ -265,7 +274,7 @@ void MainWindow::createToolBar() {
   My->setText("M_y");
   connect(My, &QToolButton::clicked, this, [this]() {
     short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::My];
-    scene->setResulthIndex(statusLabel, index);
+    scene->setResulthIndex(this, index);
   });
 
   QToolButton *Mxy = new QToolButton(resultWindget);
@@ -274,7 +283,7 @@ void MainWindow::createToolBar() {
   Mxy->setText("M_xy");
   connect(Mxy, &QToolButton::clicked, this, [this]() {
     short index = solver->data->OUTPUT_INDEX_MAP[(int)OutputType::Mxy];
-    scene->setResulthIndex(statusLabel, index);
+    scene->setResulthIndex(this, index);
   });
 
   resultButtons = QVector<QToolButton *>{
@@ -301,6 +310,19 @@ void MainWindow::createToolBar() {
   structuralForsesLayout->addWidget(Mx, 0, 7);
   structuralForsesLayout->addWidget(My, 1, 7);
   structuralForsesLayout->addWidget(Mxy, 0, 8);
+  hlayout->addLayout(structuralForsesLayout);
+
+  QGridLayout *tablesLayout = new QGridLayout();
+
+  tablesBtn = new QToolButton(resultWindget);
+  tablesBtn->setDisabled(true);
+  tablesBtn->setAutoRaise(true);
+  tablesBtn->setText("Tabels");
+  tablesLayout->addWidget(tablesBtn, 0, 0);
+  connect(tablesBtn, &QToolButton::clicked, this,
+          &MainWindow::createTableResultsTab);
+
+  hlayout->addLayout(tablesLayout);
 
   // Добавляем вкладки
   toolTabs->addTab(mainTab, "Основные");
@@ -361,56 +383,115 @@ void MainWindow::calculateButtonClicked() {
     return;
   }
 
-  QMessageBox *mes = new QMessageBox(this);
-  mes->setWindowTitle("Calculating...");
-  mes->show();
-  mes->setText("const QString &text");
+  QProgressDialog *progressBar = new QProgressDialog(this);
+  progressBar->setWindowTitle("Calculating...");
+  progressBar->setLabelText("Initializing calculation...");
+  progressBar->setModal(true);
+  progressBar->setRange(0, 0);
+  progressBar->setMinimumDuration(0);
+  progressBar->show();
 
   Solver *solver = new Solver();
   this->solver = solver;
 
-  connect(solver, &Solver::progressChanged, this, [mes](unsigned count) {
-    mes->setText(
-        QString("Creating local stiff matrix for element %1").arg(count));
-  });
-  connect(solver, &Solver::calcFinished, this,
-          [mes]() { mes->setText("Global stiff matrix sucsesfully created"); });
-
-  // Создаем отдельный поток для mesh_
+  // Создаем отдельный поток
   QThread *workerThread = new QThread();
-  solver->moveToThread(workerThread); // mesh_ теперь принадлежит workerThread
 
-  // Когда поток запустится, выполним расчет
-  connect(workerThread, &QThread::started, this, [=]() {
-    solver->calculate(this->mesh);
+  // Перемещаем solver в рабочий поток
+  solver->moveToThread(workerThread);
 
-    // Передаем в основной поток
-    QMetaObject::invokeMethod(
-        this,
-        [workerThread, solver, this]() {
-          this->scene->setResulthData(solver->maxAbsValues, solver->maxValues,
-                                      solver->minValues);
+  connect(
+      solver, &Solver::newElementStiffMatrixStep, this,
+      [progressBar](unsigned count) {
+        progressBar->setLabelText(
+            QString("Creating local stiff matrix for element %1").arg(count));
+      });
 
-          auto data = this->solver->data;
-          for (size_t i = 0; i < data->STR_OUTPUT_VALUES.size(); i++) {
-            for (size_t j = 0; j < this->resultButtons.size(); j++) {
-              if (data->STR_OUTPUT_VALUES[i] ==
-                  this->resultButtons[j]->text()) {
-                this->resultButtons[j]->setEnabled(true);
-                break;
+  connect(solver, &Solver::applyBaundaryConditionsStep, this, [progressBar]() {
+    progressBar->setLabelText("Applying boundary conditions...");
+  });
+  connect(solver, &Solver::solveSystemStep, this,
+          [progressBar]() { progressBar->setLabelText("Solving system..."); });
+  connect(solver, &Solver::getOutputStep, this, [progressBar]() {
+    progressBar->setLabelText("Getting output values...");
+  });
+  connect(solver, &Solver::calcFinishedStep, this, [progressBar]() {
+    progressBar->setLabelText("Calculated successfully");
+    QTimer::singleShot(500, progressBar, &QProgressDialog::close);
+  });
+  connect(workerThread, &QThread::started, solver,
+          [solver, this]() { solver->calculate(this->mesh); });
+
+  connect(solver, &Solver::calcFinishedStep, this,
+          [this, solver, workerThread, progressBar]() {
+            // Этот код выполнится в главном потоке
+            this->scene->setResulthData(solver->maxAbsValues, solver->maxValues,
+                                        solver->minValues);
+
+            auto data = this->solver->data;
+            for (size_t i = 0; i < data->STR_OUTPUT_VALUES.size(); i++) {
+              for (size_t j = 0; j < this->resultButtons.size(); j++) {
+                if (data->STR_OUTPUT_VALUES[i] ==
+                    this->resultButtons[j]->text()) {
+                  this->resultButtons[j]->setEnabled(true);
+                  break;
+                }
               }
             }
-          }
-          // Завершаем поток
-          workerThread->quit();
-        },
-        Qt::QueuedConnection);
-  });
 
-  // Удаляем поток и mesh_ при завершении
+            // Завершаем поток
+            workerThread->quit();
+          });
+  connect(solver, &Solver::calcFinishedStep, tablesBtn,
+          [this]() { tablesBtn->setEnabled(true); });
+
+  // Убираем объекты при завершении
   connect(workerThread, &QThread::finished, workerThread,
           &QThread::deleteLater);
-  // connect(workerThread, &QThread::finished, mesh_, &Mesh::deleteLater);
+  // connect(workerThread, &QThread::finished, solver, &Solver::deleteLater);
+  // connect(workerThread, &QThread::finished, this,
+  //         [mes]() { mes->deleteLater(); });
 
+  // Запускаем поток
   workerThread->start();
+  progressBar->show();
+}
+
+void MainWindow::createTableResultsTab() {
+  QWidget *tableWindow = new QWidget();
+  QVBoxLayout *layout =
+      new QVBoxLayout(tableWindow); // Создаем layout для виджета
+
+  QStandardItemModel *model = new QStandardItemModel(3, 2);
+  model->setItem(0, 0, new QStandardItem("Tom"));
+  model->setItem(0, 1, new QStandardItem("39"));
+  model->setItem(1, 0, new QStandardItem("Bob"));
+  model->setItem(1, 1, new QStandardItem("43"));
+  model->setItem(2, 0, new QStandardItem("Sam"));
+  model->setItem(2, 1, new QStandardItem("28"));
+
+  model->setHeaderData(0, Qt::Horizontal, "x");
+  model->setHeaderData(1, Qt::Horizontal, "y");
+
+  QComboBox *comboBox = new QComboBox(tableWindow);
+
+  comboBox->addItem("MITC4");
+  comboBox->addItem("MITC9");
+  comboBox->addItem("MITC16");
+  comboBox->setFixedWidth(100);
+  layout->addWidget(comboBox);
+
+  QTableView *resultsView = new QTableView();
+  resultsView->setModel(model);
+
+  layout->addWidget(resultsView); // Добавляем таблицу в layout
+  tableWindow->setLayout(layout); // Устанавливаем layout для виджета
+
+  // Устанавливаем заголовок для подокна (вкладки)
+  tableWindow->setWindowTitle(
+      "Tables " + QString::number(m_pma->subWindowList().count() + 1));
+
+  // Добавляем подокно в MDI-область
+  m_pma->addSubWindow(tableWindow);
+  tableWindow->show();
 }

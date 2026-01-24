@@ -50,8 +50,11 @@ public:
   void calculate(Mesh *mesh);
 
 signals:
-  void progressChanged(unsigned count);
-  void calcFinished();
+  void newElementStiffMatrixStep(unsigned count);
+  void applyBaundaryConditionsStep();
+  void solveSystemStep();
+  void getOutputStep();
+  void calcFinishedStep();
 
   // public slots:
   //   void updateProgress(QMessageBox *mes, int count);
