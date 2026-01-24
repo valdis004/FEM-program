@@ -1,5 +1,5 @@
 build 
 .vscode 
-.cashe 
+.cache
 CMakePresets.json 
 compile_commands.json
