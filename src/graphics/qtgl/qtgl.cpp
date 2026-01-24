@@ -1,18 +1,17 @@
-#include "qtgl.h"
-#include "../../app/mainwindow.h"
 #include <QOpenGLFunctions>
 #include <QtGui>
-#include <cstddef>
 #include <qglobal.h>
 #include <qmainwindow.h>
 #include <qmatrix4x4.h>
 #include <qnamespace.h>
 #include <qpoint.h>
 
+#include "app/mainwindow.h"
+#include "qtgl.h"
+
 Qtgl::Qtgl(QWidget *pwgt /*= 0*/)
     : QOpenGLWidget(pwgt), m_xRotate(0), m_yRotate(0) {}
 
-// ----------------------------------------------------------------------
 /*virtual*/ void Qtgl::initializeGL() {
   QOpenGLFunctions *pFunc = QOpenGLContext::currentContext()->functions();
   pFunc->glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
@@ -23,7 +22,6 @@ Qtgl::Qtgl(QWidget *pwgt /*= 0*/)
   createMeshDisplayList();
 }
 
-// ----------------------------------------------------------------------
 /*virtual*/ void Qtgl::resizeGL(int nWidth, int nHeight) {
   glViewport(0, 0, (GLint)nWidth, (GLint)nHeight);
   glMatrixMode(GL_PROJECTION);
@@ -31,7 +29,6 @@ Qtgl::Qtgl(QWidget *pwgt /*= 0*/)
   glFrustum(-0.2, 0.2, -0.2, 0.2, 0.2, 20.0);
 }
 
-// ----------------------------------------------------------------------
 /*virtual*/ void Qtgl::paintGL() {
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -48,7 +45,6 @@ Qtgl::Qtgl(QWidget *pwgt /*= 0*/)
   }
 }
 
-// ----------------------------------------------------------------------
 /*virtual*/ void Qtgl::mousePressEvent(QMouseEvent *pe) {
   if (pe->button() != Qt::LeftButton) {
     isLeftBut = false;
@@ -68,7 +64,6 @@ void Qtgl::wheelEvent(QWheelEvent *pe) {
   update();
 }
 
-// ----------------------------------------------------------------------
 /*virtual*/ void Qtgl::mouseMoveEvent(QMouseEvent *pe) {
   if (!isLeftBut)
     return;
@@ -80,14 +75,18 @@ void Qtgl::wheelEvent(QWheelEvent *pe) {
   m_ptPosition = pe->pos();
 }
 
-void Qtgl::setMeshData(const QVector<Node *> &nodes,
-                       const QVector<AbstractFemElement *> &elements) {
-  m_nodes = nodes;
-  m_elements = elements;
+void Qtgl::setMeshData(QVector<shared_ptr<AbstractElement>> *elements) {
+  this->elements = elements;
 
-  m_meshDataValid = !nodes.empty() && !elements.empty();
+  for (auto &element : *elements) {
+    auto nodes = element->meshData->nodes;
+    auto elements = element->meshData->femElements;
 
-  // Это не выполняется
+    m_meshDataValid = !nodes.empty() && !elements.empty();
+    if (!m_meshDataValid)
+      break;
+  }
+
   if (m_meshDataValid) {
     // Нормируем данные для лучшего отображения
     normalizeMeshData();
@@ -117,9 +116,13 @@ void Qtgl::setResulthIndex(MainWindow *mainwindow, short index) {
 
   double scaleForOutput = 1000.0 / maxAbsValues[resultIndex];
 
-  for (const auto &node : m_nodes) {
-    double value = node->outputValues[resultIndex];
-    node->glOutputValue = value * scaleForOutput + node->point.z;
+  for (auto &element : *elements) {
+    auto nodes = element->meshData->nodes;
+
+    for (const auto &node : nodes) {
+      double value = node->outputValues[resultIndex];
+      node->glOutputValue = value * scaleForOutput + node->point.z;
+    }
   }
 
   normalizeOutData();
@@ -150,98 +153,116 @@ void Qtgl::createMeshDisplayList() {
   // 1. Рисуем элементы (прямоугольники)
   glColor4f(0.8f, 0.8f, 0.8f, 0.7f); // Полупрозрачный серый для элементов
 
-  for (const auto &element : m_elements) {
-    glBegin(GL_QUADS);
-    // Рисуем прямоугольник по 4 узлам
-    for (int i = 0; i < element->nodesCount; i++) {
-      const Node *node = element->nodes[i];
-      glVertex3f(node->glPoint.x, node->glPoint.z, node->glPoint.y);
-    }
-    glEnd();
+  for (const auto element : *elements) {
+    auto nodes = element->meshData->nodes;
+    auto femElements = element->meshData->femElements;
 
-    // Рисуем контур элемента (черный)
-    glBegin(GL_LINE_LOOP);
-    glColor4f(0.0f, 0.0f, 0.0f, 1.0f);
-    for (int i = 0; i < element->nodesCount; i++) {
-      const Node *node = element->nodes[i];
-      glVertex3f(node->glPoint.x, node->glPoint.z, node->glPoint.y);
-    }
-    glEnd();
-
-    // Рисуем расчетный параметр
-    if (resultIndex != -1) {
-      glBegin(GL_LINE_LOOP);
-      glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
+    for (const auto &element : femElements) {
+      glBegin(GL_QUADS);
+      // Рисуем прямоугольник по 4 узлам
       for (int i = 0; i < element->nodesCount; i++) {
         const Node *node = element->nodes[i];
-        glVertex3f(node->glPoint.x, node->glOutputValue, node->glPoint.y);
+        glVertex3f(node->glPoint.x, node->glPoint.z, node->glPoint.y);
       }
       glEnd();
+
+      // Рисуем контур элемента (черный)
+      glBegin(GL_LINE_LOOP);
+      glColor4f(0.0f, 0.0f, 0.0f, 1.0f);
+      for (int i = 0; i < element->nodesCount; i++) {
+        const Node *node = element->nodes[i];
+        glVertex3f(node->glPoint.x, node->glPoint.z, node->glPoint.y);
+      }
+      glEnd();
+
+      // Рисуем расчетный параметр
+      if (resultIndex != -1) {
+        glBegin(GL_LINE_LOOP);
+        glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
+        for (int i = 0; i < element->nodesCount; i++) {
+          const Node *node = element->nodes[i];
+          glVertex3f(node->glPoint.x, node->glOutputValue, node->glPoint.y);
+        }
+        glEnd();
+      }
+
+      glColor4f(0.8f, 0.8f, 0.8f,
+                0.7f); // Возвращаем цвет для следующих элементов
     }
 
-    glColor4f(0.8f, 0.8f, 0.8f,
-              0.7f); // Возвращаем цвет для следующих элементов
+    // 2. Рисуем узлы (красные точки)
+    glPointSize(7.0f);
+    glBegin(GL_POINTS);
+    glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
+
+    for (const auto node : nodes) {
+      glVertex3f(node->glPoint.x, node->glPoint.z, node->glPoint.y);
+    }
+    glEnd();
+
+    glEndList();
   }
-
-  // 2. Рисуем узлы (красные точки)
-  glPointSize(7.0f);
-  glBegin(GL_POINTS);
-  glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
-
-  for (const auto node : m_nodes) {
-    glVertex3f(node->glPoint.x, node->glPoint.z, node->glPoint.y);
-  }
-  glEnd();
-
-  glEndList();
 }
 
 void Qtgl::calculateMeshBounds() {
-  if (m_nodes.empty())
-    return;
+  for (auto &element : *elements) {
+    auto nodes = element->meshData->nodes;
 
-  m_minX = m_maxX = m_nodes[0]->point.x;
-  m_minY = m_maxY = m_nodes[0]->point.y;
-  m_minZ = m_maxZ = m_nodes[0]->point.z;
+    if (nodes.empty())
+      return;
 
-  for (const auto node : m_nodes) {
-    m_minX = std::min(m_minX, node->glPoint.x);
-    m_maxX = std::max(m_maxX, node->glPoint.x);
-    m_minY = std::min(m_minY, node->glPoint.y);
-    m_maxY = std::max(m_maxY, node->glPoint.y);
-    m_minZ = std::min(m_minZ, node->glPoint.z);
-    m_maxZ = std::max(m_maxZ, node->glPoint.z);
+    m_minX = m_maxX = nodes[0]->point.x;
+    m_minY = m_maxY = nodes[0]->point.y;
+    m_minZ = m_maxZ = nodes[0]->point.z;
+
+    for (const auto node : nodes) {
+      m_minX = std::min(m_minX, node->glPoint.x);
+      m_maxX = std::max(m_maxX, node->glPoint.x);
+      m_minY = std::min(m_minY, node->glPoint.y);
+      m_maxY = std::max(m_maxY, node->glPoint.y);
+      m_minZ = std::min(m_minZ, node->glPoint.z);
+      m_maxZ = std::max(m_maxZ, node->glPoint.z);
+    }
+
+    m_centerX = (m_minX + m_maxX) * 0.5f;
+    m_centerY = (m_minY + m_maxY) * 0.5f;
+    m_centerZ = (m_minZ + m_maxZ) * 0.5f;
+
+    // Находим максимальный размер для масштабирования
+    float dx = m_maxX - m_minX;
+    float dy = m_maxY - m_minY;
+    float dz = m_maxZ - m_minZ;
+    m_scaleFactor = std::max({dx, dy, dz});
+
+    if (m_scaleFactor < 0.001f)
+      m_scaleFactor = 1.0f;
   }
-
-  m_centerX = (m_minX + m_maxX) * 0.5f;
-  m_centerY = (m_minY + m_maxY) * 0.5f;
-  m_centerZ = (m_minZ + m_maxZ) * 0.5f;
-
-  // Находим максимальный размер для масштабирования
-  float dx = m_maxX - m_minX;
-  float dy = m_maxY - m_minY;
-  float dz = m_maxZ - m_minZ;
-  m_scaleFactor = std::max({dx, dy, dz});
-
-  if (m_scaleFactor < 0.001f)
-    m_scaleFactor = 1.0f;
 }
 
 void Qtgl::normalizeMeshData() {
   calculateMeshBounds();
 
-  // Центрируем и нормируем узлы
-  for (auto node : m_nodes) {
-    node->glPoint.x = (node->glPoint.x - m_centerX) / m_scaleFactor;
-    node->glPoint.y = (node->glPoint.y - m_centerY) / m_scaleFactor;
-    node->glPoint.z = (node->glPoint.z - m_centerZ) / m_scaleFactor;
+  for (auto &element : *elements) {
+    auto nodes = element->meshData->nodes;
+    auto elements = element->meshData->femElements;
 
-    // node->glOutputValue = (node->glOutputValue - m_centerZ) / m_scaleFactor;
+    // Центрируем и нормируем узлы
+    for (auto node : nodes) {
+      node->glPoint.x = (node->glPoint.x - m_centerX) / m_scaleFactor;
+      node->glPoint.y = (node->glPoint.y - m_centerY) / m_scaleFactor;
+      node->glPoint.z = (node->glPoint.z - m_centerZ) / m_scaleFactor;
+
+      // node->glOutputValue = (node->glOutputValue - m_centerZ) /
+      // m_scaleFactor;
+    }
   }
 }
 
 void Qtgl::normalizeOutData() {
-  for (const auto &node : m_nodes) {
-    node->glOutputValue = (node->glOutputValue - m_centerZ) / m_scaleFactor;
+  for (auto &element : *elements) {
+    auto nodes = element->meshData->nodes;
+    for (const auto &node : nodes) {
+      node->glOutputValue = (node->glOutputValue - m_centerZ) / m_scaleFactor;
+    }
   }
 }

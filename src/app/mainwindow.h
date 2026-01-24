@@ -16,6 +16,8 @@ class MainWindow : public QMainWindow {
   Q_OBJECT
 
 public:
+  QVector<shared_ptr<AbstractElement>> elements;
+
   MainWindow();
   QMdiArea *m_pma;
   Qtgl *scene{nullptr};

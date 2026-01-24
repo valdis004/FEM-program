@@ -11,7 +11,7 @@
 
 // #include "../material/PlateMaterial.h"
 
-class MITC4PlateMy : public AbstractFemElement {
+class MITC4PlateMy : public FemAbstractElement {
 private:
   MatrixXd jMatrix(double xi, double eta);
 

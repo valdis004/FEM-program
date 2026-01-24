@@ -11,7 +11,7 @@
 #include <qexception.h>
 #include <qglobal.h>
 
-AbstractFemElement::AbstractFemElement(size_t id, Node **nodes, int count,
+FemAbstractElement::FemAbstractElement(size_t id, Node **nodes, int count,
                                        ElementType type)
     : data(ElementProvider::elementData[type]), id(id), type(type) {
   for (size_t i = 0; i < count; i++) {
@@ -20,12 +20,12 @@ AbstractFemElement::AbstractFemElement(size_t id, Node **nodes, int count,
   nodesCount = count;
 }
 
-AbstractFemElement::AbstractFemElement(size_t id, Node **nodes, int count,
+FemAbstractElement::FemAbstractElement(size_t id, Node **nodes, int count,
                                        const Material &material,
                                        ElementType type)
-    : AbstractFemElement(id, nodes, count, type) {}
+    : FemAbstractElement(id, nodes, count, type) {}
 
-AbstractFemElement *AbstractFemElement::create(size_t id, ElementType type,
+FemAbstractElement *FemAbstractElement::create(size_t id, ElementType type,
                                                Node **nodes, int count) {
   switch (type) {
   case ElementType::MITC4MY: {
@@ -36,7 +36,7 @@ AbstractFemElement *AbstractFemElement::create(size_t id, ElementType type,
   }
 }
 
-void AbstractFemElement::setCalcProps(AbstractFemElement *ptr,
+void FemAbstractElement::setCalcProps(FemAbstractElement *ptr,
                                       unsigned &globalMatrixSize) {
 
   auto &data = ElementProvider::elementData[ptr->type];
@@ -90,15 +90,20 @@ void AbstractFemElement::setCalcProps(AbstractFemElement *ptr,
       currentNode->nodeDisplacement->setIndexesToZero(currentNode);
     }
 
-    if (isLoad) {
-      if (currentNode->nodeLoad) {
-        currentNode->nodeLoad->appendValuesToNodeLoad(ptr->generalLoad,
-                                                      currentCoefs);
-      } else {
-        currentNode->nodeLoad = NodeLoad::createNodeLoadFromLoad(
-            ptr->type, ptr->generalLoad, currentCoefs, i);
-      }
+    if (isLoad && !currentNode->nodeLoad) {
+      currentNode->nodeLoad = NodeLoad::createNodeLoadFromLoad(
+          ptr->type, ptr->generalLoad, currentCoefs, i);
     }
+
+    // if (isLoad) {
+    //   if (currentNode->nodeLoad) {
+    //     currentNode->nodeLoad->appendValuesToNodeLoad(ptr->generalLoad,
+    //                                                   currentCoefs);
+    //   } else {
+    //     currentNode->nodeLoad = NodeLoad::createNodeLoadFromLoad(
+    //         ptr->type, ptr->generalLoad, currentCoefs, i);
+    //   }
+    // }
 
     // if (isDispl) {
     //   currentNode->nodeDisplacement =

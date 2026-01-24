@@ -27,7 +27,7 @@
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
 
-class AbstractFemElement {
+class FemAbstractElement {
 private:
   // const ElementData &check(ElementType type);
 
@@ -41,10 +41,10 @@ public:
   AbstractDisplacement *generalDisp;
 
 public:
-  AbstractFemElement(size_t id, Node **nodes, int count,
+  FemAbstractElement(size_t id, Node **nodes, int count,
                      ElementType type = ElementType::NONE);
 
-  AbstractFemElement(size_t id, Node **nodes, int count,
+  FemAbstractElement(size_t id, Node **nodes, int count,
                      const Material &material,
                      ElementType type = ElementType::NONE);
 
@@ -55,12 +55,12 @@ public:
   virtual QVector<double> getResultVector(VectorXd U, double xi,
                                           double eta) = 0;
 
-  virtual ~AbstractFemElement() = default;
+  virtual ~FemAbstractElement() = default;
 
-  static AbstractFemElement *create(size_t id, ElementType type, Node **nodes,
+  static FemAbstractElement *create(size_t id, ElementType type, Node **nodes,
                                     int count);
 
-  static void setCalcProps(AbstractFemElement *ptr, unsigned &globalMatrixSize);
+  static void setCalcProps(FemAbstractElement *ptr, unsigned &globalMatrixSize);
 
   void setLoad(AbstractLoad *load) { this->generalLoad = load; }
 

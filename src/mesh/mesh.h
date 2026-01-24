@@ -1,28 +1,25 @@
 #pragma once
 
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
-// #include "../elements/elementprovider.h"
-#include "../elements/femelement.h"
-// #include "../elements/elementprovider.h"
-#include "../elements/point.h"
 #include <QList>
 #include <QMessageBox>
 #include <QObject>
-// #include <cstddef>
+#include <memory>
 #include <qglobal.h>
 #include <qnamespace.h>
 #include <qobject.h>
 #include <qtmetamacros.h>
-// #include <vector>
+
+#include "elements/femelement.h"
+#include "elements/femtypes.h"
+#include "elements/point.h"
+
+class AbstractElement;
+using std::shared_ptr;
 
 class Mesh : public QObject {
   Q_OBJECT
 public:
-  QVector<AbstractFemElement *> elements{};
-  QVector<Node *> nodes{};
-  unsigned globaStiffMatrixSize = 0;
-  unsigned tripletsCount = 0; // Колчиество узлов во всех элементах, считая
-  // общие для Solver triplets аллокации
+  QVector<shared_ptr<AbstractElement>> elements;
 
 private:
   bool isEqual(const Point3 &p1, const Point3 &p2);
@@ -30,11 +27,12 @@ private:
   unsigned maxNodeIndexInList(const QList<Node> &list);
 
 public:
-  void createDefaultMesh(ElementType type);
+  void createDefaultMesh(shared_ptr<AbstractElement> element);
 
-  void meshManager(QMessageBox *mes, ElementType type);
+  void meshCreateManager(QVector<shared_ptr<AbstractElement>> *elements,
+                         bool standartScheme = false);
 
-  ~Mesh();
+  // ~Mesh();
 
 signals:
   void progressChanged(int count);

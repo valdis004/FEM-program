@@ -375,7 +375,7 @@ void MainWindow::onTreeContextMenuRequested(const QPoint &pos) {
 // Функция, отрабатываемая при нажатии кнопки "Create default scheme" У treewiev
 // для plate
 void MainWindow::createDefaultPlateScheme(QTreeWidgetItem *item) {
-  treeContextMenu->createDiologDefualtSchemePlate(this, scene, mesh);
+  treeContextMenu->createDiologDefualtSchemePlate(&elements, this, scene, mesh);
 }
 
 void MainWindow::calculateButtonClicked() {
@@ -420,7 +420,7 @@ void MainWindow::calculateButtonClicked() {
     QTimer::singleShot(500, progressBar, &QProgressDialog::close);
   });
   connect(workerThread, &QThread::started, solver,
-          [solver, this]() { solver->calculate(this->mesh); });
+          [solver, this]() { solver->calculate(this->elements); });
 
   connect(solver, &Solver::calcFinishedStep, this,
           [this, solver, workerThread, progressBar]() {

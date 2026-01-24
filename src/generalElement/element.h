@@ -1,3 +1,5 @@
+#pragma once
+
 #include <QVector>
 #include <memory>
 #include <qglobal.h>
@@ -6,30 +8,44 @@
 #include "elements/femtypes.h"
 #include "elements/point.h"
 #include "load/load.h"
+#include "mesh/meshdata.h"
 
 class Node;
-class AbstractFemElement;
+class FemAbstractElement;
 
 using std::shared_ptr;
 
 class AbstractElement {
 private:
-  ElementType type;
+  // Geometry
+  ElementType type{ElementType::NONE};
   Point3 statrtPoint{0, 0, 0};
+  unsigned lenght{0};
+
+  // Structural parameters
   QVector<shared_ptr<AbstractLoad>> loads;
   QVector<shared_ptr<AbstractDisplacement>> displacements;
-  QVector<Node *> *nodes{nullptr};
-  QVector<AbstractFemElement *> *elements{nullptr};
 
 public:
+  // Mesh
+  std::shared_ptr<MeshData> meshData{nullptr};
+
   AbstractElement();
 
-  AbstractElement(shared_ptr<AbstractLoad> load,
-                  ElementType type = ElementType::NONE);
+  AbstractElement(shared_ptr<AbstractLoad> load, ElementType type,
+                  unsigned lenght);
 
-  inline void addLoad(shared_ptr<AbstractLoad> load) { loads.push_back(load); }
+  ElementType getType() const;
 
-  inline short loadCount() const { return loads.size(); }
+  Point3 getStartPoint() const;
+
+  double getLenght() const;
+
+  void addLoad(shared_ptr<AbstractLoad> load);
+
+  inline short loadCount() const;
 
   virtual shared_ptr<AbstractLoad> createAndAddLoad() = 0;
+
+  // void setMeshData(shared_ptr<MeshData> meshData);
 };

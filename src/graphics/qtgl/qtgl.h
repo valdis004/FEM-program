@@ -1,16 +1,17 @@
 #pragma once
 
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/femelement.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/point.h"
+#include <QLabel>
 #include <QList>
 #include <QOpenGLWidget>
 #include <qevent.h>
-
-#include <QLabel>
 #include <qglobal.h>
 #include <qmainwindow.h>
 #include <qtmetamacros.h>
+
+#include "elements/femelement.h"
+#include "elements/node.h"
+#include "elements/point.h"
+#include "generalElement/element.h"
 
 class MainWindow;
 
@@ -30,8 +31,7 @@ private:
   bool isLeftBut = false;
   bool isNeedSetCoods = true;
 
-  QVector<Node *> m_nodes;                  // Храним узлы
-  QVector<AbstractFemElement *> m_elements; // Храним элементы
+  QVector<shared_ptr<AbstractElement>> *elements;
 
   QVector<double> maxAbsValues;
   QVector<double> maxValues;
@@ -58,8 +58,7 @@ protected:
 
 public:
   Qtgl(QWidget *pwgt = 0);
-  void setMeshData(const QVector<Node *> &nodes,
-                   const QVector<AbstractFemElement *> &elements);
+  void setMeshData(QVector<shared_ptr<AbstractElement>> *elements);
 
   void setResulthData(const QVector<double> &maxAbsValues,
                       const QVector<double> &maxValues,

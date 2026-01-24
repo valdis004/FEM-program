@@ -1,21 +1,11 @@
 #pragma once
 
-// #include "load/load.h"
-// #include <memory>
-// #include "/home/vladislav/Документы/FEM/FEM
-// program/src/elements/load/femload.h"
-// #include "/home/vladislav/Документы/FEM/FEM
-// program/src/elements/displacement/displacement.h" #include "load/femload.h"
-// #include "displacement/displacement.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/point.h"
-// #include "elementprovider.h"
-// #include "/home/vladislav/Документы/FEM/FEM
-// program/src/elements/displacement/displacement.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/femdisplacement.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/load/femload.h"
-// #include "femtypes.h"
 #include <QVector>
 #include <qglobal.h>
+
+#include "displacement/femdisplacement.h"
+#include "elements/load/femload.h"
+#include "elements/point.h"
 
 // class NodeLoad;
 
@@ -32,6 +22,13 @@ public:
   QVector<double> outputValues;
 
   Node() = default;
+
+  Node(const Node &other)
+      : point(other.point), glPoint(other.point), dofCount(other.dofCount),
+        id(other.id), nodeLoad(other.nodeLoad),
+        nodeDisplacement(other.nodeDisplacement),
+        firstGlobStiffId(other.firstGlobStiffId) {}
+
   Node(Point3 point, int dofCount, int id, short outputCount)
       : point(point), glPoint(point), dofCount(dofCount), id(id) {
     outputValues.resize(outputCount + 1);

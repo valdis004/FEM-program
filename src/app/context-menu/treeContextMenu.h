@@ -36,8 +36,9 @@ public:
   // Создать стандартное меню
   void createDefaultMenu();
 
-  void createDiologDefualtSchemePlate(QWidget *mainWindow, Qtgl *scene,
-                                      Mesh *&mesh);
+  void
+  createDiologDefualtSchemePlate(QVector<shared_ptr<AbstractElement>> *elements,
+                                 QWidget *mainWindow, Qtgl *scene, Mesh *&mesh);
 
 signals:
   // Сигналы для различных действий

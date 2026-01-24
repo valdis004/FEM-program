@@ -1,21 +1,30 @@
-#include "treeContextMenu.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/graphics/qtgl/qtgl.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.h"
 #include <QContextMenuEvent>
 #include <QDialog>
 #include <QMessageBox>
 #include <QThread>
+#include <memory>
 #include <qboxlayout.h>
 #include <qcombobox.h>
 #include <qdialogbuttonbox.h>
 #include <qformlayout.h>
+#include <qglobal.h>
 #include <qmessagebox.h>
 #include <qprogressdialog.h>
 #include <qtimer.h>
 #include <qwidget.h>
 #include <vector>
 
+#include "femtypes.h"
+#include "generalElement/plates/plate.h"
+#include "graphics/qtgl/qtgl.h"
+#include "load.h"
+#include "mesh/mesh.h"
+#include "treeContextMenu.h"
+
 #define TEXT_PLATE_STANDART_SCHEME "Create default scheme"
+
+using std::make_shared;
+using std::shared_ptr;
 
 TreeContextMenu::TreeContextMenu(QTreeWidget *treeWidget, QObject *parent)
     : QObject(parent), treeWidget(treeWidget), currentItem(nullptr) {
@@ -85,8 +94,9 @@ void TreeContextMenu::onActionTriggered() {
   emit actionTriggered(actionName, currentItem);
 }
 
-void TreeContextMenu::createDiologDefualtSchemePlate(QWidget *mainWindow,
-                                                     Qtgl *scene, Mesh *&mesh) {
+void TreeContextMenu::createDiologDefualtSchemePlate(
+    QVector<shared_ptr<AbstractElement>> *elements, QWidget *mainWindow,
+    Qtgl *scene, Mesh *&mesh) {
   QDialog *d = new QDialog(mainWindow);
   d->setFixedSize({500, 260});
   d->setWindowTitle("Settings of scheme");
@@ -127,6 +137,12 @@ void TreeContextMenu::createDiologDefualtSchemePlate(QWidget *mainWindow,
   d->show();
 
   ElementType type = (ElementType)comboBox->currentIndex();
+  double loadv[] = {-100, 0, 0};
+  shared_ptr<AbstractLoad> load = make_shared<AreaLoadFzMxMy>(loadv, 3);
+
+  shared_ptr<AbstractElement> plate = std::make_shared<Plate>(load, type, 2000);
+
+  elements->push_back(plate);
 
   if (d->exec() == QDialog::Accepted) {
     QProgressDialog *mes = new QProgressDialog(mainWindow);
@@ -153,14 +169,11 @@ void TreeContextMenu::createDiologDefualtSchemePlate(QWidget *mainWindow,
 
     // Когда поток запустится, выполним создание меша
     connect(workerThread, &QThread::started, this,
-            [=]() { mesh->createDefaultMesh(type); });
+            [mesh, elements]() { mesh->meshCreateManager(elements, true); });
 
     connect(mesh, &Mesh::meshFinished, this,
-            [mesh, scene, workerThread](int count) {
-              QVector<Node *> nodes = mesh->nodes;
-              QVector<AbstractFemElement *> elements = mesh->elements;
-
-              scene->setMeshData(nodes, elements);
+            [mesh, scene, workerThread, elements](int count) {
+              scene->setMeshData(elements);
 
               // Завершаем поток
               workerThread->quit();
@@ -172,5 +185,6 @@ void TreeContextMenu::createDiologDefualtSchemePlate(QWidget *mainWindow,
     // connect(workerThread, &QThread::finished, mesh_, &Mesh::deleteLater);
 
     workerThread->start();
+    // delete mesh;
   }
 }

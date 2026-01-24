@@ -93,11 +93,11 @@ constexpr static auto NDiffAny = [](double *arr, double xi, double eta,
 // const int MITC4PlateMy::nodeCOunt = 4;
 
 MITC4PlateMy::MITC4PlateMy(size_t id, Node **nodes, int count)
-    : AbstractFemElement(id, nodes, count, ElementType::MITC4MY) {};
+    : FemAbstractElement(id, nodes, count, ElementType::MITC4MY) {};
 
 MITC4PlateMy::MITC4PlateMy(size_t id, Node **nodes, const Material &material,
                            int count)
-    : AbstractFemElement(id, nodes, count, material, ElementType::MITC4MY) {};
+    : FemAbstractElement(id, nodes, count, material, ElementType::MITC4MY) {};
 
 MatrixXd MITC4PlateMy::jMatrix(double xi, double eta) {
   double y1 = nodes[0]->point.y / 1000.0;

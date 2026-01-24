@@ -3,9 +3,11 @@
 // #include "/home/vladislav/Документы/FEM/FEM
 // program/src/elements/elementprovider.h"
 #include "/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.h"
+#include "qtgl/qtgl.h"
 #include <Eigen/Dense>
 #include <Eigen/Sparse>
 #include <QVector>
+#include <memory>
 #include <qglobal.h>
 #include <utility>
 
@@ -13,33 +15,36 @@ using Eigen::MatrixXd;
 using Eigen::SparseMatrix;
 using Eigen::SparseVector;
 using Eigen::VectorXd;
+using std::shared_ptr;
 
-class AbstractFemElement;
+class FemAbstractElement;
 
 class Solver : public QObject {
   Q_OBJECT
 private:
   unsigned globalMatrixSize = 0;
 
-  inline void setParams(size_t i, const AbstractFemElement *element,
+  inline void setParams(size_t i, const FemAbstractElement *element,
                         unsigned &correction, unsigned &curDof,
                         unsigned &localId, unsigned &nodeId, unsigned &fullDof);
 
   inline unsigned
-  getGlobalIndexAndSetLoad(size_t i, const AbstractFemElement *element,
+  getGlobalIndexAndSetLoad(size_t i, const FemAbstractElement *element,
                            SparseVector<double> &globalLoadVector);
 
-  inline unsigned getGlobalIndex(size_t i, const AbstractFemElement *element);
+  inline unsigned getGlobalIndex(size_t i, const FemAbstractElement *element);
 
   std::pair<SparseMatrix<double>, SparseVector<double>>
-  getGlobalStiffMatrixAndLoadVector(Mesh *mesh);
+  getGlobalStiffMatrixAndLoadVector(shared_ptr<MeshData> mesh);
 
-  SparseVector<double> getGlobalLoadVector(Mesh *mesh);
+  SparseVector<double> getGlobalLoadVector(shared_ptr<MeshData> mesh);
 
   void applyBaundaryConditions(SparseMatrix<double> &globalMatrix,
-                               SparseVector<double> &globalVector, Mesh *mesh);
+                               SparseVector<double> &globalVector,
+                               shared_ptr<MeshData> mesh);
 
-  void setOutputValuesToNodes(Mesh *mesh, const SparseVector<double> &globalU);
+  void setOutputValuesToNodes(shared_ptr<MeshData> mesh,
+                              const SparseVector<double> &globalU);
 
 public:
   QVector<double> maxAbsValues;
@@ -47,7 +52,7 @@ public:
   QVector<double> minValues;
   ElementData *data;
 
-  void calculate(Mesh *mesh);
+  void calculate(QVector<shared_ptr<AbstractElement>> &elements);
 
 signals:
   void newElementStiffMatrixStep(unsigned count);

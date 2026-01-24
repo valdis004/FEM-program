@@ -5,15 +5,17 @@ add_executable(FEM-program
      ../graphics/qtgl/qtgl.cpp
      # модули FEM
      ${CMAKE_HOME_DIRECTORY}/src/mesh/mesh.cpp
-   ${CMAKE_HOME_DIRECTORY}/src/generalElement/load/load.cpp
-   ${CMAKE_HOME_DIRECTORY}/src/generalElement/displacement/displacement.cpp
-   ${CMAKE_HOME_DIRECTORY}/src/generalElement/element.cpp
-   ${CMAKE_HOME_DIRECTORY}/src/elements/plates/plates.cpp
-   ${CMAKE_HOME_DIRECTORY}/src/elements/femelement.cpp
-   ${CMAKE_HOME_DIRECTORY}/src/elements/load/femload.cpp
-   ${CMAKE_HOME_DIRECTORY}/src/elements/displacement/femdisplacement.cpp
-   ${CMAKE_HOME_DIRECTORY}/src/elements/elementprovider.cpp
-   ${CMAKE_HOME_DIRECTORY}/src/solver/solver.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/mesh/meshdata.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/generalElement/plates/plate.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/generalElement/load/load.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/generalElement/displacement/displacement.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/generalElement/element.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/elements/plates/plates.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/elements/femelement.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/elements/load/femload.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/elements/displacement/femdisplacement.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/elements/elementprovider.cpp
+     ${CMAKE_HOME_DIRECTORY}/src/solver/solver.cpp
 #   ${CMAKE_HOME_DIRECTORY}/src/elements/material/PlateMaterial.cpp
 )
 
