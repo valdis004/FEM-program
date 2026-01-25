@@ -11,7 +11,7 @@ class FemAbstractElement;
 class MeshData {
 public:
   // Settings of mesh
-  int step{1000};
+  int step{100};
 
   QVector<Node *> nodes;
   QVector<FemAbstractElement *> femElements;

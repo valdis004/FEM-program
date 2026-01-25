@@ -1,15 +1,16 @@
-#include "femelement.h"
-#include "../generalElement/displacement/displacement.h"
-#include "elementprovider.h"
-#include "load/femload.h"
-// #include "load/load.h"
-#include "plates/plates.h"
-#include <Eigen/src/Core/Matrix.h>
+#include <Eigen/Core>
 #include <cstddef>
 #include <exception>
 #include <qdebug.h>
 #include <qexception.h>
 #include <qglobal.h>
+
+#include "elementprovider.h"
+#include "femelement.h"
+#include "generalElement/displacement/displacement.h"
+#include "load/femload.h"
+// #include "load/load.h"
+#include "plates/plates.h"
 
 FemAbstractElement::FemAbstractElement(size_t id, Node **nodes, int count,
                                        ElementType type)

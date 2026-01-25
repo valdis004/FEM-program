@@ -1,6 +1,7 @@
-#include "elementprovider.h"
 #include "femtypes.h"
 #include <qglobal.h>
+
+#include "elementprovider.h"
 
 /* static */ void ElementProvider::init() {
   struct ElementData MITC4 = {

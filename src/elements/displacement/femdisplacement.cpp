@@ -1,8 +1,8 @@
 #include "femdisplacement.h"
 // #include "/home/vladislav/Документы/FEM/FEM
 // program/src/elements/displacement/displacement.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/elementprovider.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
+#include "elements/elementprovider.h"
+#include "elements/node.h"
 
 // /*static*/ NodeDisplacement *NodeDisplacement::create(DisplType type,
 //                                                       bool *value) {

@@ -2,7 +2,7 @@
 
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
 
-#include "../femtypes.h"
+#include "elements/femtypes.h"
 
 class Node;
 class AbstractDisplacement;

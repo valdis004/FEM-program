@@ -41,7 +41,7 @@ target_include_directories(FEM-program
 )
 
 
-target_link_libraries(FEM-program PRIVATE Qt6::Widgets Qt6::OpenGLWidgets Qt6::Gui Eigen3::Eigen)
+target_link_libraries(FEM-program PRIVATE Qt6::Widgets Qt6::OpenGLWidgets Qt6::Gui Eigen3::Eigen opengl32)
 
 set_target_properties(FEM-program PROPERTIES
     WIN32_EXECUTABLE ON

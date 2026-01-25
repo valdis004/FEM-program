@@ -2,7 +2,6 @@
 
 // #include "/home/vladislav/Документы/FEM/FEM
 // program/src/elements/elementprovider.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.h"
 #include "qtgl/qtgl.h"
 #include <Eigen/Dense>
 #include <Eigen/Sparse>
@@ -10,6 +9,8 @@
 #include <memory>
 #include <qglobal.h>
 #include <utility>
+
+#include "src/mesh/mesh.h"
 
 using Eigen::MatrixXd;
 using Eigen::SparseMatrix;

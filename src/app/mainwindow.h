@@ -1,19 +1,21 @@
 #pragma once
 
-#include "context-menu/treeContextMenu.h"
-#include "femtypes.h"
 #include <QDialogButtonBox>
 #include <QMainWindow>
 #include <qglobal.h>
 #include <qmdiarea.h>
 #include <qstandarditemmodel.h>
 #include <qtableview.h>
+#include <qtablewidget.h>
 #include <qtoolbutton.h>
+
+#include "context-menu/treeContextMenu.h"
+#include "femtypes.h"
 
 class mesh;
 class Qtgl;
 class Solver;
-class QTableView;
+class QTableWidget;
 class QStandardItemModel;
 
 class MainWindow : public QMainWindow {
@@ -35,8 +37,8 @@ public:
 
 private:
   // Result table vars
-  QStandardItemModel *model{nullptr};
-  QTableView *resultsView{nullptr};
+  // QStandardItemModel *model{nullptr};
+  QTableWidget *resultsView{nullptr};
   shared_ptr<AbstractElement> selectedELement{nullptr};
 
   void createLeftDock();
@@ -48,7 +50,7 @@ private:
   TreeContextMenu *treeContextMenu;
   void setupTreeContextMenu();
   void getResultTable(shared_ptr<AbstractElement> selectedELement,
-                      int selectedId, QStandardItemModel *model);
+                      int selectedId);
   void setSpanResultTable(shared_ptr<AbstractElement> selectedELement,
                           QTableView *resultsView);
 
@@ -57,6 +59,7 @@ private slots:
   void createDefaultPlateScheme(QTreeWidgetItem *item);
   void calculateButtonClicked();
   void createTableResultsTab();
+  void copySelectionToClipboard();
 
   // Result table
   void updateResultTable();

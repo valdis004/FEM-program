@@ -10,7 +10,7 @@
 #include <qobject.h>
 #include <qwidget.h>
 
-#include "/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.h"
+#include "mesh/mesh.h"
 
 class Qtgl;
 

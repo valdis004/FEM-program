@@ -2,17 +2,18 @@
 
 // #include "/home/vladislav/Документы/FEM/FEM
 // program/src/elements/elementdata.h"
-#include "femtypes.h"
-// #include "plates/plates.h"
-#include "../generalElement/displacement/displacement.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/displacement/femdisplacement.h"
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/element.h"
-#include "../generalElement/load/load.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/load/femload.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/point.h"
 #include <QMap>
 #include <QVector>
+
+#include "elements/load/femload.h"
+#include "elements/node.h"
+#include "elements/point.h"
+#include "femtypes.h"
+#include "generalElement/load/load.h"
+// #include "plates/plates.h"
+#include "../generalElement/displacement/displacement.h"
+#include "displacement/femdisplacement.h"
 
 #define SQRT_3 1.7320508075688772
 

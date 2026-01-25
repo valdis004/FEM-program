@@ -3,8 +3,6 @@
 // #include "displacement/displacement.h"
 // #include "displacement/displacement.h"
 // #include "elementprovider.h
-#include "elementprovider.h"
-#include "material/material.h"
 // #include "node.h"
 // #include "plates/plates.h"
 // #include "plates/plates.h"
@@ -12,17 +10,20 @@
 #include <QVector>
 // #include <exception>
 // #include "elementprovider.h"
-#include "../generalElement/displacement/displacement.h"
-// #include "/home/vladislav/Документы/FEM/FEM
-// program/src/elements/elementprovider.h"
-#include "../generalElement/load/load.h"
-#include "node.h"
-// #include "/home/vladislav/Документы/FEM/FEM program/src/elements/point.h"
-#include "femtypes.h"
 #include <cstddef>
 #include <qglobal.h>
 #include <qmap.h>
 #include <qnamespace.h>
+
+#include "elementprovider.h"
+#include "generalElement/displacement/displacement.h"
+#include "material/material.h"
+// #include "/home/vladislav/Документы/FEM/FEM
+// program/src/elements/elementprovider.h"
+#include "generalElement/load/load.h"
+#include "node.h"
+// #include "/home/vladislav/Документы/FEM/FEM program/src/elements/point.h"
+#include "femtypes.h"
 
 using Eigen::MatrixXd;
 using Eigen::VectorXd;

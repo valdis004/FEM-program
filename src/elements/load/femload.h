@@ -1,6 +1,6 @@
 #pragma once
 
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
+#include "elements/femtypes.h"
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/load/load.h"
 
 // #include <stdexcept>

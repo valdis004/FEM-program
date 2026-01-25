@@ -1,7 +1,3 @@
-#include "mainwindow.h"
-#include "../graphics/qtgl/qtgl.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/solver/solver.h"
-
 #include <QButtonGroup>
 #include <QComboBox>
 #include <QDialog>
@@ -17,6 +13,7 @@
 #include <QPushButton>
 #include <QStatusBar>
 #include <QTableView>
+#include <QTableWidget>
 #include <QTextBrowser>
 #include <QTextEdit>
 #include <QToolBar>
@@ -29,6 +26,7 @@
 #include <memory>
 #include <qapplication.h>
 #include <qboxlayout.h>
+#include <qclipboard.h>
 #include <qcombobox.h>
 #include <qdebug.h>
 #include <qdialog.h>
@@ -38,7 +36,10 @@
 #include <qgridlayout.h>
 #include <qnamespace.h>
 #include <qobject.h>
+#include <qshortcut.h>
 #include <qstandarditemmodel.h>
+#include <qtablewidget.h>
+#include <qtabwidget.h>
 #include <qthread.h>
 #include <qtimer.h>
 #include <qtoolbutton.h>
@@ -50,6 +51,9 @@
 #include "context-menu/treeContextMenu.h"
 #include "element.h"
 #include "femtypes.h"
+#include "graphics/qtgl/qtgl.h"
+#include "mainwindow.h"
+#include "solver/solver.h"
 
 MainWindow::MainWindow() {
   setWindowTitle("Fem test");
@@ -422,7 +426,7 @@ void MainWindow::calculateButtonClicked() {
   });
   connect(solver, &Solver::calcFinishedStep, this, [progressBar]() {
     progressBar->setLabelText("Calculated successfully");
-    QTimer::singleShot(500, progressBar, &QProgressDialog::close);
+    progressBar->close();
   });
   connect(workerThread, &QThread::started, solver,
           [solver, this]() { solver->calculate(this->elements); });
@@ -462,6 +466,7 @@ void MainWindow::calculateButtonClicked() {
   progressBar->show();
 }
 
+// Creating the result tab
 void MainWindow::createTableResultsTab() {
   QWidget *tableWindow = new QWidget();
   QVBoxLayout *layout =
@@ -470,7 +475,7 @@ void MainWindow::createTableResultsTab() {
   QHBoxLayout *hLayout =
       new QHBoxLayout(tableWindow); // Создаем layout для виджета
 
-  model = new QStandardItemModel();
+  // model = new QTableWidgetItemModel();
 
   QComboBox *comboBoxForResultType = new QComboBox(tableWindow);
 
@@ -506,16 +511,23 @@ void MainWindow::createTableResultsTab() {
   comboBoxForResultType->addItem("All results");
   comboBoxForResultType->setCurrentIndex(DATA.OUTPUT_VALUES_COUNT);
 
-  getResultTable(selectedELement, DATA.OUTPUT_VALUES_COUNT, model);
-
   comboBoxForResultType->setFixedWidth(100);
   comboBoxForSelectedElement->setFixedWidth(100);
   layout->addLayout(hLayout);
   hLayout->addWidget(comboBoxForResultType);
   hLayout->addWidget(comboBoxForSelectedElement);
 
-  resultsView = new QTableView();
-  resultsView->setModel(model);
+  resultsView = new QTableWidget();
+  resultsView->setSelectionBehavior(QAbstractItemView::SelectRows);
+  resultsView->setSelectionBehavior(QAbstractItemView::SelectItems);
+  resultsView->setSelectionMode(QAbstractItemView::MultiSelection);
+  resultsView->setSelectionMode(QAbstractItemView::ExtendedSelection);
+  QShortcut *shortcut = new QShortcut(QKeySequence("Ctrl+C"), resultsView);
+  connect(shortcut, &QShortcut::activated, this,
+          &MainWindow::copySelectionToClipboard);
+
+  getResultTable(selectedELement, DATA.OUTPUT_VALUES_COUNT);
+
   setSpanResultTable(selectedELement, resultsView);
 
   layout->addWidget(resultsView); // Добавляем таблицу в layout
@@ -536,59 +548,65 @@ void MainWindow::createTableResultsTab() {
 
 // Initialize s default result table with all results type
 void MainWindow::getResultTable(shared_ptr<AbstractElement> selectedELement,
-                                int selectedId, QStandardItemModel *model) {
+                                int selectedId) {
   auto mesh = selectedELement->meshData;
   auto DATA = ElementProvider::elementData[selectedELement->getType()];
   auto nodes = mesh->nodes;
-  model->setColumnCount(5 + DATA.OUTPUT_VALUES_COUNT);
+  resultsView->setColumnCount(5 + DATA.OUTPUT_VALUES_COUNT);
+  resultsView->setRowCount(nodes.size());
   short outputValuesCount = DATA.OUTPUT_VALUES_COUNT;
 
-  model->setHeaderData(0, Qt::Horizontal, "Elements");
-  model->setHeaderData(1, Qt::Horizontal, "Nodes");
-  model->setHeaderData(2, Qt::Horizontal, "x");
-  model->setHeaderData(3, Qt::Horizontal, "y");
-  model->setHeaderData(4, Qt::Horizontal, "z");
+  resultsView->setHorizontalHeaderItem(0, new QTableWidgetItem("Elements"));
+  resultsView->setHorizontalHeaderItem(1, new QTableWidgetItem("Nodes"));
+  resultsView->setHorizontalHeaderItem(2, new QTableWidgetItem("x"));
+  resultsView->setHorizontalHeaderItem(3, new QTableWidgetItem("y"));
+  resultsView->setHorizontalHeaderItem(4, new QTableWidgetItem("z"));
 
   if (selectedId == outputValuesCount) {
     for (size_t i = 0; i < DATA.STR_OUTPUT_VALUES.size(); i++) {
-      model->setHeaderData(i + 5, Qt::Horizontal, DATA.STR_OUTPUT_VALUES[i]);
+      resultsView->setHorizontalHeaderItem(
+          i + 5, new QTableWidgetItem(DATA.STR_OUTPUT_VALUES[i]));
     }
 
     for (size_t i = 0; i < nodes.size(); i++) {
       int elementId = i / DATA.NODES_COUNT;
-      model->setItem(
-          i, 0, new QStandardItem("Element " + QString::number(elementId)));
-      model->setItem(
-          i, 1, new QStandardItem("Node " + QString::number(nodes[i]->id)));
-      model->setItem(i, 2,
-                     new QStandardItem(QString::number(nodes[i]->point.x)));
-      model->setItem(i, 3,
-                     new QStandardItem(QString::number(nodes[i]->point.y)));
-      model->setItem(i, 4,
-                     new QStandardItem(QString::number(nodes[i]->point.z)));
+      resultsView->setItem(
+          i, 0, new QTableWidgetItem("Element " + QString::number(elementId)));
+      resultsView->setItem(
+          i, 1, new QTableWidgetItem("Node " + QString::number(nodes[i]->id)));
+      resultsView->setItem(
+          i, 2, new QTableWidgetItem(QString::number(nodes[i]->point.x)));
+      resultsView->setItem(
+          i, 3, new QTableWidgetItem(QString::number(nodes[i]->point.y)));
+      resultsView->setItem(
+          i, 4, new QTableWidgetItem(QString::number(nodes[i]->point.z)));
 
       for (size_t j = 0; j < DATA.OUTPUT_VALUES_COUNT; j++) {
-        model->setItem(
+        resultsView->setItem(
             i, j + 5,
-            new QStandardItem(QString::number(nodes[i]->outputValues[j])));
+            new QTableWidgetItem(QString::number(nodes[i]->outputValues[j])));
       }
     }
 
     return;
   }
 
-  model->setHeaderData(4, Qt::Horizontal, DATA.STR_OUTPUT_VALUES[selectedId]);
+  resultsView->setHorizontalHeaderItem(
+      4, new QTableWidgetItem(DATA.STR_OUTPUT_VALUES[selectedId]));
 
   for (size_t i = 0; i < nodes.size(); i++) {
     int elementId = i / DATA.NODES_COUNT;
-    model->setItem(i, 0,
-                   new QStandardItem("Element " + QString::number(elementId)));
-    model->setItem(i, 1, new QStandardItem(QString::number(nodes[i]->point.x)));
-    model->setItem(i, 2, new QStandardItem(QString::number(nodes[i]->point.y)));
-    model->setItem(i, 3, new QStandardItem(QString::number(nodes[i]->point.z)));
-    model->setItem(
-        i, 4,
-        new QStandardItem(QString::number(nodes[i]->outputValues[selectedId])));
+    resultsView->setItem(
+        i, 0, new QTableWidgetItem("Element " + QString::number(elementId)));
+    resultsView->setItem(
+        i, 1, new QTableWidgetItem(QString::number(nodes[i]->point.x)));
+    resultsView->setItem(
+        i, 2, new QTableWidgetItem(QString::number(nodes[i]->point.y)));
+    resultsView->setItem(
+        i, 3, new QTableWidgetItem(QString::number(nodes[i]->point.z)));
+    resultsView->setItem(i, 4,
+                         new QTableWidgetItem(QString::number(
+                             nodes[i]->outputValues[selectedId])));
   }
 }
 
@@ -620,27 +638,28 @@ void MainWindow::updateResultTable() {
     for (size_t i = 0; i < outputValuesCount; i++) {
       resultsView->setColumnHidden(i + 5, false);
       QString strOutput = DATA.STR_OUTPUT_VALUES[i];
-      model->setHeaderData(i + 5, Qt::Horizontal, DATA.STR_OUTPUT_VALUES[i]);
+      resultsView->setHorizontalHeaderItem(
+          i + 5, new QTableWidgetItem(DATA.STR_OUTPUT_VALUES[i]));
     }
 
     for (size_t i = 0; i < nodes.size(); i++) {
       for (size_t j = 0; j < DATA.OUTPUT_VALUES_COUNT; j++) {
-        model->setItem(
+        resultsView->setItem(
             i, j + 5,
-            new QStandardItem(QString::number(nodes[i]->outputValues[j])));
+            new QTableWidgetItem(QString::number(nodes[i]->outputValues[j])));
       }
     }
   }
   // If selected result type is not all results
   else {
     QString strOutput = DATA.STR_OUTPUT_VALUES[selectedIndex];
-    model->setHeaderData(5, Qt::Horizontal, strOutput);
+    resultsView->setHorizontalHeaderItem(5, new QTableWidgetItem(strOutput));
 
     for (size_t i = 0; i < nodes.size(); i++) {
       for (size_t j = 0; j < DATA.OUTPUT_VALUES_COUNT; j++) {
-        model->setItem(i, 5,
-                       new QStandardItem(QString::number(
-                           nodes[i]->outputValues[selectedIndex])));
+        resultsView->setItem(i, 5,
+                             new QTableWidgetItem(QString::number(
+                                 nodes[i]->outputValues[selectedIndex])));
       }
     }
 
@@ -648,4 +667,56 @@ void MainWindow::updateResultTable() {
       resultsView->setColumnHidden(i + 5, true);
     }
   }
+}
+
+void MainWindow::copySelectionToClipboard() {
+  // Получаем список всех выделенных элементов
+  QList<QTableWidgetItem *> selectedItems = resultsView->selectedItems();
+
+  if (selectedItems.isEmpty())
+    return; // Ничего не выделено
+
+  // Определяем границы выделенного диапазона
+  int minRow = INT_MAX, maxRow = INT_MIN;
+  int minCol = INT_MAX, maxCol = INT_MIN;
+
+  foreach (QTableWidgetItem *item, selectedItems) {
+    minRow = qMin(minRow, item->row());
+    maxRow = qMax(maxRow, item->row());
+    minCol = qMin(minCol, item->column());
+    maxCol = qMax(maxCol, item->column());
+  }
+
+  // Создаем карту для группировки элементов по строкам
+  QMap<int, QMap<int, QString>> cellTexts;
+  foreach (QTableWidgetItem *item, selectedItems) {
+    cellTexts[item->row()][item->column()] = item->text();
+  }
+
+  // Формируем строку для буфера обмена
+  QString clipboardText;
+  for (int row = minRow; row <= maxRow; ++row) {
+    if (row != minRow)
+      clipboardText += "\n"; // Новая строка
+
+    for (int col = minCol; col <= maxCol; ++col) {
+      if (col != minCol)
+        clipboardText += "\t"; // Табуляция между столбцами
+
+      // Добавляем текст ячейки или пустую строку
+      if (cellTexts.contains(row) && cellTexts[row].contains(col)) {
+        clipboardText += cellTexts[row][col];
+      } else {
+        clipboardText += ""; // Пустая ячейка в выделенном диапазоне
+      }
+    }
+  }
+
+  // Копируем в буфер обмена
+  QApplication::clipboard()->setText(clipboardText);
+
+  // Для отладки
+  qDebug() << "Скопировано:" << selectedItems.size() << "ячеек";
+  qDebug() << "Диапазон: строки" << minRow << "-" << maxRow << ", столбцы"
+           << minCol << "-" << maxCol;
 }

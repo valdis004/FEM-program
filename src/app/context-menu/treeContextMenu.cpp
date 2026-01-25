@@ -12,7 +12,6 @@
 #include <qprogressdialog.h>
 #include <qtimer.h>
 #include <qwidget.h>
-#include <vector>
 
 #include "femtypes.h"
 #include "generalElement/plates/plate.h"
@@ -145,22 +144,23 @@ void TreeContextMenu::createDiologDefualtSchemePlate(
   elements->push_back(plate);
 
   if (d->exec() == QDialog::Accepted) {
-    QProgressDialog *mes = new QProgressDialog(mainWindow);
-    mes->setWindowTitle("Generating default mesh...");
-    mes->setLabelText("Initializing calculation...");
-    mes->setModal(true);
-    mes->setRange(0, 0);
-    mes->setMinimumDuration(0);
-    mes->show();
+    QProgressDialog *progressDilog = new QProgressDialog(mainWindow);
+    progressDilog->setWindowTitle("Generating default mesh...");
+    progressDilog->setLabelText("Initializing calculation...");
+    progressDilog->setModal(true);
+    progressDilog->setRange(0, 0);
+    progressDilog->setMinimumDuration(0);
+    progressDilog->show();
 
     mesh = new Mesh();
 
-    connect(mesh, &Mesh::progressChanged, this, [mes](int count) {
-      mes->setLabelText(QString("Creating element: %1").arg(count));
+    connect(mesh, &Mesh::progressChanged, this, [progressDilog](int count) {
+      progressDilog->setLabelText(QString("Creating element: %1").arg(count));
     });
-    connect(mesh, &Mesh::meshFinished, this, [mes](int count) {
-      mes->setLabelText(QString("Sucsesfully Created %1 elements").arg(count));
-      QTimer::singleShot(500, mes, &QProgressDialog::close);
+    connect(mesh, &Mesh::meshFinished, this, [progressDilog](int count) {
+      progressDilog->setLabelText(
+          QString("Sucsesfully Created %1 elements").arg(count));
+      progressDilog->close();
     });
 
     // Создаем отдельный поток для mesh_

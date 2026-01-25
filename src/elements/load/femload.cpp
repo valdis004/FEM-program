@@ -1,9 +1,9 @@
 #include "femload.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/generalElement/load/load.h"
+#include "generalElement/load/load.h"
 // #include <exception>
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
 // #include <stdexcept>
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/elementprovider.h"
+#include "elements/elementprovider.h"
 
 NodeLoad *NodeLoad::createNodeLoadFromLoad(ElementType type, AbstractLoad *load,
                                            double *coefs, int localNodeId) {

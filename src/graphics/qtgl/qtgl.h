@@ -8,7 +8,6 @@
 #include <qmainwindow.h>
 #include <qtmetamacros.h>
 
-#include "elements/femelement.h"
 #include "elements/node.h"
 #include "elements/point.h"
 #include "generalElement/element.h"

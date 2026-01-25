@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../femelement.h"
+#include "elements/femelement.h"
 // #include "/home/vladislav/Документы/FEM/FEM
 // program/src/elements/elementprovider.h" #include
 // "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
-#include "/home/vladislav/Документы/FEM/FEM program/src/elements/node.h"
+#include "elements/node.h"
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/point.h"
 #include <QVector>
 // #include <stdexcept>
