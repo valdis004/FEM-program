@@ -26,8 +26,11 @@
 #include <QVBoxLayout>
 #include <QWidget>
 #include <cstddef>
+#include <memory>
 #include <qapplication.h>
 #include <qboxlayout.h>
+#include <qcombobox.h>
+#include <qdebug.h>
 #include <qdialog.h>
 #include <qdialogbuttonbox.h>
 #include <qdockwidget.h>
@@ -45,6 +48,8 @@
 // #include "/home/vladislav/Документы/FEM/FEM program/src/elements/femtypes.h"
 // #include "/home/vladislav/Документы/FEM/FEM program/src/mesh/mesh.h"
 #include "context-menu/treeContextMenu.h"
+#include "element.h"
+#include "femtypes.h"
 
 MainWindow::MainWindow() {
   setWindowTitle("Fem test");
@@ -462,27 +467,56 @@ void MainWindow::createTableResultsTab() {
   QVBoxLayout *layout =
       new QVBoxLayout(tableWindow); // Создаем layout для виджета
 
-  QStandardItemModel *model = new QStandardItemModel(3, 2);
-  model->setItem(0, 0, new QStandardItem("Tom"));
-  model->setItem(0, 1, new QStandardItem("39"));
-  model->setItem(1, 0, new QStandardItem("Bob"));
-  model->setItem(1, 1, new QStandardItem("43"));
-  model->setItem(2, 0, new QStandardItem("Sam"));
-  model->setItem(2, 1, new QStandardItem("28"));
+  QHBoxLayout *hLayout =
+      new QHBoxLayout(tableWindow); // Создаем layout для виджета
 
-  model->setHeaderData(0, Qt::Horizontal, "x");
-  model->setHeaderData(1, Qt::Horizontal, "y");
+  model = new QStandardItemModel();
 
-  QComboBox *comboBox = new QComboBox(tableWindow);
+  QComboBox *comboBoxForResultType = new QComboBox(tableWindow);
 
-  comboBox->addItem("MITC4");
-  comboBox->addItem("MITC9");
-  comboBox->addItem("MITC16");
-  comboBox->setFixedWidth(100);
-  layout->addWidget(comboBox);
+  QComboBox *comboBoxForSelectedElement = new QComboBox(tableWindow);
+  for (const auto &element : elements) {
+    auto type = element->getType();
+    auto DATA = ElementProvider::elementData[type];
+    comboBoxForSelectedElement->addItem(element->name);
+  }
 
-  QTableView *resultsView = new QTableView();
+  selectedELement = elements.first();
+  // for (const auto &element : elements) {
+  //   if (element->name ==
+  //   comboBoxForSelectedElement->currentData().toString()) {
+  //     selectedELement = element;
+
+  //     auto type = element->getType();
+  //     auto DATA = ElementProvider::elementData[type];
+  //     comboBoxForResultType->addItem("All results");
+  //     for (const auto &resultName : DATA.STR_OUTPUT_VALUES) {
+  //       comboBoxForResultType->addItem(resultName);
+  //     }
+  //   }
+  // }
+
+  auto element = elements.first();
+  auto type = element->getType();
+  auto DATA = ElementProvider::elementData[type];
+
+  for (const auto &resultName : DATA.STR_OUTPUT_VALUES) {
+    comboBoxForResultType->addItem(resultName);
+  }
+  comboBoxForResultType->addItem("All results");
+  comboBoxForResultType->setCurrentIndex(DATA.OUTPUT_VALUES_COUNT);
+
+  getResultTable(selectedELement, DATA.OUTPUT_VALUES_COUNT, model);
+
+  comboBoxForResultType->setFixedWidth(100);
+  comboBoxForSelectedElement->setFixedWidth(100);
+  layout->addLayout(hLayout);
+  hLayout->addWidget(comboBoxForResultType);
+  hLayout->addWidget(comboBoxForSelectedElement);
+
+  resultsView = new QTableView();
   resultsView->setModel(model);
+  setSpanResultTable(selectedELement, resultsView);
 
   layout->addWidget(resultsView); // Добавляем таблицу в layout
   tableWindow->setLayout(layout); // Устанавливаем layout для виджета
@@ -493,5 +527,125 @@ void MainWindow::createTableResultsTab() {
 
   // Добавляем подокно в MDI-область
   m_pma->addSubWindow(tableWindow);
+
+  connect(comboBoxForResultType, &QComboBox::currentIndexChanged, this,
+          &MainWindow::updateResultTable);
+
   tableWindow->show();
+}
+
+// Initialize s default result table with all results type
+void MainWindow::getResultTable(shared_ptr<AbstractElement> selectedELement,
+                                int selectedId, QStandardItemModel *model) {
+  auto mesh = selectedELement->meshData;
+  auto DATA = ElementProvider::elementData[selectedELement->getType()];
+  auto nodes = mesh->nodes;
+  model->setColumnCount(5 + DATA.OUTPUT_VALUES_COUNT);
+  short outputValuesCount = DATA.OUTPUT_VALUES_COUNT;
+
+  model->setHeaderData(0, Qt::Horizontal, "Elements");
+  model->setHeaderData(1, Qt::Horizontal, "Nodes");
+  model->setHeaderData(2, Qt::Horizontal, "x");
+  model->setHeaderData(3, Qt::Horizontal, "y");
+  model->setHeaderData(4, Qt::Horizontal, "z");
+
+  if (selectedId == outputValuesCount) {
+    for (size_t i = 0; i < DATA.STR_OUTPUT_VALUES.size(); i++) {
+      model->setHeaderData(i + 5, Qt::Horizontal, DATA.STR_OUTPUT_VALUES[i]);
+    }
+
+    for (size_t i = 0; i < nodes.size(); i++) {
+      int elementId = i / DATA.NODES_COUNT;
+      model->setItem(
+          i, 0, new QStandardItem("Element " + QString::number(elementId)));
+      model->setItem(
+          i, 1, new QStandardItem("Node " + QString::number(nodes[i]->id)));
+      model->setItem(i, 2,
+                     new QStandardItem(QString::number(nodes[i]->point.x)));
+      model->setItem(i, 3,
+                     new QStandardItem(QString::number(nodes[i]->point.y)));
+      model->setItem(i, 4,
+                     new QStandardItem(QString::number(nodes[i]->point.z)));
+
+      for (size_t j = 0; j < DATA.OUTPUT_VALUES_COUNT; j++) {
+        model->setItem(
+            i, j + 5,
+            new QStandardItem(QString::number(nodes[i]->outputValues[j])));
+      }
+    }
+
+    return;
+  }
+
+  model->setHeaderData(4, Qt::Horizontal, DATA.STR_OUTPUT_VALUES[selectedId]);
+
+  for (size_t i = 0; i < nodes.size(); i++) {
+    int elementId = i / DATA.NODES_COUNT;
+    model->setItem(i, 0,
+                   new QStandardItem("Element " + QString::number(elementId)));
+    model->setItem(i, 1, new QStandardItem(QString::number(nodes[i]->point.x)));
+    model->setItem(i, 2, new QStandardItem(QString::number(nodes[i]->point.y)));
+    model->setItem(i, 3, new QStandardItem(QString::number(nodes[i]->point.z)));
+    model->setItem(
+        i, 4,
+        new QStandardItem(QString::number(nodes[i]->outputValues[selectedId])));
+  }
+}
+
+// Span element rows
+void MainWindow::setSpanResultTable(shared_ptr<AbstractElement> selectedELement,
+                                    QTableView *resultsView) {
+  auto mesh = selectedELement->meshData;
+  auto DATA = ElementProvider::elementData[selectedELement->getType()];
+  auto nodes = mesh->nodes;
+
+  for (size_t i = 0; i < nodes.size(); i++) {
+    // int elementId = i / DATA.NODES_COUNT;
+    resultsView->setSpan(i * DATA.NODES_COUNT, 0, DATA.NODES_COUNT, 1);
+  }
+}
+
+// Slot that activates when comboBox selection changes after initializing the
+// default result table
+void MainWindow::updateResultTable() {
+  QComboBox *comboBox = (QComboBox *)sender();
+  int selectedIndex = comboBox->currentIndex();
+  auto mesh = selectedELement->meshData;
+  auto DATA = ElementProvider::elementData[selectedELement->getType()];
+  short outputValuesCount = DATA.OUTPUT_VALUES_COUNT;
+  const auto &nodes = mesh->nodes;
+
+  // If selected result type == All results (that have last index)
+  if (selectedIndex == outputValuesCount) {
+    for (size_t i = 0; i < outputValuesCount; i++) {
+      resultsView->setColumnHidden(i + 5, false);
+      QString strOutput = DATA.STR_OUTPUT_VALUES[i];
+      model->setHeaderData(i + 5, Qt::Horizontal, DATA.STR_OUTPUT_VALUES[i]);
+    }
+
+    for (size_t i = 0; i < nodes.size(); i++) {
+      for (size_t j = 0; j < DATA.OUTPUT_VALUES_COUNT; j++) {
+        model->setItem(
+            i, j + 5,
+            new QStandardItem(QString::number(nodes[i]->outputValues[j])));
+      }
+    }
+  }
+  // If selected result type is not all results
+  else {
+    QString strOutput = DATA.STR_OUTPUT_VALUES[selectedIndex];
+    model->setHeaderData(5, Qt::Horizontal, strOutput);
+
+    for (size_t i = 0; i < nodes.size(); i++) {
+      for (size_t j = 0; j < DATA.OUTPUT_VALUES_COUNT; j++) {
+        model->setItem(i, 5,
+                       new QStandardItem(QString::number(
+                           nodes[i]->outputValues[selectedIndex])));
+      }
+    }
+
+    for (size_t i = 1; i < outputValuesCount; i++) {
+      resultsView->setColumnHidden(i + 5, true);
+    }
+  }
 }

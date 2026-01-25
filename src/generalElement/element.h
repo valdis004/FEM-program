@@ -15,6 +15,8 @@ class FemAbstractElement;
 
 using std::shared_ptr;
 
+static unsigned count = 0;
+
 class AbstractElement {
 private:
   // Geometry
@@ -29,6 +31,9 @@ private:
 public:
   // Mesh
   std::shared_ptr<MeshData> meshData{nullptr};
+
+  // Other
+  QString name;
 
   AbstractElement();
 
